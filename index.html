@@ -127,6 +127,48 @@ canvas#gl{position:fixed;inset:0;width:100%;height:100%;display:block}
 #team .hpb{display:inline-block;width:50px;height:5px;background:#300;margin-left:6px;vertical-align:middle}#team .hpb i{display:block;height:100%;background:#d33}
 #chatin{position:absolute;left:12px;bottom:100px;width:min(560px,60vw);background:rgba(0,0,0,.7);border:1px solid #888;color:#fff;font:15px "Noto Sans KR";padding:6px 8px;outline:none;pointer-events:auto}
 #loadmsg{font-size:13px;color:#b3a77f;margin-top:10px}
+#lobby{position:fixed;inset:0;z-index:21;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 35%,#5a4e22 0%,#14110a 72%)}
+#lobby .box{background:rgba(16,14,9,.92);border:1px solid #6a5d3a;padding:28px 34px;width:min(560px,94vw);text-align:center;box-shadow:0 20px 70px #000}
+#lobby h2{font-family:'VT323',monospace;font-size:54px;letter-spacing:6px;color:#f3e6a8;line-height:1}
+#lobby .lbcode{margin:10px 0 18px;font-size:15px;color:#cfc39a}#lobby .lbcode b{font-family:'VT323',monospace;font-size:34px;color:#ffd76a;letter-spacing:6px;vertical-align:middle;margin:0 8px}
+#lblist{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;text-align:left}
+.lbrow{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#1d1a12;border:1px solid #3d3626;font-size:15px}
+.lbrow .dot{width:12px;height:12px;border-radius:50%}
+.lbrow .st{margin-left:auto;font-family:'VT323',monospace;font-size:20px;letter-spacing:2px}
+.lbrow .st.on{color:#7dff9a}.lbrow .st.off{color:#a08a6a}
+.lbrow.empty{color:#6d6350;border-style:dashed;background:transparent}
+#lbhint{font-size:13px;color:#b3a77f;margin:6px 0 12px;min-height:18px}
+.btn.sm{padding:4px 10px;margin:0;font-size:12px}
+#term{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.72);z-index:15}
+#term .crt{width:min(980px,94vw);height:min(640px,88vh);background:#020c05;border:2px solid #1b5a30;box-shadow:0 0 40px rgba(40,255,120,.18),inset 0 0 80px rgba(0,0,0,.9);display:flex;flex-direction:column;font-family:'VT323',monospace;color:#8dffb4;position:relative;overflow:hidden}
+#term .crt:after{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 1px,transparent 1px 3px)}
+#term .thead{display:flex;justify-content:space-between;padding:8px 14px;background:#0a2a14;color:#c8ffd8;font-size:20px;letter-spacing:1px;border-bottom:1px solid #1b5a30}
+#term .tbody{flex:1;display:flex;min-height:0}
+#term .tnav{width:210px;border-right:1px solid #12401f;padding:10px 0;display:flex;flex-direction:column}
+#term .tnav button{all:unset;cursor:pointer;padding:7px 16px;font-size:21px;color:#6fdc98}
+#term .tnav button:hover{background:#0b2a16;color:#d8ffe4}#term .tnav button.on{background:#14482a;color:#e8fff0}
+#term .tmain{flex:1;padding:14px 20px;overflow:auto;font-size:20px;line-height:1.35;white-space:pre-wrap}
+#term .tmain .mrow{cursor:pointer;padding:4px 6px;border-bottom:1px dashed #123d20;display:flex;gap:14px}
+#term .tmain .mrow:hover{background:#0b2a16}#term .tmain .mrow.read{color:#4fa872}
+#term .tmain .hl{color:#e8fff0}#term .tmain .dim{color:#3f8f5c}#term .tmain .warn{color:#ff8d7a}
+#term .tmain table{border-collapse:collapse;width:100%}#term .tmain td{padding:2px 8px;border-bottom:1px solid #0e3018}
+#term input{background:#000;border:1px solid #2a8a4a;color:#c8ffd8;font:26px 'VT323',monospace;padding:4px 10px;width:150px;letter-spacing:8px;outline:none;text-align:center}
+#term .tbtn{all:unset;cursor:pointer;border:1px solid #2a8a4a;padding:4px 14px;color:#c8ffd8;margin-top:8px;display:inline-block}#term .tbtn:hover{background:#14482a}
+#note{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.6);z-index:15}
+#note .paper{width:min(460px,90vw);background:#efe9d8;color:#2a2620;padding:26px 30px 22px;box-shadow:0 18px 50px #000;font-family:'Nanum Myeongjo',serif;transform:rotate(-1deg)}
+#note h4{font-size:14px;color:#7a6f58;margin-bottom:10px;font-family:'Noto Sans KR';font-weight:700}
+#note .nb{font-size:18px;line-height:1.8;white-space:pre-wrap}
+#note .nf{margin-top:16px;font-size:12px;color:#8a7f68;font-family:'Noto Sans KR'}
+#clues{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.6);z-index:15}
+#clues .book{width:min(620px,92vw);max-height:80vh;overflow:auto;background:#1b1912;border:1px solid #5a5038;padding:22px 26px;box-shadow:0 18px 50px #000}
+#clues h3{font-family:'Nanum Myeongjo',serif;font-size:22px;margin-bottom:12px;color:#f0e6c4}
+#clues .ent{border-top:1px solid #3a3326;padding:10px 0;font-size:14px;line-height:1.7;white-space:pre-wrap;color:#ddd2b0}
+#clues .ent b{color:#ffd76a}
+#noise{position:absolute;left:50%;top:74px;transform:translateX(-50%);text-align:center;font-size:12px;color:#ddd;text-shadow:1px 1px 0 #000}
+#noise .nbar{width:180px;height:6px;background:rgba(0,0,0,.6);border:1px solid #000;margin:3px auto 0}
+#noise .nbar i{display:block;height:100%;background:linear-gradient(90deg,#7dff9a,#ffd76a,#ff4a3a)}
+#bossbar.ph1 #bbfill{background:linear-gradient(#a8a8a0,#5a5a54)}
+#bossbar.ph3 #bbfill{background:linear-gradient(#8a3ad8,#3a0f6a)}
 #dragHint{position:fixed;left:50%;top:12px;transform:translateX(-50%);background:rgba(0,0,0,.6);padding:5px 12px;font-size:13px}
 </style>
 </head>
@@ -158,8 +200,19 @@ canvas#gl{position:fixed;inset:0;width:100%;height:100%;display:block}
     <div id="stambar"><i></i></div>
     <div id="hotslots"></div>
   </div>
+  <div id="noise" class="hidden"><span id="noisetxt">소음</span><div class="nbar"><i id="noisefill"></i></div></div>
   <div id="dead" class="hidden"><h2>쓰러졌다</h2><p id="deadtxt"></p></div>
 </div>
+<div id="lobby" class="hidden"><div class="box">
+  <h2>K BACKROOM</h2>
+  <div class="lbcode">방 코드<b id="lbcode"></b><button class="btn sm" id="lbcopy">복사</button></div>
+  <div id="lblist"></div>
+  <div id="lbhint"></div>
+  <div><button class="btn" id="lbready">준비</button><button class="btn" id="lbstart" disabled>게임 시작</button><button class="btn" id="lbleave">나가기</button></div>
+</div></div>
+<div id="term" class="hidden"><div class="crt"><div class="thead"><span id="ttitle"></span><span>ESC 닫기</span></div><div class="tbody"><div class="tnav" id="tnav"></div><div class="tmain" id="tmain"></div></div></div></div>
+<div id="note" class="hidden"><div class="paper"><h4 id="ntitle"></h4><div class="nb" id="nbody"></div><div class="nf">클릭하거나 F / Esc로 닫기 · 내용은 단서 수첩(Tab)에 적어 둔다</div></div></div>
+<div id="clues" class="hidden"><div class="book"><h3>단서 수첩</h3><div id="cluelist"></div><p style="font-size:12px;color:#8a7f60;margin-top:10px">Tab / Esc 닫기</p></div></div>
 <div id="dragHint" class="hidden">포인터 고정이 막혀 있어 <b>마우스를 누른 채 끌어</b> 시점을 돌립니다</div>
 
 <div id="inv" class="hidden">
@@ -199,10 +252,11 @@ canvas#gl{position:fixed;inset:0;width:100%;height:100%;display:block}
     <div><b>좌클릭</b> 공격 · 사격 · 던지기</div><div><b>우클릭</b> 회복 아이템 사용</div>
     <div><b>R</b> 재장전</div><div><b>F</b> 상호작용 · 줍기</div>
     <div><b>E</b> 인벤토리 · 조합</div><div><b>Q</b> 아이템 1개 던지기</div>
-    <div><b>1–9 / 휠</b> 핫바 선택</div><div><b>V</b> 각성 (LEVEL 1)</div>
+    <div><b>1–9 / 휠</b> 핫바 선택</div><div><b>C</b> 웅크려 걷기 (소리 없음)</div>
+    <div><b>Tab</b> 단서 수첩</div><div><b>V</b> 각성 (LEVEL 1)</div>
     <div><b>T</b> 팀 채팅 (멀티)</div><div><b>Esc</b> 일시정지</div>
   </div>
-  <div class="warn">거인을 쓰러뜨려 <b style="color:#f3e6a8">방재 엘리베이터 열쇠</b>를 얻고 위층으로 올라가십시오.<br>헤드폰 권장 · 데스크톱 브라우저 전용</div>
+  <div class="warn">총알이 통하지 않는 거인. <b style="color:#f3e6a8">약품총</b>으로 무너뜨리고, 열쇠 조각을 모아 위층으로 올라가십시오.<br>헤드폰 권장 · 데스크톱 브라우저 전용</div>
   <div id="loadmsg">3D 엔진을 불러오는 중…</div>
 </div></div>
 <div id="fade"></div>
@@ -232,13 +286,16 @@ let PNAME = '생존자';
 try { const s = localStorage.getItem('ls_name'); if (s) PNAME = s; } catch (e) {}
 
 /* ================= 그리드 ================= */
-// 0 벽, 1 바닥, 2 잠긴 엘리베이터(문/칸), 4 소품(막힘)
+// 0 벽, 1 바닥, 2 잠긴 엘리베이터, 4 소품(막힘), 5 은신처 문, 6 보안실 문
 let W = 0, H = 0, grid = null, zone = null, codeF = null;
+const DOORS = new Map(), DOORL = [], HIDECELL = new Map(), REDS = [];
 const cellT = (x, z) => (x < 0 || z < 0 || x >= W || z >= H) ? 0 : grid[z * W + x];
 const cellAtW = (x, z) => [Math.floor(x / CS), Math.floor(z / CS)];
-function blockedP(cx, cz) { const t = cellT(cx, cz); return t === 0 || t === 4 || (t === 2 && !S.gateOpen); }
-function blockedE(cx, cz) { return cellT(cx, cz) !== 1; }
-function blockedShot(cx, cz) { const t = cellT(cx, cz); return t === 0 || (t === 2 && !S.gateOpen); }
+const hideOf = (cx, cz) => HIDECELL.get(cx + ',' + cz) || DOORS.get(cx + ',' + cz) || null;
+function hideDoorOpen(d) { return S.p3 && (d.open || d.broken); }
+function blockedP(cx, cz) { const t = cellT(cx, cz); if (t === 0 || t === 4) return true; if (t === 7) return !S.startOpen; if (t === 8) { const r = REDS.find(q => q.d[0] === cx && q.d[1] === cz); return !(S.redOn && r && r.open); } if (t === 2) return !S.gateOpen; if (t === 5) { const d = DOORS.get(cx + ',' + cz); return !d || !hideDoorOpen(d); } if (t === 6) return !S.secOpen; return false; }
+function blockedE(cx, cz) { const t = cellT(cx, cz); if (t === 1) return false; if (t === 8) return true; if (t === 7) return !S.startOpen; if (t === 5) { const d = DOORS.get(cx + ',' + cz); return !d || !hideDoorOpen(d); } if (t === 6) return !S.secOpen; return true; }
+function blockedShot(cx, cz) { const t = cellT(cx, cz); return t === 0 || (t === 2 && !S.gateOpen) || ((t === 5 || t === 6 || t === 7) && blockedP(cx, cz)) || t === 8; }
 
 /* ================= 렌더러 ================= */
 const canvas = $('#gl');
@@ -306,6 +363,11 @@ function updateCode(dt) {
 // 모니터 화면
 { const [c, g] = cvs(64, 48); g.fillStyle = '#021006'; g.fillRect(0, 0, 64, 48); g.font = '6px monospace'; for (let y = 6; y < 48; y += 7) { g.fillStyle = Math.random() < .3 ? '#c8ffd8' : '#1fd468'; let s = ''; for (let i = 0; i < 12; i++) s += GLYPH[Math.floor(Math.random() * GLYPH.length)]; g.fillText(s, 2, y); } T.screen = tex(c); }
 
+{ const [c, g] = cvs(256, 580); g.fillStyle = '#cfcbb8'; g.fillRect(0, 0, 256, 580); noise(g, 256, 580, 7); g.fillStyle = '#a9a48e'; g.fillRect(0, 300, 256, 6); g.fillStyle = '#bdb8a2'; g.fillRect(0, 306, 256, 242); noise(g, 256, 580, 4); g.fillStyle = '#8f8a76'; g.fillRect(0, 548, 256, 32); T.wall3 = tex(c); }
+{ const [c, g] = cvs(256, 256); g.fillStyle = '#8f8c82'; g.fillRect(0, 0, 256, 256); noise(g, 256, 256, 16); g.fillStyle = 'rgba(0,0,0,.18)'; g.fillRect(0, 0, 256, 2); g.fillRect(0, 0, 2, 256); T.floor3 = tex(c); }
+{ const [c, g] = cvs(128, 290); g.fillStyle = '#d9cfb4'; g.fillRect(0, 0, 128, 290); noise(g, 128, 290, 6); g.strokeStyle = 'rgba(90,75,50,.35)'; g.lineWidth = 3; g.strokeRect(14, 16, 100, 112); g.strokeRect(14, 150, 100, 124); g.fillStyle = '#8a7a58'; g.fillRect(104, 140, 10, 18); T.door = tex(c); }
+{ const [c, g] = cvs(96, 64); g.fillStyle = '#04140a'; g.fillRect(0, 0, 96, 64); g.fillStyle = '#1fd468'; g.fillRect(0, 0, 96, 7); g.fillStyle = '#c8ffd8'; g.font = '6px monospace'; for (let y = 16; y < 62; y += 7) { let s = ''; for (let i = 0; i < 14; i++) s += Math.random() < .2 ? ' ' : String.fromCharCode(65 + Math.floor(Math.random() * 26)); g.fillText(s, 4, y); } g.fillStyle = '#c8ffd8'; g.fillRect(4, 56, 5, 2); T.screen2 = tex(c); }
+{ const [c, g] = cvs(64, 48); const d = g.createImageData(64, 48); for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 120; d.data[i] = v * .6; d.data[i + 1] = v; d.data[i + 2] = v * .7; d.data[i + 3] = 255; } g.putImageData(d, 0, 0); T.static = tex(c); T.static.magFilter = THREE.NearestFilter; }
 const matCache = {};
 function getMat(k) {
   if (matCache[k]) return matCache[k];
@@ -318,13 +380,14 @@ const LM = (c, extra = {}) => new THREE.MeshLambertMaterial(Object.assign({ colo
 const M = {
   steel: LM(0x9aa0a6), dark: LM(0x161616), red: LM(0x9b1f1b), black: LM(0x0d0d0d), white: LM(0xe6e6e0),
   part: LM(0x55635b), part2: LM(0x6a7a70), desk: LM(0x5a625d), chair: LM(0x15181a), glass: new THREE.MeshLambertMaterial({ color: 0x66ffaa, transparent: true, opacity: .18, depthWrite: false }),
-  screen: new THREE.MeshBasicMaterial({ map: T.screen, toneMapped: false }), booth: LM(0x1a1d1b), phone: LM(0x111111),
+  screen: new THREE.MeshBasicMaterial({ map: T.screen, toneMapped: false }), screen2: new THREE.MeshBasicMaterial({ map: T.screen2, toneMapped: false }), cctv: new THREE.MeshBasicMaterial({ map: T.static, toneMapped: false }), booth: LM(0x1a1d1b), phone: LM(0x111111),
+  rack: LM(0x15181a), ledG: new THREE.MeshBasicMaterial({ color: 0x3dff86, toneMapped: false }), ledR: new THREE.MeshBasicMaterial({ color: 0xff3a2a, toneMapped: false }), door: new THREE.MeshLambertMaterial({ map: T.door }), wallplug: null, sdoor: LM(0x5a6066), frameD: LM(0xe8e2cc),
 };
 
 /* ================= 스테이지 설정 ================= */
 const STAGES = {
   1: { lvl: 'LEVEL 0', sub: '끝없는 노란 방', WH: 3.4, fog: 0xd8cb8c, fogN: 7, fogF: 58, amb: [0xfff3c8, .78], hemi: [0xfff8e0, 0x8a7a40, .35], light: 0xfff2c8, li: 7, wall: 'wall1', floor: 'floor1', ceil: 'ceil1', panel: 0xfffbe8, boss: '방랑하는 거인', bossEn: 'THE WANDERER' },
-  2: { lvl: 'LEVEL 1', sub: '시뮬레이션된 사무실', WH: 3.2, fog: 0x03100a, fogN: 4, fogF: 40, amb: [0xb0ffc6, .5], hemi: [0xd8ffe4, 0x0a1a10, .45], light: 0xd8ffe6, li: 14, wall: 'wall2', floor: 'floor2', ceil: 'ceil2', panel: 0xd8ffe6, boss: '관리자', bossEn: 'THE ADMINISTRATOR' },
+  2: { lvl: 'LEVEL 1', sub: '시뮬레이션된 사무실', WH: 3.2, fog: 0x03100a, fogN: 4, fogF: 40, amb: [0xb0ffc6, .5], hemi: [0xd8ffe4, 0x0a1a10, .45], light: 0xd8ffe6, li: 14, wall: 'wall2', floor: 'floor2', ceil: 'ceil2', panel: 0xd8ffe6 },
 };
 
 /* ================= 월드 ================= */
@@ -358,7 +421,7 @@ function clearWorld() {
   for (const e of [...enemies]) removeEnemy(e);
   for (const p of [...projs]) removeProj(p);
   for (const g of [...grenades]) { scene.remove(g.mesh); } grenades.length = 0;
-  flick.clear();
+  flick.clear(); startDoor = null; REDS.length = 0; elevPlug = null; DOORS.clear(); DOORL.length = 0; HIDECELL.clear(); secDoor = null; phantoms.length = 0;
 }
 
 /* --- LEVEL 0 생성: 반듯한 방 격자 + 미로 --- */
@@ -398,14 +461,63 @@ function genLevel0() {
     if (rnd() < .2) { const bx = X0 + rx * STEP, bz = Z0 + rz * STEP; for (const [a, b] of [[3, 3], [4, 3], [3, 4], [4, 4]]) grid[(bz + b) * W + bx + a] = 0; }
   }
   const spawn = { x: wc(X0 + (R >> 1) * STEP + 3) + CS / 2, z: wc(Z0 + (R >> 1) * STEP + 3) + CS / 2 };
+  // 시작 방: 사방을 막고 문 하나만 남긴다
+  const SR = R >> 1, sx0 = X0 + SR * STEP, sz0 = Z0 + SR * STEP;
+  for (let i = 0; i <= STEP; i++) for (const [x, z] of [[sx0 + i, sz0], [sx0 + i, sz0 + STEP], [sx0, sz0 + i], [sx0 + STEP, sz0 + i]]) grid[z * W + x] = 0;
+  const rcen = (rx, rz) => [X0 + rx * STEP + 3, Z0 + rz * STEP + 3];
+  const segL0 = (ax, az, bx, bz) => { const c = []; if (ax !== bx) { const x = X0 + Math.max(ax, bx) * STEP; for (let i = 1; i < STEP; i++) c.push([x, Z0 + az * STEP + i]); } else { const z = Z0 + Math.max(az, bz) * STEP; for (let i = 1; i < STEP; i++) c.push([X0 + ax * STEP + i, z]); } return c; };
+  for (let it = 0; it < 80; it++) {
+    const [ox, oz] = rcen(SR + 1, SR); const DD = bfsCells(ox, oz, (x, z) => cellT(x, z) !== 1);
+    const un = []; for (let rz = 0; rz < R; rz++) for (let rx = 0; rx < R; rx++) { if (rx === SR && rz === SR) continue; const [cx, cz] = rcen(rx, rz); let ok = false; for (let a = 0; a < 2 && !ok; a++) for (let b = 0; b < 2 && !ok; b++) if (DD[(cz + b) * W + cx + a] >= 0) ok = true; if (!ok) un.push([rx, rz]); }
+    if (!un.length) break; let fixed = false;
+    for (const [ux, uz] of un) { for (const [dx, dz] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) { const vx = ux + dx, vz = uz + dz; if (vx < 0 || vz < 0 || vx >= R || vz >= R || (vx === SR && vz === SR)) continue; const [cx, cz] = rcen(vx, vz); let ok = false; for (let a = 0; a < 2 && !ok; a++) for (let b = 0; b < 2 && !ok; b++) if (DD[(cz + b) * W + cx + a] >= 0) ok = true; if (!ok) continue; const cells = segL0(ux, uz, vx, vz); for (let i = 2; i < 5; i++) { const [x, z] = cells[i]; grid[z * W + x] = 1; } fixed = true; break; } if (fixed) break; }
+    if (!fixed) break;
+  }
+  const [sdx, sdz] = pick([[1, 0], [-1, 0], [0, 1], [0, -1]]);
+  const sdc = sdx === 1 ? [sx0 + STEP, sz0 + 3] : sdx === -1 ? [sx0, sz0 + 3] : sdz === 1 ? [sx0 + 3, sz0 + STEP] : [sx0 + 3, sz0];
+  grid[sdc[1] * W + sdc[0]] = 7; { const ox = sdc[0] + sdx, oz = sdc[1] + sdz; if (grid[oz * W + ox] === 0) grid[oz * W + ox] = 1; }
+  const sdoorL0 = { c: sdc, n: [sdx, sdz] };
   // 엘리베이터: 가장 먼 가장자리 방
-  const D = bfsCells(...cellAtW(spawn.x, spawn.z), (x, z) => cellT(x, z) !== 1);
+  const D = bfsCells(...cellAtW(spawn.x, spawn.z), (x, z) => { const t = cellT(x, z); return t !== 1 && t !== 7; });
   let best = null, bd = -1;
   for (let i = 0; i < R; i++) for (const [rx, rz, side] of [[i, 0, 'n'], [i, R - 1, 's'], [0, i, 'w'], [R - 1, i, 'e']]) {
     const cx = X0 + rx * STEP + 3, cz = Z0 + rz * STEP + 3; const d = D[cz * W + cx]; if (d > bd) { bd = d; best = [rx, rz, side]; }
   }
   const el = carveElevator(best[0], best[1], best[2], X0, Z0, STEP, R, 2);
-  return { spawn, el, X0, Z0, STEP, R, D };
+  // 3페이즈 은신처 4곳 — 바깥 벽 너머에 숨겨 둔다
+  const hides = [], hideIdx = {};
+  for (const sd of ['n', 's', 'w', 'e']) {
+    for (let tries = 0; tries < 30; tries++) {
+      const i = ri(1, R - 2); const [rx, rz] = sd === 'n' ? [i, 0] : sd === 's' ? [i, R - 1] : sd === 'w' ? [0, i] : [R - 1, i];
+      if (sd === best[2] && Math.abs((sd === 'n' || sd === 's' ? rx - best[0] : rz - best[1])) < 3) continue;
+      hides.push(carveHide(rx, rz, sd, X0, Z0, STEP, R)); hideIdx[sd] = i; break;
+    }
+  }
+  // 빨간 문 한 쌍 — 서로 맞은편 가장자리. 통과하면 반대편으로 나온다
+  const pair = (best[2] === 'n' || best[2] === 's') ? ['w', 'e'] : ['n', 's'];
+  let ri_ = 7;
+  for (let tries = 0; tries < 60; tries++) { const i = ri(2, R - 3); if (pair.every(sd => Math.abs(i - (hideIdx[sd] ?? -9)) >= 2)) { ri_ = i; break; } }
+  const reds = pair.map(sd => {
+    const [rx, rz] = sd === 'n' ? [ri_, 0] : sd === 's' ? [ri_, R - 1] : sd === 'w' ? [0, ri_] : [R - 1, ri_];
+    const bx = X0 + rx * STEP, bz = Z0 + rz * STEP; let n, d;
+    if (sd === 'n') { n = [0, -1]; d = [bx + 3, Z0]; } if (sd === 's') { n = [0, 1]; d = [bx + 3, Z0 + R * STEP]; }
+    if (sd === 'w') { n = [-1, 0]; d = [X0, bz + 3]; } if (sd === 'e') { n = [1, 0]; d = [X0 + R * STEP, bz + 3]; }
+    grid[d[1] * W + d[0]] = 8; const fx = d[0] - n[0], fz = d[1] - n[1]; if (grid[fz * W + fx] === 0) grid[fz * W + fx] = 1;
+    return { d, n, t: [-n[1], n[0]], sd };
+  });
+  return { spawn, el, hides, reds, sdoor: sdoorL0, X0, Z0, STEP, R, D };
+}
+function carveHide(rx, rz, side, X0, Z0, STEP, R) {
+  const bx = X0 + rx * STEP, bz = Z0 + rz * STEP; let n, d;
+  if (side === 'n') { n = [0, -1]; d = [bx + 3, Z0]; }
+  if (side === 's') { n = [0, 1]; d = [bx + 3, Z0 + R * STEP]; }
+  if (side === 'w') { n = [-1, 0]; d = [X0, bz + 3]; }
+  if (side === 'e') { n = [1, 0]; d = [X0 + R * STEP, bz + 3]; }
+  const t = [-n[1], n[0]]; const cells = [];
+  grid[d[1] * W + d[0]] = 5;
+  for (let k = 1; k <= 2; k++) for (let w = -1; w <= 1; w++) { const cx = d[0] + n[0] * k + t[0] * w, cz = d[1] + n[1] * k + t[1] * w; grid[cz * W + cx] = 1; zone[cz * W + cx] = 3; cells.push([cx, cz]); }
+  const fx = d[0] - n[0], fz = d[1] - n[1]; if (grid[fz * W + fx] === 0) grid[fz * W + fx] = 1;
+  return { d, n, t, cells, inner: [d[0] + n[0] * 2, d[1] + n[1] * 2] };
 }
 function carveElevator(rx, rz, side, X0, Z0, STEP, R, type) {
   let n, d = [];
@@ -420,7 +532,14 @@ function carveElevator(rx, rz, side, X0, Z0, STEP, R, type) {
   return { d, n };
 }
 
-/* --- LEVEL 1 생성: 사무실 --- */
+/* --- LEVEL 1 생성: 사무실 (조사형) --- */
+const SURN = '김이박최정강조윤장임한오서신권황안송류홍'.split('');
+const GIVN = ['지훈', '서연', '민준', '하은', '도윤', '수아', '예준', '지우', '시우', '서윤', '주원', '하린', '유준', '지민', '건우', '채원', '현우', '다은', '우진', '소율', '선우', '예린', '정민', '태윤', '승현', '나연', '재원', '유나'];
+const DEPTS = ['영업1팀', '영업2팀', '재무팀', '인사팀', '개발팀', '기획팀', '시설관리팀', '고객지원팀'];
+const RANKS = ['사원', '주임', '대리', '과장', '차장'];
+const JUNK = ['클립 몇 개와 구겨진 영수증뿐이다.', '명함 한 묶음. 전부 같은 이름, 같은 번호가 인쇄돼 있다.', '회의록. 날짜 칸마다 같은 날짜가 적혀 있다.', '가족사진 액자. 얼굴 부분만 초록 픽셀로 깨져 있다.', '볼펜 세 자루. 모두 잉크가 말라 있다.', '"업무 시간 이후 엘리베이터 이용 금지" 공문 사본.', '사원증 목걸이. 사진 칸이 비어 있다.', '포스트잇 한 장 — "창밖 보지 말 것".', '커피 도장 쿠폰. 열 번째 칸이 인쇄돼 있지 않다.', '반려된 출장 신청서. 목적지 칸: "LEVEL 0".', '빈 약통. 라벨에 "현실감 유지제 — 1일 2회".', '손으로 그린 층 안내도. 계단이 그려져 있어야 할 곳이 비어 있다.', '다 쓴 다이어리. 마지막 쉰 장이 모두 같은 하루다.', '서랍 바닥에 손톱으로 긁은 자국 — "나가는 길은 전화".'];
+const SUPPLY = [['ammo9', 12, 5], ['ammo556', 30, 5], ['almond', 1, 4], ['bandage', 1, 4], ['medkit', 1, 2], ['shell', 6, 2], ['grenade', 1, 1], ['cloth', 1, 2]];
+const zoneName = (rx, rz) => 'ABCDEF'[rx] + (rz + 1);
 function genLevel1() {
   const RX = 6, RZ = 5, STEP = 11, MG = 3;
   W = RX * STEP + 1 + MG * 2; H = RZ * STEP + 1 + MG * 2;
@@ -439,34 +558,103 @@ function genLevel1() {
     if (rnd() < .28) cells.forEach(([x, z]) => grid[z * W + x] = 1);
     else { const o = ri(0, 3); for (let i = o; i < o + 3; i++) { const [x, z] = cells[i]; grid[z * W + x] = 1; } if (rnd() < .6) { const o2 = ri(6, 7); for (let i = o2; i < o2 + 3; i++) { const [x, z] = cells[i]; grid[z * W + x] = 1; } } }
   };
+  const seg = (rx, rz, dir) => { const c = []; if (dir === 'h') { const x = X0 + (rx + 1) * STEP; for (let i = 1; i < STEP; i++) c.push([x, Z0 + rz * STEP + i]); } else { const z = Z0 + (rz + 1) * STEP; for (let i = 1; i < STEP; i++) c.push([X0 + rx * STEP + i, z]); } return c; };
   for (let rz = 0; rz < RZ; rz++) for (let rx = 0; rx < RX; rx++) {
-    if (rx < RX - 1 && (tree.has(rx + ',' + rz + ',h') || rnd() < .55)) { const x = X0 + (rx + 1) * STEP; const c = []; for (let i = 1; i < STEP; i++) c.push([x, Z0 + rz * STEP + i]); openSeg(c); }
-    if (rz < RZ - 1 && (tree.has(rx + ',' + rz + ',v') || rnd() < .55)) { const z = Z0 + (rz + 1) * STEP; const c = []; for (let i = 1; i < STEP; i++) c.push([X0 + rx * STEP + i, z]); openSeg(c); }
+    if (rx < RX - 1 && (tree.has(rx + ',' + rz + ',h') || rnd() < .55)) openSeg(seg(rx, rz, 'h'));
+    if (rz < RZ - 1 && (tree.has(rx + ',' + rz + ',v') || rnd() < .55)) openSeg(seg(rx, rz, 'v'));
   }
-  // 외벽은 코드 비 / 안쪽 벽 일부도
-  for (let z = 0; z < H; z++) for (let x = 0; x < W; x++) if (grid[z * W + x] === 0) {
-    const border = x <= X0 || z <= Z0 || x >= X0 + RX * STEP || z >= Z0 + RZ * STEP;
-    codeF[z * W + x] = border ? 1 : 0;
-  }
-  for (let rz = 0; rz < RZ; rz++) for (let rx = 0; rx < RX; rx++) if (rnd() < .3) { const x = X0 + (rx + 1) * STEP; for (let i = 1; i < STEP; i++) { const z = Z0 + rz * STEP + i; if (x < W) codeF[z * W + x] = 1; } }
-  const spawnRoom = [0, 0];
+  for (let z = 0; z < H; z++) for (let x = 0; x < W; x++) if (grid[z * W + x] === 0) codeF[z * W + x] = (x <= X0 || z <= Z0 || x >= X0 + RX * STEP || z >= Z0 + RZ * STEP) ? 1 : 0;
+  for (let rz = 0; rz < RZ; rz++) for (let rx = 0; rx < RX - 1; rx++) if (rnd() < .25) for (const [x, z] of seg(rx, rz, 'h')) if (grid[z * W + x] === 0) codeF[z * W + x] = 1;
   const el = carveElevator(0, 0, 'n', X0, Z0, STEP, RX, 1);
-  // 엘리베이터 칸이 매트릭스 '도착 지점'
   const ec = el.d[0]; const spawn = { x: wc(ec[0]) + CS / 2, z: wc(ec[1] - 1) };
-  // 큐비클 클러스터
-  const cubes = [];
+  const rc = (rx, rz) => [X0 + rx * STEP + 5, Z0 + rz * STEP + 5];
+  let D = bfsCells(...cellAtW(spawn.x, spawn.z), (x, z) => cellT(x, z) !== 1);
+  const rooms = []; for (let rz = 0; rz < RZ; rz++) for (let rx = 0; rx < RX; rx++) { const [cx, cz] = rc(rx, rz); rooms.push({ rx, rz, d: D[cz * W + cx] }); }
+  rooms.sort((a, b) => a.d - b.d);
+  const phoneR = rooms[rooms.length - 1];
+  const mids = rooms.filter(r => r !== phoneR && (r.rx + r.rz) >= 2 && r.rx > 0 && r.rz > 0 && r.rx < RX - 1);
+  const secR = mids[Math.floor(mids.length * (.45 + rnd() * .25))] || rooms[Math.floor(rooms.length / 2)];
+  // 보안실 봉인 + 카드 문
+  { const x0 = X0 + secR.rx * STEP, z0 = Z0 + secR.rz * STEP; for (let i = 0; i <= STEP; i++) for (const [x, z] of [[x0 + i, z0], [x0 + i, z0 + STEP], [x0, z0 + i], [x0 + STEP, z0 + i]]) { grid[z * W + x] = 0; codeF[z * W + x] = 0; } }
+  const reconnect = () => {
+    for (let it = 0; it < 60; it++) {
+      const DD = bfsCells(...cellAtW(spawn.x, spawn.z), (x, z) => cellT(x, z) !== 1);
+      const un = []; for (let rz = 0; rz < RZ; rz++) for (let rx = 0; rx < RX; rx++) { if (rx === secR.rx && rz === secR.rz) continue; const [cx, cz] = rc(rx, rz); if (DD[cz * W + cx] < 0) un.push([rx, rz]); }
+      if (!un.length) return;
+      let fixed = false;
+      for (const [ux, uz] of un) { for (const [dx, dz] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) { const vx = ux + dx, vz = uz + dz; if (vx < 0 || vz < 0 || vx >= RX || vz >= RZ || (vx === secR.rx && vz === secR.rz)) continue; const [cx, cz] = rc(vx, vz); if (DD[cz * W + cx] < 0) continue; const cells = dx ? seg(Math.min(ux, vx), uz, 'h') : seg(ux, Math.min(uz, vz), 'v'); for (let i = 3; i < 6; i++) { const [x, z] = cells[i]; grid[z * W + x] = 1; } fixed = true; break; } if (fixed) break; }
+      if (!fixed) return;
+    }
+  };
+  reconnect();
+  const sx0 = X0 + secR.rx * STEP, sz0 = Z0 + secR.rz * STEP; let sdoor = null;
+  for (const [dx, dz] of shuffle([[0, -1], [0, 1], [-1, 0], [1, 0]])) {
+    const nx = secR.rx + dx, nz = secR.rz + dz; if (nx < 0 || nz < 0 || nx >= RX || nz >= RZ) continue;
+    const cell = dz === -1 ? [sx0 + 5, sz0] : dz === 1 ? [sx0 + 5, sz0 + STEP] : dx === -1 ? [sx0, sz0 + 5] : [sx0 + STEP, sz0 + 5];
+    sdoor = { c: cell, n: [dx, dz] }; grid[cell[1] * W + cell[0]] = 6; break;
+  }
+  D = bfsCells(...cellAtW(spawn.x, spawn.z), (x, z) => cellT(x, z) !== 1);
+  // 큐비클 + 책상
+  const blocks = [], desks = [];
+  const zoneCnt = {};
   for (let rz = 0; rz < RZ; rz++) for (let rx = 0; rx < RX; rx++) {
+    if ((rx === secR.rx && rz === secR.rz) || (rx === phoneR.rx && rz === phoneR.rz)) continue;
     for (const [lx, lz] of [[2, 2], [6, 2], [2, 6], [6, 6]]) {
       if (rx === 0 && rz === 0 && lz === 2) continue;
-      if (rnd() < .72) { const bx = X0 + rx * STEP + 1 + lx, bz = Z0 + rz * STEP + 1 + lz; for (const [a, b] of [[0, 0], [1, 0], [0, 1], [1, 1]]) grid[(bz + b) * W + bx + a] = 4; cubes.push([bx, bz]); }
+      if (rnd() < .78) {
+        const bx = X0 + rx * STEP + 1 + lx, bz = Z0 + rz * STEP + 1 + lz; for (const [a, b] of [[0, 0], [1, 0], [0, 1], [1, 1]]) grid[(bz + b) * W + bx + a] = 4;
+        const zn = zoneName(rx, rz); const blk = { bx, bz, desks: [] }; blocks.push(blk);
+        for (const [qx, qz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) {
+          const n = (zoneCnt[zn] = (zoneCnt[zn] || 0) + 1);
+          const cx = (bx + 1) * CS, cz = (bz + 1) * CS; const dx = cx + qx * CS / 2, dz = cz + qz * CS / 2;
+          const vac = rnd() < .12;
+          const d = { i: desks.length, id: zn + '-' + n, zone: zn, rx, rz, qx, qz, dx, dz, mx: dx - qx * .28, mz: dz - qz * .28, name: vac ? '공석' : pick(SURN) + pick(GIVN), dept: pick(DEPTS), rank: pick(RANKS), kind: 'locked', searched: false, dist: D[Math.floor(dz / CS) * W + Math.floor(dx / CS)] };
+          const r = rnd();
+          if (r < .5) d.drawer = { type: 'junk', text: pick(JUNK) };
+          else if (r < .8) { const tot = SUPPLY.reduce((a, b) => a + b[2], 0); let q = rnd() * tot, it = SUPPLY[0]; for (const s of SUPPLY) { q -= s[2]; if (q <= 0) { it = s; break; } } d.drawer = { type: 'supply', item: [it[0], it[1]] }; }
+          else d.drawer = { type: 'empty' };
+          desks.push(d); blk.desks.push(d);
+        }
+      }
     }
   }
-  const D = bfsCells(...cellAtW(spawn.x, spawn.z), (x, z) => cellT(x, z) !== 1);
-  // 전화 부스: 가장 먼 방 중앙
-  let best = null, bd = -1;
-  for (let rz = 0; rz < RZ; rz++) for (let rx = 0; rx < RX; rx++) { const cx = X0 + rx * STEP + 5, cz = Z0 + rz * STEP + 5; const d = D[cz * W + cx]; if (d > bd) { bd = d; best = [cx, cz]; } }
-  grid[best[1] * W + best[0]] = 4;
-  return { spawn, el, cubes, phone: best, X0, Z0, STEP, R: RX, D };
+  const [phx, phz] = rc(phoneR.rx, phoneR.rz); grid[phz * W + phx] = 4;
+  // 보안실 내부 소품 칸
+  const secProps = [[sx0 + 5, sz0 + 6], [sx0 + 6, sz0 + 6]];
+  const racks = [[sx0 + 2, sz0 + 2], [sx0 + 3, sz0 + 2], [sx0 + 8, sz0 + 2], [sx0 + 9, sz0 + 2], [sx0 + 2, sz0 + 9], [sx0 + 3, sz0 + 9], [sx0 + 8, sz0 + 9], [sx0 + 9, sz0 + 9]];
+  for (const [x, z] of [...secProps, ...racks]) grid[z * W + x] = 4;
+  // ── 퍼즐 ──
+  const named = desks.filter(d => d.name !== '공석');
+  const far = named.filter(d => d.dist > 18 && !(d.rx === 0 && d.rz === 0)); const secGuy = pick(far.length ? far : named);
+  secGuy.dept = '보안팀'; secGuy.rank = '주임';
+  const others = shuffle(named.filter(d => d !== secGuy)).slice(0, 2); others.forEach(d => { d.dept = '보안팀'; d.rank = pick(['사원', '대리']); });
+  const pa = ri(10, 99), cd = ri(10, 99), cdh = ri(10, 99);
+  secGuy.drawer = { type: 'card', note: `보안실 출입카드와 접힌 메모.\n\n「단말 비번 앞 두 자리 ${pa}.\n뒤는 매일 바뀜 — 아침 회선 점검 코드.\n적어 두지 말라고 했는데… 미안.」\n\n— ${secGuy.name}` };
+  others[0].drawer = { type: 'note', note: `보안팀 야간 근무표\n\n월  ${others[0].name}\n화  ${secGuy.name}\n수  ${secGuy.name}\n목  ${others[1].name}\n금  ${secGuy.name}\n\n* 출입카드는 근무자 본인이 보관할 것.` };
+  others[1].drawer = { type: 'junk', text: '보안팀 교육 자료. "B-5는 점검용, 실사용은 B-7." 이라고 형광펜이 칠해져 있다.' };
+  const near = desks.filter(d => (d.rx <= 1 && d.rz <= 1) && !(d.rx === 0 && d.rz === 0) && d !== secGuy && !others.includes(d));
+  const pub = pick(near.length ? near : desks); pub.kind = 'public'; pub.name = '공용 단말'; pub.drawer = { type: 'note', note: `공용 단말 사용 수칙\n\n1. 로그인 없이 사내 메일·인명부·시스템 로그 열람 가능\n2. 업무 시간 외 사용 금지\n3. 화면에 이상한 문자가 흐르면 즉시 시설관리팀에 신고` };
+  const lorePool = shuffle(desks.filter(d => d.kind === 'locked' && d !== secGuy && !others.includes(d)));
+  lorePool.slice(0, 3).forEach((d, i) => { d.kind = 'lore'; d.lore = i; });
+  const fmt = n => String(n).padStart(2, '0');
+  const logs = [];
+  const tline = (h, m, s, t) => `[${fmt(h)}:${fmt(m)}:${fmt(s)}] ${t}`;
+  const L0 = [['SYS', '부팅 완료 · 노드 7F-SIM'], ['NET', '외부 게이트웨이 응답 없음 (재시도 4,096회)'], ['HVAC', '공조 정상 · 실내 22.0℃'], ['SEC', '출입 기록 동기화'], ['LINE', `LINE-CHECK B-5 :: 점검 코드 [${fmt(cdh)}] 발급`], ['LIFT', '승강기 B → 7F 도착 (탑승 0명)'], ['SYS', '사용자 세션 0개 · 활성 인원 미확인'], ['LINE', `LINE-CHECK B-7 :: 점검 코드 [${fmt(cd)}] 발급`], ['PWR', '조명 회로 정상'], ['SEC', '보안실 단말 로그인 실패 3회 · 잠금 해제됨'], ['LIFT', '승강기 B → 7F 도착 (탑승 0명)'], ['SYS', '경고: 동일 일자 재시작 감지 (n=11)'], ['NET', '창문 패널 렌더 큐 지연'], ['LINE', 'B-7 상태: 대기 (비상 전용)'], ['HR', '퇴근 처리 0건'], ['SYS', '알 수 없는 프로세스 AGENT.exe 대기 중']];
+  let h = 5, m = 58; for (const [k, t] of L0) { m += ri(0, 7); if (m >= 60) { m -= 60; h++; } logs.push(tline(h, m, ri(0, 59), `${k.padEnd(4)} ${t}`)); }
+  const mails = [
+    { from: '시설관리팀', to: '전 직원', subj: '비상 회선(B-7) 안내', body: `정전 또는 고립 상황에서 외부와 연결 가능한 회선은 B-7뿐입니다.\nB-7은 보안실 단말에서만 활성화할 수 있으며,\n보안실은 출입카드가 있어야 열립니다.\n\n활성화되면 회의실(${zoneName(phoneR.rx, phoneR.rz)} 구역)의 전화로 연결됩니다.` },
+    { from: `보안팀 ${secGuy.name} ${secGuy.rank}`, to: '시설관리팀', subj: 'RE: 출입카드 미반납 건', body: `죄송합니다. 출입카드를 또 제 자리 서랍에 두고 나왔습니다.\n내일 아침에 바로 회수하겠습니다.\n\n(어차피 내일도 오늘이겠지만요.)` },
+    { from: 'IT지원', to: '보안팀', subj: '보안실 단말 암호 정책 변경', body: `보안실 단말 암호는 숫자 4자리입니다.\n\n· 앞 두 자리: 담당자 개인 지정 (본인만 알 것)\n· 뒤 두 자리: 당일 사용 회선의 아침 점검 코드\n  (시스템 로그 LINE-CHECK 항목 참고)\n\n점검용 회선과 실사용 회선을 혼동하지 마십시오.` },
+    { from: '인사팀', to: '전 직원', subj: '[공지] 금일 퇴근 처리 불가', body: `금일 퇴근 처리된 인원이 없습니다.\n승강기는 계속 이 층으로 돌아옵니다.\n별도 안내가 있을 때까지 자리를 지켜 주십시오.\n\n인사팀은 여러분의 협조에 감사드립니다.\n인사팀은 여러분의 협조에 감사드립니다.\n인사팀은 여러분의 협조에 감사드립니다.` },
+    { from: '(발신자 없음)', to: '나', subj: '읽지 마', body: `창밖을 오래 보지 마.\n저건 풍경이 아니라 출력이야.\n\n전화가 울리면 받아. 그게 유일한 출구야.\n요원들이 오기 전에.` },
+  ];
+  const dir = shuffle([secGuy, ...others, ...shuffle(named.filter(d => d !== secGuy && !others.includes(d))).slice(0, 22)]).sort((a, b) => a.dept.localeCompare(b.dept));
+  const lore = [
+    { t: '업무일지.hwp', b: `3월 14일 (화)\n오늘도 3월 14일이다. 달력을 넘겨도 다시 화요일.\n박 대리는 웃으면서 "그럼 마감도 영원히 내일이네" 라고 했다.\n\n3월 14일 (화)\n박 대리가 없다. 아무도 박 대리를 기억하지 못한다.\n인명부에서도 지워졌다.` },
+    { t: '메모장.txt', b: `아래층 이야기\n\n- 승강기 B를 비상 버튼으로 내리면 노란 방이 끝없이 이어진 층이 나온다고 함\n- 형광등 소리 말고는 아무것도 없다고\n- 거인이 산다는 건 농담이겠지\n- 그 사람은 거기서 "약"을 쏘라고 했다. 무슨 뜻인지 모르겠다` },
+    { t: '검색 기록', b: `> 창문 밖 초록색 글자 뜻\n> 우리 회사 건물 몇 층\n> 같은 날 반복 꿈\n> 검은 정장 선글라스 사람 회사\n> 깨어나는 법\n> 깨어나는 법\n> 깨어나는 법` },
+  ];
+  return { spawn, el, blocks, desks, phone: [phx, phz], phoneZone: zoneName(phoneR.rx, phoneR.rz), secR, sec: { x0: sx0, z0: sz0, door: sdoor, racks, zone: zoneName(secR.rx, secR.rz) }, pz: { secGuy, pa, cd, cdh, mails, logs, dir, lore }, X0, Z0, STEP, R: RX, RZ, D };
 }
 
 function bfsCells(sx, sz, isBlocked) {
@@ -484,7 +672,7 @@ function buildStructure(cfg) {
   for (let z = 0; z < H; z++) for (let x = 0; x < W; x++) {
     const t = cellT(x, z); if (t === 0) continue;
     const zn = zone[z * W + x];
-    const wk = zn === 1 ? 'metal' : zn === 2 ? (S.stage === 1 ? 'frame' : 'metal') : cfg.wall, fk = zn ? 'metalFloor' : cfg.floor, ck = zn ? 'metal' : cfg.ceil;
+    const wk = zn === 1 ? 'metal' : zn === 2 ? (S.stage === 1 ? 'frame' : 'metal') : zn === 3 ? 'wall3' : cfg.wall, fk = zn === 3 ? 'floor3' : zn ? 'metalFloor' : cfg.floor, ck = zn === 3 ? cfg.ceil : zn ? 'metal' : cfg.ceil;
     const cx = wc(x), cz = wc(z);
     for (const [dx, dz] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
       if (cellT(x + dx, z + dz) !== 0) continue;
@@ -542,17 +730,255 @@ function placeDoors() {
   for (const d of e.doors) { const off = (CS / 2) + e.open * (CS * .92); d.m.position.set(e.fx + e.nx * .07 + e.tx * d.s * off, 1.35, e.fz + e.nz * .07 + e.tz * d.s * off); }
 }
 
-/* --- 큐비클 / 전화 부스 --- */
-function buildCubicle(bx, bz) {
-  const x0 = bx * CS, z0 = bz * CS, s = CS * 2, cx = x0 + CS, cz = z0 + CS;
-  for (const [ox, oz, w, d] of [[0, -CS + .04, s - .04, .06], [0, CS - .04, s - .04, .06], [-CS + .04, 0, .06, s - .04], [CS - .04, 0, .06, s - .04], [0, 0, s - .1, .05], [0, 0, .05, s - .1]]) { sbox(w, 1.25, d, M.part, cx + ox, .625, cz + oz); sbox(w + .02, .04, d + .02, M.part2, cx + ox, 1.27, cz + oz); }
-  for (const [qx, qz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) {
-    const dx = cx + qx * CS / 2, dz = cz + qz * CS / 2;
-    sbox(CS * .82, .05, CS * .82, M.desk, dx, .74, dz);
-    sbox(.42, .3, .03, M.black, dx + qx * .25, 1.02, dz + qz * .25, Math.atan2(-qx, -qz) + Math.PI / 4 * 0);
-    splane(.38, .26, M.screen, dx + qx * .25 - qx * .02, 1.02, dz + qz * .25 - qz * .02, Math.atan2(-qx, -qz));
-    sbox(.4, .05, .4, M.chair, dx - qx * .1, .48, dz - qz * .1); sbox(.4, .45, .05, M.chair, dx - qx * .1, .72, dz - qz * .1 - qz * .18);
+/* --- LEVEL 0 은신처 문 --- */
+function buildHide(h, i) {
+  const [cx, cz] = h.d; const [nx, nz] = h.n; const [tx, tz] = h.t; const ry = Math.atan2(-nx, -nz);
+  const x = wc(cx), z = wc(cz);
+  // 3페이즈 전까지 문 자리를 막는 벽
+  const plug = new THREE.Mesh(new THREE.BoxGeometry(CS + .002, WH, CS + .002), getMat('wall1')); plug.position.set(x, WH / 2, z); world.add(plug);
+  // 문틀 + 문짝
+  const fx = x - nx * CS / 2, fz = z - nz * CS / 2;
+  const frame = new THREE.Group(); frame.visible = false; world.add(frame);
+  for (const s_ of [-1, 1]) { const p = mk(new THREE.BoxGeometry(.1, 2.5, .16), M.frameD); p.position.set(fx + tx * s_ * (CS / 2 - .05), 1.25, fz + tz * s_ * (CS / 2 - .05)); p.rotation.y = ry; frame.add(p); }
+  const top = mk(new THREE.BoxGeometry(CS, WH - 2.45, .16), getMat('wall1')); top.position.set(fx, 2.45 + (WH - 2.45) / 2, fz); top.rotation.y = ry; frame.add(top);
+  const lintel = mk(new THREE.BoxGeometry(CS, .1, .17), M.frameD); lintel.position.set(fx, 2.5, fz); lintel.rotation.y = ry; frame.add(lintel);
+  const pivotG = new THREE.Group(); pivotG.position.set(fx - tx * (CS / 2 - .1), 0, fz - tz * (CS / 2 - .1)); pivotG.rotation.y = ry; frame.add(pivotG);
+  const panel = mk(new THREE.BoxGeometry(CS - .22, 2.42, .06), M.door); panel.position.set((CS - .22) / 2, 1.21, 0); pivotG.add(panel);
+  const knob = mk(new THREE.SphereGeometry(.035, 8, 6), M.steel); knob.position.set(CS - .34, 1.05, .05); pivotG.add(knob); const knob2 = knob.clone(); knob2.position.z = -.05; pivotG.add(knob2);
+  const debris = new THREE.Group(); debris.visible = false; world.add(debris);
+  for (let k = 0; k < 4; k++) { const b = mk(new THREE.BoxGeometry(mr(.3, .6), .05, mr(.15, .4)), M.door); b.position.set(x + nx * mr(.2, 1.2) + tx * mr(-.5, .5), .03 + k * .02, z + nz * mr(.2, 1.2) + tz * mr(-.5, .5)); b.rotation.y = Math.random() * 3; debris.add(b); }
+  const lm = mk(new THREE.PlaneGeometry(.9, .45), new THREE.MeshBasicMaterial({ color: 0xfff4dc, toneMapped: false })); lm.rotation.x = Math.PI / 2; lm.position.set(wc(h.inner[0]), WH - .02, wc(h.inner[1])); world.add(lm);
+  const d = { i, cx, cz, n: h.n, t: h.t, ry, open: false, broken: false, brokenT: 0, hp: 4, ang: 0, jig: 0, plug, frame, pivotG, debris, room: h.inner, x, z };
+  DOORS.set(cx + ',' + cz, d); DOORL.push(d); for (const [a, b] of h.cells) HIDECELL.set(a + ',' + b, d);
+  inters.push({ x, y: 1.3, z, r: 2.4, hide: () => !S.p3, lab: () => d.broken ? `문이 부서졌다 — ${Math.ceil(d.brokenT)}초 뒤 다시 닫을 수 있다` : d.open ? '<b>[F]</b> 문을 닫는다 (소리 남)' : '<b>[F]</b> 문을 연다 (소리 남)', act: () => toggleDoor(d) });
+}
+let startDoor = null, elevPlug = null;
+function graffitiTex() {
+  const [c, g] = cvs(512, 512); g.clearRect(0, 0, 512, 512);
+  const J = (v, a = 3) => v + (Math.random() - .5) * a;
+  const line = (pts, col, w) => { g.strokeStyle = col; g.lineWidth = w; g.lineCap = g.lineJoin = 'round'; for (let k = 0; k < 2; k++) { g.beginPath(); pts.forEach(([x, y], i) => i ? g.lineTo(J(x), J(y)) : g.moveTo(J(x), J(y))); g.stroke(); } };
+  const door = (x, y) => { line([[x, y + 200], [x, y], [x + 90, y], [x + 90, y + 200]], '#a3120f', 7); line([[x + 70, y + 105], [x + 78, y + 105]], '#a3120f', 6); };
+  const man = (x, y) => { g.strokeStyle = '#1b1b1b'; g.lineWidth = 6; g.beginPath(); g.arc(J(x), J(y), 14, 0, 6.3); g.stroke(); line([[x, y + 14], [x + 4, y + 80]], '#1b1b1b', 6); line([[x + 4, y + 80], [x - 14, y + 130]], '#1b1b1b', 6); line([[x + 4, y + 80], [x + 26, y + 126]], '#1b1b1b', 6); line([[x - 18, y + 52], [x + 2, y + 34], [x + 28, y + 50]], '#1b1b1b', 6); };
+  door(60, 120); man(22, 170); line([[110, 300], [165, 300], [150, 285], [165, 300], [150, 315]], '#1b1b1b', 6);
+  door(250, 120); man(212, 170); line([[300, 300], [355, 300], [340, 285], [355, 300], [340, 315]], '#1b1b1b', 6);
+  g.fillStyle = '#a3120f'; g.font = "900 120px 'Noto Sans KR', sans-serif"; g.save(); g.translate(380, 290); g.rotate(-.12); g.fillText('×2', 0, 0); g.restore();
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
+}
+const redMat = LM(0x8c1512, { emissive: 0x1a0000 }), voidMat = new THREE.MeshBasicMaterial({ color: 0x2a0000, toneMapped: false });
+function buildRed(rd, i) {
+  const [cx, cz] = rd.d; const [nx, nz] = rd.n; const [tx, tz] = rd.t; const ry = Math.atan2(-nx, -nz);
+  const x = wc(cx), z = wc(cz); const fx = x - nx * CS / 2, fz = z - nz * CS / 2;
+  const plug = mk(new THREE.BoxGeometry(CS + .002, WH, CS + .002), getMat('wall1')); plug.position.set(x, WH / 2, z); world.add(plug);
+  const grp = new THREE.Group(); grp.visible = false; world.add(grp);
+  for (const s_ of [-1, 1]) { const p = mk(new THREE.BoxGeometry(.12, 2.55, .18), redMat); p.position.set(fx + tx * s_ * (CS / 2 - .06), 1.27, fz + tz * s_ * (CS / 2 - .06)); p.rotation.y = ry; grp.add(p); }
+  const top = mk(new THREE.BoxGeometry(CS, WH - 2.5, .18), getMat('wall1')); top.position.set(fx, 2.5 + (WH - 2.5) / 2, fz); top.rotation.y = ry; grp.add(top);
+  const lin = mk(new THREE.BoxGeometry(CS, .12, .19), redMat); lin.position.set(fx, 2.55, fz); lin.rotation.y = ry; grp.add(lin);
+  const back = mk(new THREE.PlaneGeometry(CS, WH), voidMat); back.position.set(x + nx * (CS / 2 - .03), WH / 2, z + nz * (CS / 2 - .03)); back.rotation.y = Math.atan2(-nx, -nz); grp.add(back);
+  const pivotG = new THREE.Group(); pivotG.position.set(fx - tx * (CS / 2 - .12), 0, fz - tz * (CS / 2 - .12)); pivotG.rotation.y = ry; grp.add(pivotG);
+  const panel = mk(new THREE.BoxGeometry(CS - .26, 2.46, .07), redMat); panel.position.set((CS - .26) / 2, 1.23, 0); pivotG.add(panel);
+  const knob = mk(new THREE.SphereGeometry(.035, 8, 6), M.steel); knob.position.set(CS - .38, 1.05, -.05); pivotG.add(knob);
+  // 옆 벽 낙서
+  const gf = new THREE.Mesh(new THREE.PlaneGeometry(1.3, 1.3), new THREE.MeshLambertMaterial({ map: graffitiTex(), transparent: true, alphaTest: .05 }));
+  gf.position.set(fx - nx * .01 + tx * CS * 1.15, 1.45, fz - nz * .01 + tz * CS * 1.15); gf.rotation.y = Math.atan2(-nx, -nz); world.add(gf);
+  const r = { i, d: rd.d, n: rd.n, x, z, ry, plug, grp, pivotG, open: false, ang: 0 }; REDS.push(r);
+  inters.push({ x, y: 1.3, z, r: 2.6, hide: () => !S.redOn || r.open, lab: () => '<b>[F]</b> 빨간 문을 연다', act: () => { r.open = true; sfx('doorop', [x, 1.2, z]); } });
+}
+function revealRed() {
+  if (S.redOn || S.stage !== 1) return; S.redOn = true;
+  for (const r of REDS) { r.plug.visible = false; r.grp.visible = true; }
+  sfx('glitch'); setTimeout(() => subtitle('맵 끝 어딘가에 빨간 문이 생겼다. 벽의 낙서를 봐라.', 5), 4500);
+  updateObjective();
+}
+function redPass(r) {
+  if ((S.redCD || 0) > S.t || S.riding) return; S.redCD = S.t + 1.2;
+  const o = REDS.find(q => q !== r); if (!o) return;
+  const ox = o.x - o.n[0] * CS * 1.4, oz = o.z - o.n[1] * CS * 1.4;
+  teleport(ox, oz, Math.atan2(o.n[0], o.n[1])); o.open = true; o.ang = Math.PI / 2;
+  setTimeout(() => { if (o) o.open = false; }, 1500); r.open = false;
+  const f = $('#flash'); f.style.background = '#600'; f.style.transition = 'none'; f.style.opacity = .7; requestAnimationFrame(() => { f.style.transition = 'opacity .9s'; f.style.opacity = 0; setTimeout(() => f.style.background = '#fff', 950); });
+  sfx('glitch'); sfx('doorop', [ox, 1.2, oz]);
+  netEv({ t: 'rpass', by: PNAME }); onRedPass(PNAME);
+}
+function onRedPass(by) {
+  S.redCount = (S.redCount || 0) + 1;
+  if (by !== PNAME) msg(`${by}님이 빨간 문을 통과했다. (${Math.min(2, S.redCount)}/2)`, '#f88');
+  if (S.redCount === 1) subtitle('…반대편 벽에서 나왔다. 같은 복도가 끝없이 이어진다. (1/2)', 4);
+  if (S.redCount >= 2 && !S.elevShown) revealElevator();
+  updateObjective();
+}
+function revealElevator() {
+  if (S.elevShown) return; S.elevShown = true; if (elevPlug) elevPlug.visible = false;
+  sfx('ding'); sfx('door'); subtitle('어딘가에서 승강기 도착음이 울렸다. 이제 열쇠를 쓸 수 있다. (나침반)', 5); updateObjective();
+}
+function updateReds(dt) {
+  for (const r of REDS) { r.ang = lerp(r.ang, r.open ? Math.PI / 2 : 0, 1 - Math.exp(-dt * 6)); r.pivotG.rotation.y = r.ry + r.ang; }
+  if (S.redOn && !S.dead) { const [cx, cz] = cellAtW(PL.x, PL.z); if (cellT(cx, cz) === 8) { const r = REDS.find(q => q.d[0] === cx && q.d[1] === cz); if (r) redPass(r); } }
+}
+function buildStartDoor(sd) {
+  const [cx, cz] = sd.c; const [nx, nz] = sd.n; const tx = -nz, tz = nx; const ry = Math.atan2(-nx, -nz);
+  const x = wc(cx), z = wc(cz); const fx = x - nx * CS / 2, fz = z - nz * CS / 2;
+  for (const s_ of [-1, 1]) { const p = mk(new THREE.BoxGeometry(.1, 2.5, .16), M.frameD); p.position.set(fx + tx * s_ * (CS / 2 - .05), 1.25, fz + tz * s_ * (CS / 2 - .05)); p.rotation.y = ry; world.add(p); }
+  const top = mk(new THREE.BoxGeometry(CS, WH - 2.45, .16), getMat('wall1')); top.position.set(fx, 2.45 + (WH - 2.45) / 2, fz); top.rotation.y = ry; world.add(top);
+  const lintel = mk(new THREE.BoxGeometry(CS, .1, .17), M.frameD); lintel.position.set(fx, 2.5, fz); lintel.rotation.y = ry; world.add(lintel);
+  const sign = new THREE.Mesh(new THREE.PlaneGeometry(.9, .22), new THREE.MeshBasicMaterial({ map: textTex(['EXIT · 비상구'], 384, 96, { bg: '#1c7a3a', fg: '#effff2', fs: 44 }), toneMapped: false }));
+  sign.position.set(fx - nx * .1, 2.72, fz - nz * .1); sign.rotation.y = Math.atan2(-nx, -nz); world.add(sign);
+  const pivotG = new THREE.Group(); pivotG.position.set(fx - tx * (CS / 2 - .1), 0, fz - tz * (CS / 2 - .1)); pivotG.rotation.y = ry; world.add(pivotG);
+  const panel = mk(new THREE.BoxGeometry(CS - .22, 2.42, .06), M.door); panel.position.set((CS - .22) / 2, 1.21, 0); pivotG.add(panel);
+  const knob = mk(new THREE.SphereGeometry(.035, 8, 6), M.steel); knob.position.set(CS - .34, 1.05, -.05); pivotG.add(knob);
+  startDoor = { x, z, ry, pivotG, ang: 0, n: sd.n };
+  inters.push({ x, y: 1.3, z, r: 2.6, hide: () => S.startOpen, lab: () => '<b>[F]</b> 문을 연다 — 시작', act: () => { if (S.startOpen) return; netEv({ t: 'sopen', by: PNAME }); openStart(PNAME); } });
+}
+function openStart(by) {
+  if (S.startOpen || !startDoor) return; S.startOpen = true; sfx('doorop', [startDoor.x, 1.2, startDoor.z]);
+  if (by !== PNAME) msg(`${by}님이 문을 열었다.`, '#ffd76a');
+  updateObjective();
+  setTimeout(() => { if (S.stage === 1 && isHost()) spawnBoss(); }, 1400);
+}
+function bossStartPos() {
+  const sd = LV.sdoor; const ox = sd.c[0] + sd.n[0], oz = sd.c[1] + sd.n[1];
+  const D = bfsCells(ox, oz, (x, z) => cellT(x, z) !== 1);
+  let bp = null, bd = 1e9;
+  for (let z = 0; z < H; z++) for (let x = 0; x < W; x++) { const d = D[z * W + x]; if (d < 0 || zone[z * W + x]) continue; const s_ = Math.abs(d - 13) + (hitsGrid(wc(x), wc(z), .8, blockedE) ? 100 : 0) + Math.random() * 2; if (s_ < bd) { bd = s_; bp = [wc(x), wc(z)]; } }
+  return bp || LV.bossPos;
+}
+function toggleDoor(d) {
+  if (!S.p3 || d.broken) return;
+  const [pcx, pcz] = cellAtW(PL.x, PL.z); if (d.open && pcx === d.cx && pcz === d.cz) { msg('문틀에 서 있어서 닫을 수 없다.', '#aaa'); return; }
+  setDoor(d.i, !d.open); netEv({ t: 'door', i: d.i, o: d.open ? 1 : 0 }); makeNoise(d.x, d.z, 9);
+}
+function setDoor(i, o) { const d = DOORL[i]; if (!d || d.broken) return; d.open = !!o; sfx('doorop', [d.x, 1.2, d.z]); }
+function breakDoor(d) { if (!d) return; d.broken = true; d.open = false; d.brokenT = 16; d.hp = 0; sfx('crash', [d.x, 1.2, d.z]); sparks(d.x, 1.2, d.z, 0xd9cfb4, 20, 3); const dd = Math.hypot(PL.x - d.x, PL.z - d.z); if (dd < 10) PL.shake = Math.max(PL.shake, (10 - dd) / 10); if (HIDECELL.get(cellAtW(PL.x, PL.z).join(',')) === d) subtitle('문이 박살 났다!', 2.5); }
+function fixDoor(d) { if (!d) return; d.broken = false; d.hp = 4; d.open = false; d.brokenT = 0; }
+function poundFx(d) { if (!d) return; d.jig = .35; sfx('pound', [d.x, 1.2, d.z]); const dd = Math.hypot(PL.x - d.x, PL.z - d.z); if (dd < 8) PL.shake = Math.max(PL.shake, (8 - dd) / 8 * .6); }
+function updateDoors(dt) {
+  for (const d of DOORL) {
+    if (S.p3 && d.plug.visible !== false) { d.plug.visible = false; d.frame.visible = true; }
+    const tgt = d.open ? Math.PI / 2 : 0; d.ang = lerp(d.ang, tgt, 1 - Math.exp(-dt * 8)); d.jig = Math.max(0, d.jig - dt);
+    d.pivotG.rotation.y = d.ry + d.ang + (d.jig > 0 ? Math.sin(d.jig * 60) * .05 : 0);
+    d.pivotG.visible = !d.broken; d.debris.visible = d.broken;
   }
+  if (startDoor) { startDoor.ang = lerp(startDoor.ang, S.startOpen ? Math.PI / 2 : 0, 1 - Math.exp(-dt * 4)); startDoor.pivotG.rotation.y = startDoor.ry + startDoor.ang; }
+  if (secDoor) { secDoor.o = lerp(secDoor.o, S.secOpen ? 1 : 0, 1 - Math.exp(-dt * 3)); secDoor.m.position.set(secDoor.x + secDoor.tx * secDoor.o * CS * .95, 1.35, secDoor.z + secDoor.tz * secDoor.o * CS * .95); secDoor.led.material = S.secOpen ? M.ledG : M.ledR; }
+}
+
+/* --- LEVEL 1 사무실 --- */
+function buildCubicle(blk) {
+  const { bx, bz } = blk; const s_ = CS * 2, cx = (bx + 1) * CS, cz = (bz + 1) * CS;
+  for (const [ox, oz, w, d] of [[0, -CS + .04, s_ - .04, .06], [0, CS - .04, s_ - .04, .06], [-CS + .04, 0, .06, s_ - .04], [CS - .04, 0, .06, s_ - .04], [0, 0, s_ - .1, .05], [0, 0, .05, s_ - .1]]) { sbox(w, 1.25, d, M.part, cx + ox, .625, cz + oz); sbox(w + .02, .04, d + .02, M.part2, cx + ox, 1.27, cz + oz); }
+  const [c, g] = cvs(256, 64); g.fillStyle = '#d8dcd6'; g.fillRect(0, 0, 256, 64);
+  const geos = [];
+  blk.desks.forEach((d, k) => {
+    const { qx, qz, dx, dz } = d;
+    sbox(CS * .82, .05, CS * .82, M.desk, dx, .74, dz);
+    sbox(.42, .3, .03, M.black, d.mx, 1.02, d.mz, Math.atan2(qx, qz));
+    splane(.38, .26, d.kind === 'locked' ? M.screen : M.screen2, d.mx + qx * .021, 1.02, d.mz + qz * .021, Math.atan2(qx, qz));
+    sbox(.06, .2, .06, M.black, d.mx, .86, d.mz);
+    sbox(.4, .05, .4, M.chair, dx + qx * .12, .48, dz + qz * .12); sbox(.4, .45, .05, M.chair, dx + qx * .12, .72, dz + qz * .3);
+    sbox(.36, .3, .5, M.desk, dx + qx * .2, .55, dz - qz * .15);
+    // 이름표
+    const ux = (k % 2) * 128, uy = Math.floor(k / 2) * 32;
+    g.fillStyle = '#123a22'; g.fillRect(ux + 2, uy + 2, 124, 28); g.fillStyle = '#d8ffe4'; g.font = "700 15px 'Noto Sans KR', sans-serif"; g.textBaseline = 'middle'; g.fillText(d.id, ux + 7, uy + 16); g.font = "13px 'Noto Sans KR', sans-serif"; g.fillText(d.name, ux + 62, uy + 16);
+    const pg = new THREE.PlaneGeometry(.56, .14); const uv = pg.attributes.uv; for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) * .5 + (k % 2) * .5, uv.getY(i) * .5 + (1 - Math.floor(k / 2)) * .5 - 0);
+    pg.applyMatrix4(new THREE.Matrix4().compose(new THREE.Vector3(dx, 1.08, cz + qz * (CS + .002)), new THREE.Quaternion().setFromEuler(new THREE.Euler(0, qz > 0 ? 0 : Math.PI, 0)), new THREE.Vector3(1, 1, 1)));
+    geos.push(pg);
+  });
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4;
+  world.add(new THREE.Mesh(mergeGeometries(geos), new THREE.MeshLambertMaterial({ map: t, emissive: 0x0a1a10 })));
+}
+function zoneSign(label, x, z, sub) {
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(1.2, .5), new THREE.MeshBasicMaterial({ map: textTex(sub ? [label, sub] : [label], 256, 108, { bg: '#08180e', fg: '#9dffbf', fs: sub ? 34 : 64 }), toneMapped: false, side: THREE.DoubleSide }));
+  m.position.set(x, WH - .42, z); world.add(m); sbox(.02, .25, .02, M.black, x - .45, WH - .12, z); sbox(.02, .25, .02, M.black, x + .45, WH - .12, z);
+}
+let secDoor = null;
+function buildSec(sc) {
+  const { x0, z0 } = sc;
+  const dx = (x0 + 6) * CS, dz = wc(z0 + 6);
+  sbox(CS * 2 - .1, .73, CS * .85, M.desk, dx, .365, dz);
+  for (const o of [-.7, 0, .7]) { sbox(.5, .34, .04, M.black, dx + o, 1.0, dz - .1, 0); splane(.46, .3, M.screen2, dx + o, 1.0, dz - .078, 0); splane(.46, .3, M.screen2, dx + o, 1.0, dz - .122, Math.PI); }
+  // CCTV 묶음 (천장)
+  for (let i = 0; i < 6; i++) { const ox = (i % 3 - 1) * .62, oy = Math.floor(i / 3) * .42; for (const ry of [0, Math.PI]) { sbox(.58, .38, .05, M.black, dx + ox, 2.0 + oy, dz + .55 + (ry ? .03 : -.03), 0); splane(.52, .32, M.cctv, dx + ox, 2.0 + oy, dz + .55 + (ry ? .06 : -.06), ry); } }
+  sbox(.04, WH - 2.6, .04, M.black, dx, 2.6 + (WH - 2.6) / 2, dz + .55);
+  for (const [rx_, rz_] of sc.racks) { const x = wc(rx_), z = wc(rz_); sbox(CS * .9, 2.2, CS * .8, M.rack, x, 1.1, z); for (let k = 0; k < 10; k++) { sbox(.03, .03, .02, Math.random() < .2 ? M.ledR : M.ledG, x + mr(-.5, .5), mr(.3, 2), z + (k % 2 ? 1 : -1) * CS * .41); } }
+  // 카드 문
+  const [cx, cz] = sc.door.c; const [nx, nz] = sc.door.n; const tx = -nz, tz = nx; const ry = Math.atan2(-nx, -nz);
+  const m = mk(new THREE.BoxGeometry(CS - .02, 2.7, .1), M.sdoor); m.rotation.y = ry; world.add(m);
+  const ox = wc(cx) + nx * (CS / 2 + .02), oz = wc(cz) + nz * (CS / 2 + .02);
+  sbox(CS + .3, WH - 2.7, .14, M.black, wc(cx) + nx * .05, 2.7 + (WH - 2.7) / 2, wc(cz) + nz * .05, ry);
+  const rd = { x: ox + tx * (CS / 2 + .2), z: oz + tz * (CS / 2 + .2) };
+  sbox(.14, .22, .05, M.black, rd.x, 1.25, rd.z, ry);
+  const led = mk(new THREE.BoxGeometry(.04, .04, .03), M.ledR); led.position.set(rd.x + nx * .03, 1.32, rd.z + nz * .03); world.add(led);
+  const sign = new THREE.Mesh(new THREE.PlaneGeometry(1.5, .32), new THREE.MeshBasicMaterial({ map: textTex(['보안실 · SECURITY'], 512, 108, { bg: '#1a1d1b', fg: '#e8fff0', fs: 46 }), toneMapped: false }));
+  sign.position.set(wc(cx) + nx * (CS / 2 + .03), 2.95, wc(cz) + nz * (CS / 2 + .03)); sign.rotation.y = Math.atan2(nx, nz); world.add(sign);
+  secDoor = { m, x: wc(cx), z: wc(cz), tx, tz, o: 0, led };
+  inters.push({ x: ox, y: 1.3, z: oz, r: 2.6, hide: () => S.secOpen, lab: () => countItem('card') ? '<b>[F]</b> 출입카드를 댄다' : '보안실 — 출입카드가 필요하다', act: () => { if (S.secOpen) return; if (!countItem('card')) { sfx('deny', [ox, 1.3, oz]); msg('카드 리더기에 빨간불이 켜져 있다. 출입카드가 필요하다.', '#ccc'); return; } netEv({ t: 'sdoor' }); openSec(PNAME); } });
+  inters.push({ x: dx, y: 1.0, z: dz, r: 2.6, hide: () => !S.secOpen, lab: () => '<b>[F]</b> 보안실 단말', act: () => openTerm('sec') });
+}
+function openSec(by) { if (S.secOpen) return; S.secOpen = true; sfx('card'); sfx('door', [secDoor.x, 1.3, secDoor.z]); msg(by === PNAME ? '삑 — 보안실 문이 열렸다.' : `${by}님이 보안실 문을 열었다.`, '#9dffbf'); updateObjective(); }
+function buildOffice() {
+  const L = LV;
+  for (const b of L.blocks) buildCubicle(b);
+  for (let rz = 0; rz < L.RZ; rz++) for (let rx = 0; rx < L.R; rx++) { const x = (L.X0 + rx * L.STEP + 6) * CS, z = (L.Z0 + rz * L.STEP + 6) * CS; const zn = zoneName(rx, rz); if (rx === L.secR.rx && rz === L.secR.rz) continue; zoneSign(zn, x, z + (zn === L.phoneZone ? 2 : 0), zn === L.phoneZone ? '회의실' : null); }
+  buildSec(L.sec);
+  buildPhone(L.phone[0], L.phone[1]);
+  for (const d of L.desks) {
+    inters.push({ x: d.dx + d.qx * .2, y: .6, z: d.dz - d.qz * .15, r: 2.3, lab: () => d.searched ? `${d.id} · ${d.name} — 이미 뒤진 서랍` : `<b>[F]</b> ${d.id} · ${d.name} 서랍 뒤지기`, act: () => searchDrawer(d) });
+    inters.push({ x: d.mx, y: 1.02, z: d.mz, r: 2.6, lab: () => d.kind === 'public' ? '<b>[F]</b> 공용 단말 사용' : d.kind === 'lore' ? `<b>[F]</b> ${d.name}의 켜진 단말 보기` : `${d.id} 단말 — 화면 잠김`, act: () => { if (d.kind === 'public') openTerm('public', d); else if (d.kind === 'lore') openTerm('lore', d); else { sfx('deny', [d.mx, 1, d.mz]); msg(`잠금 화면: "${d.name} 님, 비밀번호를 입력하세요" — 알 수 없다.`, '#9a9'); } } });
+  }
+}
+function searchDrawer(d) {
+  if (d.searched) { msg('이미 뒤진 서랍이다.', '#aaa'); return; }
+  d.searched = true; netEv({ t: 'drawer', i: d.i }); sfx('drawer', [d.dx, .6, d.dz]);
+  const c = d.drawer; const who = `${d.id} · ${d.name}`;
+  if (c.type === 'card') { addItem('card'); sfx('card'); showNote(`${who} 서랍`, c.note); addClue(`${who} 서랍 — 메모`, c.note); msg('보안실 출입카드 획득', '#ffd76a'); updateObjective(); }
+  else if (c.type === 'note') { showNote(`${who} 서랍`, c.note); addClue(`${who} 서랍`, c.note); }
+  else if (c.type === 'supply') { const [id, n] = c.item; const left = addItem(id, n); if (left) { const iid = uid(); spawnItem(id, left, PL.x, 0, PL.z, null, iid); netEv({ t: 'spawn', iid, id, n: left, x: PL.x, y: 0, z: PL.z }); } msg(`서랍에서 ${ITEMS[id].name}${n > 1 ? ' ×' + n : ''}을(를) 찾았다.`, '#fff'); }
+  else if (c.type === 'junk') subtitle(c.text, 4);
+  else msg('비어 있다.', '#aaa');
+}
+/* --- 단서 / 메모 / 단말 --- */
+const CLUES = [];
+function addClue(title, text) { if (CLUES.some(c => c.title === title)) return; CLUES.push({ title, text }); msg('단서 수첩에 적었다 (Tab)', '#ffd76a'); }
+function showNote(title, text) { $('#ntitle').textContent = title; $('#nbody').textContent = text; openUI('note'); sfx('paper'); }
+function renderClues() { $('#cluelist').innerHTML = CLUES.length ? CLUES.map(c => `<div class="ent"><b>${c.title}</b>\n${c.text.replace(/</g, '&lt;')}</div>`).join('') : '<div class="ent">아직 적어 둔 것이 없다.</div>'; }
+const TERM = { kind: null, tab: 0, mail: -1, desk: null };
+function openTerm(kind, desk) { TERM.kind = kind; TERM.desk = desk; TERM.tab = 0; TERM.mail = -1; if (kind === 'public' && !S.readPublic) { S.readPublic = true; updateObjective(); } openUI('term'); renderTerm(); sfx('beep'); }
+function tabsOf(kind) { if (kind === 'public') return ['받은 메일함', '사내 인명부', '시스템 로그', '층 안내도']; if (kind === 'sec') return S.secAuth ? ['회선 관리', 'CCTV', '출입 기록'] : ['로그인']; return ['문서']; }
+function renderTerm() {
+  const pz = LV.pz; const k = TERM.kind; const tabs = tabsOf(k);
+  $('#ttitle').textContent = k === 'public' ? 'MERIDIAN 사내망 · 공용 단말 7F-01' : k === 'sec' ? 'MERIDIAN 보안 콘솔 · SEC-7F' : `${TERM.desk.id} · ${TERM.desk.name}`;
+  $('#tnav').innerHTML = tabs.map((t, i) => `<button data-t="${i}" class="${i === TERM.tab ? 'on' : ''}">${t}</button>`).join('');
+  const T_ = tabs[TERM.tab]; let h = '';
+  if (k === 'lore') { const l = pz.lore[TERM.desk.lore]; h = `<span class="hl">${l.t}</span>\n\n${l.b}`; addClue(`${TERM.desk.id} 단말 — ${l.t}`, l.b); }
+  else if (T_ === '받은 메일함') {
+    if (TERM.mail < 0) h = '<span class="dim">받은 메일 ' + pz.mails.length + '통 · 클릭해서 열기</span>\n\n' + pz.mails.map((m, i) => `<div class="mrow ${m.read ? 'read' : ''}" data-m="${i}"><span style="width:200px">${m.from}</span><span>${m.subj}</span></div>`).join('');
+    else { const m = pz.mails[TERM.mail]; m.read = true; addClue(`메일 — ${m.subj}`, `보낸 사람: ${m.from}\n\n${m.body}`); h = `<span class="dim">보낸 사람:</span> ${m.from}\n<span class="dim">받는 사람:</span> ${m.to}\n<span class="dim">제목:</span> <span class="hl">${m.subj}</span>\n\n${m.body}\n\n<span class="tbtn" data-back="1">← 목록</span>`; }
+  }
+  else if (T_ === '사내 인명부') h = '<span class="dim">사내 인명부 (일부) · 이름 / 부서 / 직급 / 좌석</span>\n<table>' + pz.dir.map(d => `<tr><td>${d.name}</td><td>${d.dept}</td><td>${d.rank}</td><td class="hl">${d.id}</td></tr>`).join('') + '</table>';
+  else if (T_ === '시스템 로그') h = '<span class="dim">/var/log/7f-sim.log — 오늘</span>\n\n' + pz.logs.join('\n');
+  else if (T_ === '층 안내도') { h = '<span class="dim">7F 층 안내도 — 구역 표지판은 천장에 걸려 있다</span>\n\n'; for (let rz = 0; rz < LV.RZ; rz++) { let row = ''; for (let rx = 0; rx < LV.R; rx++) { const zn = zoneName(rx, rz); const tag = zn === LV.sec.zone ? '[보안실]' : zn === LV.phoneZone ? '[회의실]' : rx === 0 && rz === 0 ? '[승강기]' : `[ ${zn}  ]`; row += tag.padEnd(9, ' ') + ' '; } h += row + '\n\n'; } h += '<span class="dim">북쪽이 위 · 승강기는 A1 구역 북쪽 벽</span>'; }
+  else if (T_ === '로그인') h = `<span class="hl">SEC-7F 보안 콘솔</span>\n권한 있는 사용자만 접근할 수 있습니다.\n\n암호 (숫자 4자리)\n<input id="tpw" maxlength="4" inputmode="numeric" autocomplete="off">\n<span class="tbtn" id="tpwgo">확인</span>\n\n<span id="tpwmsg" class="warn">${S.secLockT > S.t ? `잠금 — ${Math.ceil(S.secLockT - S.t)}초 뒤 다시 시도` : S.secTries ? `암호 불일치 (${S.secTries}회)` : ''}</span>`;
+  else if (T_ === '회선 관리') { h = '<span class="dim">외부 회선 상태</span>\n\n'; for (let i = 1; i <= 8; i++) { const st = i === 7 ? (S.line ? '<span class="hl">연결됨 — 회의실 단말 호출 중</span>' : '대기 (비상 전용)') : i === 5 ? '점검 중' : '<span class="dim">신호 없음</span>'; h += `B-${i}   ${st}\n`; } h += S.line ? `\n\n<span class="warn">경고: 비인가 프로세스 AGENT.exe 실행됨</span>` : `\n\n<span class="tbtn" id="tline">B-7 비상 회선 활성화</span>`; }
+  else if (T_ === 'CCTV') h = `<span class="dim">CAM 01–12</span>\n\nCAM 03  ${LV.phoneZone} 회의실 — 전화 부스 1대. 움직임 없음.\nCAM 07  승강기 홀 — 탑승 기록 0, 문은 열려 있음.\nCAM 09  <span class="warn">검은 정장 인물 1명. 정면을 보고 있다.</span>\nCAM 10  신호 없음\nCAM 11  <span class="warn">검은 정장 인물 1명. 카메라를 보고 있다.</span>\nCAM 12  당신의 뒷모습.`;
+  else if (T_ === '출입 기록') h = `<span class="dim">보안실 출입</span>\n\n${pz.secGuy.name} ${pz.secGuy.rank}   06:02 입실  06:40 퇴실 (카드 미반납)\n${pz.secGuy.name} ${pz.secGuy.rank}   06:02 입실  06:40 퇴실 (카드 미반납)\n${pz.secGuy.name} ${pz.secGuy.rank}   06:02 입실  06:40 퇴실 (카드 미반납)\n<span class="dim">… 동일 기록 11건</span>`;
+  $('#tmain').innerHTML = h;
+  const pw = $('#tpw'); if (pw) { setTimeout(() => pw.focus(), 30); pw.addEventListener('keydown', e => { e.stopPropagation(); if (e.key === 'Enter') tryPw(); if (e.key === 'Escape') closeUI(); }); $('#tpwgo').onclick = tryPw; }
+  const tl = $('#tline'); if (tl) tl.onclick = () => { if (S.line) return; netEv({ t: 'line', by: PNAME }); activateLine(PNAME); renderTerm(); };
+}
+function tryPw() {
+  const v = ($('#tpw').value || '').trim(); if (S.secLockT > S.t) return;
+  if (v === String(LV.pz.pa).padStart(2, '0') + String(LV.pz.cd).padStart(2, '0')) { S.secAuth = true; TERM.tab = 0; sfx('beep'); sfx('key'); renderTerm(); updateObjective(); }
+  else { S.secTries = (S.secTries || 0) + 1; sfx('deny'); if (S.secTries % 3 === 0) S.secLockT = S.t + 10; renderTerm(); }
+}
+$('#tnav').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; TERM.tab = +b.dataset.t; TERM.mail = -1; sfx('click'); renderTerm(); });
+$('#tmain').addEventListener('click', e => { const r = e.target.closest('.mrow'); if (r) { TERM.mail = +r.dataset.m; sfx('click'); renderTerm(); return; } if (e.target.dataset.back) { TERM.mail = -1; renderTerm(); } });
+$('#note').addEventListener('mousedown', () => closeUI());
+function activateLine(by) {
+  if (S.line) return; S.line = true; S.phoneOn = true; S.goal = { x: phone.x, z: phone.z };
+  sfx('alarm'); msg(by === PNAME ? 'B-7 회선을 열었다.' : `${by}님이 B-7 회선을 열었다.`, '#9dffbf');
+  subtitle('B-7 회선이 열렸다. 멀리서 전화벨 — 그리고 정장 차림의 발소리가 겹친다.', 5);
+  for (const p of panels) { p.base.setHex(0xffb0a0); if (panelMesh) panelMesh.setColorAt(p.i, p.base); } if (panelMesh) panelMesh.instanceColor.needsUpdate = true;
+  for (const l of POOL) l.color.setHex(0xff9c88);
+  S.agT = 4; updateObjective();
 }
 let phone = null;
 function buildPhone(px, pz) {
@@ -583,9 +1009,11 @@ const ITEMS = {
   cloth: { name: '천 조각', desc: '조합 재료.', max: 16 },
   tape: { name: '절연 테이프', desc: '조합 재료.', max: 8 },
   key1: { name: '방재 엘리베이터 열쇠', desc: '거인의 몸에서 떨어졌다. 「비상용 승강기」 문을 연다.', max: 1 },
-  key2: { name: '백도어 키', desc: '관리자가 남긴 코드 조각. 울리는 전화로 가져가라.', max: 1 },
+  drug: { name: '약품총', desc: '변이 억제제를 쏘는 주사총 (2발). 거인의 갑피를 녹인다. 재장전 불가.', max: 1, gun: 1 },
+  frag: { name: '열쇠 조각', desc: '방재 엘리베이터 열쇠의 1/4. 네 개를 조합대(E)에 모두 올리면 열쇠가 된다.', max: 4 },
+  card: { name: '보안실 출입카드', desc: '보안팀 직원의 출입카드. 보안실 카드 리더기에 댄다.', max: 1 },
 };
-const RECIPES = [{ in: ['cloth', 'cloth'], out: 'bandage' }, { in: ['almond', 'cloth'], out: 'medkit' }, { in: ['pipe', 'tape'], out: 'spiked' }];
+const RECIPES = [{ in: ['cloth', 'cloth'], out: 'bandage' }, { in: ['almond', 'cloth'], out: 'medkit' }, { in: ['pipe', 'tape'], out: 'spiked' }, { in: ['frag', 'frag', 'frag', 'frag'], out: 'key1' }];
 const WEAP = {
   pipe: { melee: 1, dmg: 34, cd: .55, range: 2.5 },
   spiked: { melee: 1, dmg: 58, cd: .6, range: 2.6 },
@@ -593,6 +1021,7 @@ const WEAP = {
   shotgun: { gun: 1, dmg: 13, cd: .85, mag: 6, ammo: 'shell', rt: 2.0, spread: .075, pel: 9, snd: 'shotgun' },
   rifle: { gun: 1, dmg: 19, cd: .095, mag: 30, ammo: 'ammo556', rt: 1.8, spread: .022, pel: 1, snd: 'rifle', auto: 1 },
   grenade: { thr: 1, cd: .9 },
+  drug: { gun: 1, drug: 1, dmg: 8, cd: .9, mag: 2, ammo: null, rt: 0, spread: .003, pel: 1, snd: 'dart' },
 };
 const HEAL = { almond: 30, bandage: 15, medkit: 65 };
 function drawIcon(id, g) {
@@ -613,7 +1042,9 @@ function drawIcon(id, g) {
     case 'cloth': P(2, 4, 12, 9, '#8a8a7a'); P(3, 5, 10, 7, '#a8a894'); P(5, 6, 1, 5, '#8a8a7a'); P(9, 5, 1, 6, '#8a8a7a'); P(13, 9, 2, 2, '#a8a894'); break;
     case 'tape': P(3, 3, 10, 10, '#1a1a1a'); P(4, 4, 8, 8, '#2a2a2a'); P(6, 6, 4, 4, '#8a7a5a'); P(7, 7, 2, 2, '#3a3a3a'); P(12, 10, 3, 2, '#1a1a1a'); break;
     case 'key1': P(2, 4, 6, 6, '#d4a434'); P(3, 5, 4, 4, '#2a2a2a'); P(8, 6, 7, 2, '#d4a434'); P(12, 8, 2, 2, '#d4a434'); P(14, 8, 1, 3, '#d4a434'); P(1, 10, 5, 4, '#c42a22'); break;
-    case 'key2': P(2, 2, 12, 12, '#04220e'); P(3, 3, 10, 10, '#0a3a18'); for (let i = 0; i < 5; i++) P(4 + i * 2, 4 + (i * 3) % 7, 1, 2 + (i % 3), '#5dff9a'); P(1, 6, 1, 4, '#c9a227'); P(14, 6, 1, 4, '#c9a227'); break;
+    case 'drug': P(1, 6, 10, 4, '#e8ecef'); P(2, 7, 8, 2, '#7dd3c8'); P(11, 7, 4, 2, '#9aa0a6'); P(15, 7, 1, 2, '#ddd'); P(3, 10, 3, 5, '#3a3f44'); P(4, 4, 4, 2, '#45d17a'); P(5, 3, 2, 1, '#2a8a4a'); break;
+    case 'frag': P(3, 3, 6, 6, '#d4a434'); P(4, 4, 4, 4, '#2a2a2a'); P(9, 5, 4, 2, '#d4a434'); P(12, 7, 1, 2, '#d4a434'); P(13, 5, 1, 1, '#d4a434'); P(10, 7, 1, 1, '#c9a227'); P(2, 9, 2, 3, '#b8892a'); break;
+    case 'card': P(1, 3, 14, 10, '#eef1f3'); P(1, 3, 14, 3, '#2b5fa8'); P(3, 8, 4, 3, '#d4a434'); P(4, 9, 2, 1, '#8a6a20'); P(9, 8, 5, 1, '#888'); P(9, 10, 4, 1, '#aaa'); break;
   }
 }
 const iconCv = {}, iconURLc = {}, iconTexC = {};
@@ -627,9 +1058,10 @@ let ITEM_SEQ = 0;
 function spawnItem(id, n, x, y, z, meta, iid) {
   if (iid && worldItems.some(i => i.iid === iid)) return null;
   const m = new THREE.Mesh(new THREE.PlaneGeometry(.42, .42), new THREE.MeshBasicMaterial({ map: iconTex(id), transparent: true, alphaTest: .5, side: THREE.DoubleSide, toneMapped: false }));
-  const big = id === 'key1' || id === 'key2'; if (big) m.scale.setScalar(1.6);
+  const big = ['key1', 'frag', 'drug', 'card'].includes(id); if (big) m.scale.setScalar(1.6);
   const ring = new THREE.Mesh(new THREE.RingGeometry(.22, .3, 20), new THREE.MeshBasicMaterial({ color: big ? 0xff4030 : 0xffffff, transparent: true, opacity: big ? .8 : .35, toneMapped: false })); ring.rotation.x = -Math.PI / 2; ring.position.y = .02;
   const it = { id, n, meta: meta || newMeta(id), mesh: m, ring, x, y, z, ph: (ITEM_SEQ * 1.7) % 6, iid: iid || ('w' + (ITEM_SEQ++)) };
+  if (big) { const beam = new THREE.Mesh(new THREE.CylinderGeometry(.06, .2, 6, 10, 1, true), new THREE.MeshBasicMaterial({ color: id === 'drug' ? 0x6dffb0 : 0xffc040, transparent: true, opacity: .22, depthWrite: false, toneMapped: false, blending: THREE.AdditiveBlending })); beam.position.set(0, 3, 0); ring.add(beam); beam.rotation.x = Math.PI / 2; beam.position.set(0, 0, 3); }
   m.position.set(x, y + .35, z); ring.position.set(x, .02, z); scene.add(m); scene.add(ring);
   worldItems.push(it); return it;
 }
@@ -669,10 +1101,9 @@ let LV = null; // 현재 레벨 생성 결과
 
 /* ================= 적 ================= */
 const KIND = {
-  giant: { hp: 1600, r: .7, h: 2.9, sp: 1.75, dmg: 30, range: 2.6, wind: .75, cd: 1.7, boss: 1 },
-  crawler: { hp: 45, r: .33, h: .8, sp: 4.3, dmg: 9, range: 1.2, wind: .22, cd: .9 },
-  admin: { hp: 2200, r: .45, h: 2.15, sp: 2.45, dmg: 24, range: 1.9, wind: .45, cd: 1.3, boss: 1 },
-  clone: { hp: 70, r: .38, h: 1.85, sp: 4.5, dmg: 10, range: 1.3, wind: .3, cd: .9 },
+  giant: { hp: 2400, r: .7, h: 2.9, sp: 1.75, dmg: 30, range: 2.6, wind: .75, cd: 1.7, boss: 1 },
+  faceless: { hp: 45, r: .32, h: 2.05, sp: 4.2, dmg: 10, range: 1.35, wind: .3, cd: .95 },
+  agent: { hp: 150, r: .4, h: 1.95, sp: 3.0, dmg: 18, range: 1.6, wind: .4, cd: 1.2, gun: 1 },
 };
 const enemies = [];
 let boss = null;
@@ -691,18 +1122,24 @@ function giantModel() {
   const hd = mk(new THREE.SphereGeometry(.26, 12, 10), skin); hd.scale.set(1, 1.15, 1); head.add(hd);
   const jaw = mk(new THREE.BoxGeometry(.34, .12, .22), dark); jaw.position.set(0, -.2, .12); head.add(jaw); P.jaw = jaw;
   for (const s of [-1, 1]) { const e = mk(new THREE.SphereGeometry(.045, 8, 6), eye); e.position.set(s * .1, .05, .23); head.add(e); }
+  P.eyeMat = eye;
+  const plateM = LM(0x4a4740, { emissive: 0x050505 }); P.plates = new THREE.Group(); chest.add(P.plates);
+  for (const [px, py, pz, sx, sy, sz, rx] of [[0, 1.05, -.42, 1.2, .5, .22, -.3], [0, .55, -.47, 1.1, .5, .2, 0], [-.55, 1.25, -.05, .45, .3, .7, .2], [.55, 1.25, -.05, .45, .3, .7, .2], [0, .75, .46, .9, .6, .12, 0], [0, 1.62, .25, .48, .2, .4, -.4]]) { const pl = mk(new THREE.BoxGeometry(sx, sy, sz), plateM); pl.position.set(px, py, pz); pl.rotation.x = rx; P.plates.add(pl); }
   P.armL = pivot(chest, -.82, 1.2, .05); P.armR = pivot(chest, .82, 1.2, .05);
   for (const A of [P.armL, P.armR]) { const u = mk(new THREE.CylinderGeometry(.17, .13, 1.75, 8), skin); u.position.y = -.88; A.add(u); const hnd = mk(new THREE.BoxGeometry(.32, .42, .26), dark); hnd.position.y = -1.85; A.add(hnd); for (let i = -1; i <= 1; i++) { const c = mk(new THREE.ConeGeometry(.035, .18, 5), M.white); c.position.set(i * .1, -2.12, .05); c.rotation.x = Math.PI; A.add(c); } }
   g.userData.P = P; g.userData.mats = [skin, dark]; return g;
 }
-function crawlerModel() {
-  const g = new THREE.Group(); const skin = LM(0x2c2724), eye = new THREE.MeshBasicMaterial({ color: 0xff3020, toneMapped: false }); const P = {};
-  const body = pivot(g, 0, .45, 0); P.body = body;
-  const b = mk(new THREE.BoxGeometry(.42, .26, .8), skin); body.add(b);
-  const h = mk(new THREE.SphereGeometry(.17, 10, 8), skin); h.position.set(0, .06, .48); h.scale.set(1, .85, 1.2); body.add(h);
-  for (const s of [-1, 1]) { const e = mk(new THREE.SphereGeometry(.03, 6, 4), eye); e.position.set(s * .07, .1, .66); body.add(e); }
-  P.legs = [];
-  for (const [lx, lz] of [[-1, 1], [1, 1], [-1, -1], [1, -1]]) { const L = pivot(body, lx * .2, 0, lz * .28); const m = mk(new THREE.CylinderGeometry(.035, .025, .62, 5), skin); m.position.set(lx * .18, -.2, 0); m.rotation.z = lx * .9; L.add(m); P.legs.push(L); }
+function facelessModel() {
+  const g = new THREE.Group(); const skin = LM(0xcfc8bb), dimple = LM(0xa9a191); const P = {};
+  P.legL = pivot(g, -.11, 1.05, 0); P.legR = pivot(g, .11, 1.05, 0);
+  for (const L of [P.legL, P.legR]) { const m = mk(new THREE.CylinderGeometry(.065, .045, 1.05, 7), skin); m.position.y = -.525; L.add(m); }
+  const chest = pivot(g, 0, 1.05, 0); P.chest = chest;
+  const t = mk(new THREE.CylinderGeometry(.17, .1, .74, 9), skin); t.position.y = .38; t.scale.z = .65; chest.add(t);
+  const head = pivot(chest, 0, .88, .05); P.head = head;
+  const hd = mk(new THREE.SphereGeometry(.13, 16, 12), skin); hd.scale.set(.88, 1.32, .95); head.add(hd);
+  for (const [x, y] of [[-.045, .03], [.045, .03], [0, -.07]]) { const dd = mk(new THREE.SphereGeometry(.028, 8, 6), dimple); dd.scale.set(1.4, .55, .3); dd.position.set(x, y, .118); head.add(dd); }
+  P.armL = pivot(chest, -.21, .7, 0); P.armR = pivot(chest, .21, .7, 0);
+  for (const A of [P.armL, P.armR]) { const a = mk(new THREE.CylinderGeometry(.04, .028, 1.02, 6), skin); a.position.y = -.51; A.add(a); const f = mk(new THREE.BoxGeometry(.07, .2, .035), skin); f.position.y = -1.1; A.add(f); }
   g.userData.P = P; g.userData.mats = [skin]; return g;
 }
 function suitModel(clone, s = 1) {
@@ -728,39 +1165,50 @@ function suitModel(clone, s = 1) {
 let EID = 0;
 function makeEnemy(k, x, z, id, hp, maxhp) {
   const K = KIND[k];
-  const mesh = k === 'giant' ? giantModel() : k === 'crawler' ? crawlerModel() : k === 'admin' ? suitModel(false, 1.15) : suitModel(true, 1);
+  const mesh = k === 'giant' ? giantModel() : k === 'faceless' ? facelessModel() : suitModel(false, 1.05);
   mesh.position.set(x, 0, z); scene.add(mesh);
   const mats = mesh.userData.mats; mats.forEach(m => m.userData.base = m.emissive.getHex());
-  const e = { id: id || ((k === 'giant' || k === 'admin') ? 'B' + S.stage : 'm' + (++EID)), k, K, x, z, tx: x, tz: z, yaw: 0, tyaw: 0, hp: hp ?? K.hp, maxhp: maxhp ?? K.hp, r: K.r, h: K.h, st: 0, cdT: 1, atkT: 0, mesh, walk: 0, stepAcc: 0, flashT: 0, dyingT: 0, tp: 0, blinkT: 0, sumT: 10, shotT: 3, roar: 0, enr: false, seen: performance.now() };
-  enemies.push(e); if (K.boss) boss = e; return e;
+  const e = { id: id || (k === 'giant' ? 'B' + S.stage : 'm' + (++EID)), k, K, x, z, tx: x, tz: z, yaw: 0, tyaw: 0, hp: hp ?? K.hp, maxhp: maxhp ?? K.hp, r: K.r, h: K.h, st: 0, cdT: 1, atkT: 0, mesh, walk: 0, stepAcc: 0, flashT: 0, dyingT: 0, tp: 0, blinkT: 0, sumT: 10, shotT: 3, roar: 0, ph: 1, anim: 0, bs: 'listen', t2: 2, chCd: 0, roarCd: 10, stunT: 0, heard: null, seen: performance.now() };
+  enemies.push(e); if (K.boss) { boss = e; bossIntro(); } return e;
 }
 function removeEnemy(e) { scene.remove(e.mesh); e.mesh.traverse(o => { if (o.geometry) o.geometry.dispose(); }); const i = enemies.indexOf(e); if (i >= 0) enemies.splice(i, 1); if (boss === e) boss = null; }
 function animEnemy(e, dt, moved) {
   const P = e.mesh.userData.P; const sp = moved / Math.max(dt, 1e-3);
-  e.walk += moved * (e.k === 'giant' ? 1.6 : e.k === 'crawler' ? 6 : 3.2);
+  e.walk += moved * (e.k === 'giant' ? 1.6 : e.k === 'faceless' ? 2.6 : 3.2);
   const w = Math.sin(e.walk), amp = Math.min(1, sp / Math.max(.5, e.K.sp * .5));
   if (e.hp <= 0) {
     e.dyingT += dt; const t = Math.min(1, e.dyingT / (e.K.boss ? 1.6 : .5));
-    e.mesh.rotation.x = -t * Math.PI / 2 * (e.k === 'crawler' ? 0 : 1); e.mesh.rotation.z = e.k === 'crawler' ? t * Math.PI : 0;
-    e.mesh.position.y = e.k === 'crawler' ? t * .45 : -t * .15; return;
+    e.mesh.rotation.x = -t * Math.PI / 2; e.mesh.position.y = -t * .15; return;
   }
   if (e.k === 'giant') {
-    P.legL.rotation.x = w * .45 * amp; P.legR.rotation.x = -w * .45 * amp;
+    const a = e.anim; let lf = w * .45 * amp;
+    if (a === 2) { e.walk += dt * 14; lf = Math.sin(e.walk) * .9; }
+    P.legL.rotation.x = lf; P.legR.rotation.x = -lf;
     const atk = e.st === 1; const wind = atk ? 1 - Math.max(0, e.atkT) / e.K.wind : 0;
-    P.armL.rotation.x = atk ? -2.4 * wind : -w * .3 * amp + .2; P.armR.rotation.x = atk ? -2.6 * wind : w * .3 * amp + .2;
-    P.chest.rotation.x = .38 + Math.sin(e.walk * 2) * .04 + (atk ? -.25 * wind : 0); P.jaw.position.y = -.2 - (atk || e.roarT > 0 ? .1 : 0);
+    let al = atk ? -2.4 * wind : -w * .3 * amp + .2, ar = atk ? -2.6 * wind : w * .3 * amp + .2, ch = .38 + Math.sin(e.walk * 2) * .04 + (atk ? -.25 * wind : 0);
+    if (a === 1) { al = ar = .9; ch = .75; }
+    else if (a === 2) { al = ar = -1.2; ch = .85; }
+    else if (a === 3) { al = ar = .1; ch = 1.0 + Math.sin(S.t * 2) * .05; }
+    else if (a === 4) { al = ar = -2.9; ch = .1; }
+    else if (a === 5) { const k_ = Math.sin(S.t * 9); al = -1.6 + k_ * .7; ar = -1.6 - k_ * .7; ch = .55; }
+    else if (a === 6) { ch = .38 + Math.sin(S.t * 13) * .25; al = .6; ar = -.4; }
+    P.armL.rotation.x = lerp(P.armL.rotation.x, al, Math.min(1, dt * 10)); P.armR.rotation.x = lerp(P.armR.rotation.x, ar, Math.min(1, dt * 10)); P.chest.rotation.x = lerp(P.chest.rotation.x, ch, Math.min(1, dt * 8));
+    P.jaw.position.y = -.2 - (atk || e.roarT > 0 || a === 1 ? .1 : 0);
+    P.head.rotation.y = e.ph === 3 && (a === 0) ? Math.sin(S.t * .9) * .6 : 0;
     e.mesh.position.y = Math.abs(Math.sin(e.walk)) * .06 * amp;
-  } else if (e.k === 'crawler') {
-    P.legs.forEach((L, i) => L.rotation.x = Math.sin(e.walk + (i % 2 ? Math.PI : 0) + (i > 1 ? Math.PI / 2 : 0)) * .7 * amp);
-    P.body.position.y = .45 + Math.abs(Math.sin(e.walk * 2)) * .05; P.body.rotation.x = e.st === 1 ? -.35 : 0;
+  } else if (e.k === 'faceless') {
+    P.legL.rotation.x = w * .85 * amp; P.legR.rotation.x = -w * .85 * amp;
+    const atk = e.st === 1;
+    P.armL.rotation.x = atk ? -1.5 : .5 + w * .25 * amp; P.armR.rotation.x = atk ? -1.7 : .5 - w * .25 * amp;
+    P.chest.rotation.x = .15 + .35 * amp; P.head.rotation.z = Math.sin(S.t * 3 + e.walk) * .12;
   } else {
     P.legL.rotation.x = w * .6 * amp; P.legR.rotation.x = -w * .6 * amp;
     const atk = e.st === 1;
-    P.armL.rotation.x = atk ? -1.4 : -w * .5 * amp; P.armR.rotation.x = (e.k === 'admin' && e.aimT > 0) ? -1.55 : atk ? -1.6 : w * .5 * amp;
-    P.chest.rotation.x = e.k === 'clone' ? .25 * amp : 0;
+    P.armL.rotation.x = atk ? -1.4 : -w * .5 * amp; P.armR.rotation.x = e.aimT > 0 ? -1.55 : atk ? -1.6 : w * .5 * amp;
+    P.chest.rotation.x = 0;
   }
 }
-function flashEnemy(e) { e.flashT = .09; e.mesh.userData.mats.forEach(m => m.emissive.setHex(e.k === 'admin' || e.k === 'clone' ? 0x30ff80 : 0x6a1010)); }
+function flashEnemy(e) { e.flashT = .09; e.mesh.userData.mats.forEach(m => m.emissive.setHex(e.k === 'agent' ? 0x30ff80 : 0x6a1010)); }
 
 /* --- 유동장 (호스트) --- */
 let FLOW = null, flowT = 0;
@@ -770,7 +1218,8 @@ function computeFlow(ps) {
   while (h < t) { const i = q[h++]; const x = i % W, z = (i / W) | 0; for (const [dx, dz] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) { const nx = x + dx, nz = z + dz; if (nx < 0 || nz < 0 || nx >= W || nz >= H) continue; const j = nz * W + nx; if (D[j] >= 0 || blockedE(nx, nz)) continue; D[j] = D[i] + 1; q[t++] = j; } }
   FLOW = D;
 }
-function flowDir(e) {
+function flowDir(e) { return flowDirOn(e, FLOW); }
+function flowDirOn(e, FLOW) {
   if (!FLOW) return null; const [cx, cz] = cellAtW(e.x, e.z); const cur = FLOW[cz * W + cx]; if (cur < 0) return null;
   let best = null, bd = cur;
   for (const [dx, dz] of [[1, 0], [-1, 0], [0, 1], [0, -1], [1, 1], [1, -1], [-1, 1], [-1, -1]]) {
@@ -801,74 +1250,156 @@ function alivePlayers() {
   for (const [id, p] of NET.peers) if (p.alive && p.stage === S.stage) a.push({ id, x: p.x, z: p.z });
   return a;
 }
-const MAXMIN = 14;
+function playerSpeed(id) { if (id === NET.self) return Math.hypot(PL.vx, PL.vz); const p = NET.peers.get(id); return p ? (p.v || 0) : 0; }
+const MAXMIN = 12;
+/* --- 소리 (3페이즈: 눈먼 거인) --- */
+function makeNoise(x, z, r) {
+  if (!r || !S.p3 || S.stage !== 1) return;
+  if (Math.hypot(x - PL.x, z - PL.z) < 3) S.noiseLvl = Math.max(S.noiseLvl, Math.min(1, r / 40));
+  if (isHost()) hostNoise(x, z, r); else netSend('ev', { t: 'noise', x: +x.toFixed(1), z: +z.toFixed(1), r }, NET.hostId);
+}
+function hostNoise(x, z, r) {
+  const b = boss; if (!b || b.hp <= 0 || b.ph !== 3) return;
+  const h = hideOf(...cellAtW(x, z)); if (h && !hideDoorOpen(h)) r *= .4;
+  if (Math.hypot(b.x - x, b.z - z) > r) return;
+  b.heard = { x, z, t: S.t, fresh: true };
+}
+function bossPath(e, tx, tz) {
+  const [cx, cz] = cellAtW(tx, tz); const key = cx + ',' + cz;
+  if (!e.pf || e.pfKey !== key || S.t - e.pfT > 2) { e.pf = bfsCells(cx, cz, blockedE); e.pfKey = key; e.pfT = S.t; }
+  return flowDirOn(e, e.pf);
+}
+function decideBlind(e) {
+  const h = e.heard; const d = Math.hypot(h.x - e.x, h.z - e.z);
+  const room = hideOf(...cellAtW(h.x, h.z));
+  if (room && !hideDoorOpen(room)) { e.goal = { x: room.x - room.n[0] * CS, z: room.z - room.n[1] * CS, door: room }; e.bs = 'walk'; e.slow = false; return; }
+  if (d < 4.2) { e.bs = 'slam'; e.t2 = .85; e.cx = h.x; e.cz = h.z; return; }
+  if (d < 26 && e.chCd <= 0 && losClear(e.x, e.z, h.x, h.z, blockedE)) { e.bs = 'wind'; e.t2 = .95; e.cx = h.x; e.cz = h.z; e.cmax = d + 5; e.roar++; e.roarT = .9; return; }
+  e.goal = { x: h.x, z: h.z }; e.bs = 'walk'; e.slow = false;
+}
+function blindBoss(e, dt, ps) {
+  e.chCd -= dt; e.roarCd -= dt; e.t2 -= dt;
+  const face = (x, z, r = 3) => { e.yaw = lerpAng(e.yaw, Math.atan2(x - e.x, z - e.z), dt * r); };
+  if (e.bs === 'listen' || e.bs === 'walk') for (const p of ps) if (Math.hypot(p.x - e.x, p.z - e.z) < 1.7) e.heard = { x: p.x, z: p.z, t: S.t, fresh: true };
+  if (e.roarCd <= 0 && (e.bs === 'listen' || e.bs === 'walk')) {
+    e.roarCd = 15; e.roar++; e.roarT = 1.6; sfx('roar', [e.x, 2, e.z]); netEv({ t: 'echo', x: e.x, z: e.z }); echoFx(e.x, e.z);
+    let best = null, bd = 1e9; for (const p of ps) { const d = Math.hypot(p.x - e.x, p.z - e.z); if (d < 22 && playerSpeed(p.id) > 2.0 && d < bd) { bd = d; best = p; } }
+    if (best) e.heard = { x: best.x, z: best.z, t: S.t, fresh: true };
+  }
+  if (e.heard && e.heard.fresh && (e.bs === 'listen' || e.bs === 'walk' || e.bs === 'pound')) { e.heard.fresh = false; decideBlind(e); }
+  switch (e.bs) {
+    case 'listen': e.anim = 0; if (e.t2 <= 0) { const c = randomCellNear(e.x, e.z, 5, 12); if (c) { e.goal = c; e.bs = 'walk'; e.slow = true; } e.t2 = mr(3, 6); } break;
+    case 'walk': {
+      e.anim = 0; const g = e.goal; if (!g) { e.bs = 'listen'; break; } const d = Math.hypot(g.x - e.x, g.z - e.z);
+      if (d < 1.4 || (e.stuckT || 0) > 4) { e.stuckT = 0; if (g.door && d < 2.5) { e.bs = 'pound'; e.t2 = .8; e.door = g.door; } else { e.bs = 'listen'; e.t2 = mr(2, 4); } break; }
+      const dir = losClear(e.x, e.z, g.x, g.z, blockedE) ? [g.x - e.x, g.z - e.z] : (bossPath(e, g.x, g.z) || [g.x - e.x, g.z - e.z]);
+      const L = Math.hypot(dir[0], dir[1]) || 1; const sp = e.slow ? .9 : 1.35; const ox = e.x, oz = e.z;
+      moveCircle(e, dir[0] / L * sp * dt, dir[1] / L * sp * dt, .6, blockedE); face(e.x + dir[0], e.z + dir[1], 3);
+      e.stuckT = Math.hypot(e.x - ox, e.z - oz) < sp * dt * .2 ? (e.stuckT || 0) + dt : 0; break;
+    }
+    case 'wind': e.anim = 1; face(e.cx, e.cz, 6); if (e.t2 <= 0) { e.bs = 'charge'; e.cdist = 0; e.hitSet = new Set(); const a = Math.atan2(e.cx - e.x, e.cz - e.z); e.cvx = Math.sin(a); e.cvz = Math.cos(a); e.yaw = a; } break;
+    case 'charge': {
+      e.anim = 2; const sp = 11 * dt; const nx = e.x + e.cvx * sp, nz = e.z + e.cvz * sp;
+      for (const p of ps) if (!e.hitSet.has(p.id) && Math.hypot(p.x - e.x, p.z - e.z) < 1.5) { e.hitSet.add(p.id); hostHitPlayer(p.id, 40, e); }
+      if (hitsGrid(nx, nz, .65, blockedE)) { e.bs = 'recover'; e.t2 = 2.8; netEv({ t: 'crash', x: e.x, z: e.z }); crashFx(e.x, e.z); const h = hideOf(...cellAtW(nx, nz)); if (h && !h.broken && !hideDoorOpen(h)) { h.hp -= 2; poundFx(h); netEv({ t: 'pound', i: h.i }); if (h.hp <= 0) { breakDoor(h); netEv({ t: 'dbreak', i: h.i }); } } break; }
+      e.x = nx; e.z = nz; e.cdist += sp; if (e.cdist >= e.cmax) { e.bs = 'recover'; e.t2 = 1.6; } break;
+    }
+    case 'recover': e.anim = 3; if (e.t2 <= 0) { e.bs = 'listen'; e.t2 = 1.5; e.chCd = 3.5; } break;
+    case 'slam': e.anim = 4; face(e.cx, e.cz, 5); if (e.t2 <= 0) { netEv({ t: 'crash', x: e.x, z: e.z, s: 1 }); crashFx(e.x, e.z, true); for (const p of ps) { const d = Math.hypot(p.x - e.x, p.z - e.z); if (d < 4.6 && losClear(e.x, e.z, p.x, p.z)) hostHitPlayer(p.id, Math.round(32 * (1 - d / 6.5)), e); } e.bs = 'recover'; e.t2 = 1.3; } break;
+    case 'pound': {
+      e.anim = 5; const dr = e.door; if (!dr || dr.broken || dr.open) { e.bs = 'listen'; e.t2 = .6; break; } face(dr.x, dr.z, 4);
+      if (e.t2 <= 0) { e.t2 = 1.4; dr.hp--; netEv({ t: 'pound', i: dr.i }); poundFx(dr); if (dr.hp <= 0) { breakDoor(dr); netEv({ t: 'dbreak', i: dr.i }); e.bs = 'listen'; e.t2 = .4; e.heard = { x: wc(dr.room[0]), z: wc(dr.room[1]), t: S.t, fresh: true }; } }
+      break;
+    }
+  }
+  e.st = 0; e.tx = e.x; e.tz = e.z;
+}
+function crashFx(x, z, slam) { sfx('crash', [x, 1, z]); sparks(x, .3, z, 0xd9c46c, slam ? 22 : 14, 3); const d = Math.hypot(PL.x - x, PL.z - z); if (d < 14) PL.shake = Math.max(PL.shake, (14 - d) / 14 * (slam ? 1 : .8)); }
+function echoFx(x, z) { const d = Math.hypot(PL.x - x, PL.z - z); if (d < 26) { PL.shake = Math.max(PL.shake, .4); if (d < 22) subtitle(Math.hypot(PL.vx, PL.vz) > 2 ? '포효가 울린다 — 움직이고 있었다면 들켰다!' : '포효가 울린다. 숨을 죽였다.', 2.5); } S.echoL = []; for (const p of panels) if (Math.hypot(p.x - x, p.z - z) < 22) { p.dark = S.t + mr(.25, 1.1); S.echoL.push(p); } }
+function setBossPhase(e, ph, silent) {
+  if (!e || e.ph >= ph) return; e.ph = ph; const P = e.mesh.userData.P; const skin = e.mesh.userData.mats[0];
+  if (ph >= 2) { if (P.plates.visible && !silent) { sparks(e.x, 1.8, e.z, 0x4a4740, 26, 3); } P.plates.visible = false; skin.color.setHex(0x6b3a30); skin.userData.base = 0x1c0503; skin.emissive.setHex(0x1c0503); }
+  if (ph >= 3) { P.eyeMat.color.setHex(0x080808); }
+  if (ph === 2 && !silent) { sfx('roar', [e.x, 2, e.z]); subtitle('약물이 퍼진다 — 갑피가 떨어져 나갔다. 이제 총알이 박힌다!', 4); }
+  if (ph === 3) enterPhase3(silent);
+  updateObjective();
+}
+function enterPhase3(silent) {
+  if (S.p3) return; S.p3 = true;
+  if (!silent) { sfx('crash'); sfx('roar', boss ? [boss.x, 2, boss.z] : null); subtitle('거인의 눈이 멀었다. 소리로 사냥한다 — 벽에 문 네 개가 생겼다.', 6); setTimeout(() => S.p3 && subtitle('C로 웅크리면 발소리가 나지 않는다. 총소리 · 먹는 소리 · 뛰는 소리를 조심하라.', 6), 6500); }
+  updateObjective();
+}
 function hostEnemies(dt) {
   const ps = alivePlayers();
   flowT -= dt; if (flowT <= 0) { flowT = .3; if (ps.length) computeFlow(ps); }
   const minions = enemies.filter(e => !e.K.boss && e.hp > 0).length;
+  for (const d of DOORL) if (d.broken) { d.brokenT -= dt; if (d.brokenT <= 0 && !ps.some(p => { const [cx, cz] = cellAtW(p.x, p.z); return cx === d.cx && cz === d.cz; }) && !enemies.some(e => { const [cx, cz] = cellAtW(e.x, e.z); return e.hp > 0 && cx === d.cx && cz === d.cz; })) { fixDoor(d); netEv({ t: 'dfix', i: d.i }); } }
   for (const e of enemies) {
-    if (e.hp <= 0) { e.dyingT += 0; continue; }
-    const K = e.K; e.cdT -= dt; e.blinkT -= dt;
-    if (e.roarT > 0) e.roarT -= dt;
+    if (e.hp <= 0) continue;
+    const K = e.K; e.cdT -= dt; if (e.roarT > 0) e.roarT -= dt;
+    if (e.stunT > 0) { e.stunT -= dt; e.anim = 6; continue; }
+    if (e.k === 'giant' && e.ph === 3) { blindBoss(e, dt, ps); continue; }
+    e.anim = 0;
     let tgt = null, td = 1e9; for (const p of ps) { const d = Math.hypot(p.x - e.x, p.z - e.z); if (d < td) { td = d; tgt = p; } }
-    // 보스 패턴
     if (K.boss && tgt) {
-      const pct = e.hp / e.maxhp; if (!e.enr && pct < .5) { e.enr = true; e.roar++; e.roarT = 1.6; hostRoar(e, true); }
       e.sumT -= dt;
-      if (e.sumT <= 0) { e.sumT = e.k === 'giant' ? (e.enr ? 11 : 16) : (e.enr ? 10 : 14); const n = Math.min(MAXMIN - minions, 1 + ps.length + (e.enr ? 1 : 0)); if (n > 0) { e.roar++; e.roarT = 1.4; hostRoar(e); for (let i = 0; i < n; i++) { const c = randomCellNear(e.x, e.z, 1.6, 4); if (c) { const m = makeEnemy(e.k === 'giant' ? 'crawler' : 'clone', c.x, c.z); m.cdT = 1; m.yaw = Math.random() * 6; } } } }
-      if (e.k === 'admin') {
-        e.shotT -= dt; if (e.aimT > 0) e.aimT -= dt;
-        if (e.shotT <= 0 && td < 28 && losClear(e.x, e.z, tgt.x, tgt.z)) { e.shotT = e.enr ? 1.5 : 2.3; e.aimT = .5; const base = Math.atan2(tgt.x - e.x, tgt.z - e.z); const sp = e.enr ? [-.16, 0, .16] : [0]; for (const o of sp) fireProj(e.x + Math.sin(base) * .5, 1.45, e.z + Math.cos(base) * .5, base + o); }
-      }
+      if (e.sumT <= 0) { e.sumT = e.ph === 2 ? 12 : 17; const n = Math.min(MAXMIN - minions, 1 + ps.length + (e.ph === 2 ? 1 : 0)); if (n > 0) { e.roar++; e.roarT = 1.4; hostRoar(e); for (let i = 0; i < n; i++) { const c = randomCellNear(e.x, e.z, 1.6, 4); if (c) { const m = makeEnemy('faceless', c.x, c.z); m.cdT = 1; m.yaw = Math.random() * 6; } } } }
     }
+    if (K.gun && tgt) { e.shotT -= dt; if (e.aimT > 0) e.aimT -= dt; if (e.shotT <= 0 && td < 22 && td > 2.5 && losClear(e.x, e.z, tgt.x, tgt.z)) { e.shotT = mr(1.8, 2.8); e.aimT = .5; const base = Math.atan2(tgt.x - e.x, tgt.z - e.z); fireProj(e.x + Math.sin(base) * .5, 1.4, e.z + Math.cos(base) * .5, base + mr(-.05, .05)); } }
     if (!tgt) continue;
-    if (e.st === 1) { e.atkT -= dt; if (e.atkT <= 0) { e.st = 0; e.cdT = K.cd; if (td < K.range * 1.3) hostHitPlayer(tgt.id, K.dmg, e); } if (e.k !== 'crawler') { e.yaw = lerpAng(e.yaw, Math.atan2(tgt.x - e.x, tgt.z - e.z), dt * 4); continue; } }
+    if (e.st === 1) { e.atkT -= dt; if (e.atkT <= 0) { e.st = 0; e.cdT = K.cd; if (td < K.range * 1.3) hostHitPlayer(tgt.id, K.dmg, e); } if (e.k === 'giant') { e.yaw = lerpAng(e.yaw, Math.atan2(tgt.x - e.x, tgt.z - e.z), dt * 4); continue; } }
     if (td < K.range && e.cdT <= 0 && e.st === 0) { e.st = 1; e.atkT = K.wind; continue; }
     let dir = null;
     if (td < 16 && losClear(e.x, e.z, tgt.x, tgt.z, blockedE)) dir = [tgt.x - e.x, tgt.z - e.z];
     else dir = flowDir(e) || [tgt.x - e.x, tgt.z - e.z];
     const L = Math.hypot(dir[0], dir[1]) || 1; let vx = dir[0] / L, vz = dir[1] / L;
-    // 분리
     for (const o of enemies) { if (o === e || o.hp <= 0) continue; const dx = e.x - o.x, dz = e.z - o.z, d = Math.hypot(dx, dz), m = e.r + o.r; if (d < m && d > 1e-3) { vx += dx / d * (m - d) * 3; vz += dz / d * (m - d) * 3; } }
-    let sp = K.sp * (e.enr ? 1.3 : 1) * (e.st === 1 ? .35 : 1);
+    let sp = K.sp * (e.k === 'giant' && e.ph === 2 ? 1.25 : 1) * (e.st === 1 ? .35 : 1);
     if (td < K.range * .7) sp = 0;
-    const ox = e.x, oz = e.z;
     moveCircle(e, vx * sp * dt, vz * sp * dt, Math.min(e.r, .6), blockedE);
     e.yaw = lerpAng(e.yaw, Math.atan2(tgt.x - e.x, tgt.z - e.z), dt * (e.k === 'giant' ? 2.5 : 8));
     e.tx = e.x; e.tz = e.z;
   }
-  // 죽은 적 정리
   for (const e of [...enemies]) if (e.hp <= 0 && e.dyingT > (e.K.boss ? 8 : 2)) removeEnemy(e);
+  if (S.stage === 2 && S.line) hostAgents(dt, ps);
+}
+function hostAgents(dt, ps) {
+  S.agT -= dt; if (S.agT > 0 || !ps.length || !FLOW) return; S.agT = 28;
+  const alive = enemies.filter(e => e.k === 'agent' && e.hp > 0).length; const want = Math.min(3 + ps.length, 14 - (S.agSpawned || 0)) - alive;
+  for (let i = 0; i < want; i++) for (let t = 0; t < 300; t++) {
+    const x = ri(0, W - 1), z = ri(0, H - 1); const d = FLOW[z * W + x]; if (cellT(x, z) !== 1 || d < 14 || d > 40) continue;
+    const a = makeEnemy('agent', wc(x), wc(z)); const np = ps.length; a.hp = a.maxhp = Math.round(150 * (1 + .3 * (np - 1))); S.agSpawned = (S.agSpawned || 0) + 1; break;
+  }
 }
 const lerpAng = (a, b, t) => a + angWrap(b - a) * Math.min(1, t);
-function hostRoar(e, enrage) { sfx('roar', [e.x, 2, e.z], e.k === 'admin' ? .6 : 1); if (enrage) subtitle(e.k === 'giant' ? '거인이 분노했다. 발걸음이 빨라진다.' : '관리자가 코드를 다시 쓴다. 공격이 거세진다.', 3); }
+function hostRoar(e) { sfx('roar', [e.x, 2, e.z], 1); }
+function bossIntro() { if (S.introSaid) return; S.introSaid = true; subtitle('문 너머 — 노란 복도 끝에서 거대한 것이 몸을 일으킨다.', 4.5); PL.shake = Math.max(PL.shake, .5); }
 function hostDamage(e, d, from) {
   if (e.hp <= 0) return;
-  e.hp -= d;
-  if (e.k === 'admin' && e.hp > 0 && e.blinkT <= 0 && Math.random() < .14) {
-    const a = e.yaw + (Math.random() < .5 ? 1 : -1) * Math.PI / 2; const nx = e.x + Math.sin(a) * 2.6, nz = e.z + Math.cos(a) * 2.6;
-    if (!hitsGrid(nx, nz, e.r, blockedE)) { e.x = e.tx = nx; e.z = e.tz = nz; e.tp++; e.blinkT = 3.5; glitchFx(e); }
-  }
+  if (e.k === 'giant') {
+    if (e.ph === 1) { e.hp = Math.max(e.maxhp * .6, e.hp - d * .04); return; }
+    e.hp -= d;
+    if (e.ph === 2 && e.hp <= e.maxhp * .3) { e.hp = Math.max(e.hp, 1); setBossPhase(e, 3); e.bs = 'recover'; e.t2 = 3; e.roarCd = 12; e.chCd = 4; }
+  } else e.hp -= d;
   if (e.hp <= 0) { e.hp = 0; onEnemyDeath(e, from); }
 }
+function hostDrug(e) { if (!e || e.k !== 'giant' || e.ph !== 1 || e.hp <= 0) return; e.stunT = 2.4; e.roar++; e.roarT = 2; setBossPhase(e, 2); }
 function onEnemyDeath(e, from) {
   if (!isHost()) return;
   if (e.K.boss) {
     for (const o of enemies) if (o !== e && o.hp > 0) { o.hp = 0; }
-    const id = S.stage === 1 ? 'key1' : 'key2';
-    const it = spawnItem(id, 1, e.x, 0, e.z, null, 'KEY' + S.stage); netEv({ t: 'spawn', iid: 'KEY' + S.stage, id, n: 1, x: e.x, y: 0, z: e.z });
     netEv({ t: 'bdead', x: e.x, z: e.z }); onBossDead(e.x, e.z);
-  } else if (Math.random() < .32) {
-    const pool = S.stage === 1 ? ['ammo9', 'ammo9', 'almond', 'shell', 'bandage', 'cloth'] : ['ammo556', 'ammo556', 'ammo9', 'almond', 'shell', 'bandage'];
+  } else if (Math.random() < (e.k === 'agent' ? .65 : .32)) {
+    const pool = S.stage === 1 ? ['ammo9', 'ammo9', 'almond', 'shell', 'bandage', 'cloth'] : ['ammo556', 'ammo556', 'ammo9', 'medkit', 'almond', 'bandage'];
     const id = pool[Math.floor(Math.random() * pool.length)]; const n = id === 'ammo9' ? 12 : id === 'shell' ? 4 : id === 'ammo556' ? 30 : 1;
     const iid = 'h' + (ITEM_SEQ++) + NET.self.slice(0, 3); spawnItem(id, n, e.x, 0, e.z, null, iid); netEv({ t: 'spawn', iid, id, n, x: e.x, y: 0, z: e.z });
   }
+  if (e.k === 'agent') { sparks(e.x, 1.2, e.z, 0x3dff86, 16, 2); sfx('glitch', [e.x, 1.4, e.z]); }
 }
 function onBossDead(x, z) {
-  if (S.bossDead) return; S.bossDead = true; S.keyPos = { x, z };
+  if (S.bossDead) return; S.bossDead = true;
   sfx('bossdie', [x, 1.5, z]); $('#flash').style.transition = 'none'; $('#flash').style.opacity = .5; requestAnimationFrame(() => { $('#flash').style.transition = 'opacity 1.4s'; $('#flash').style.opacity = 0; });
-  subtitle(S.stage === 1 ? '거인이 무너졌다. 무언가가 바닥에 떨어지는 소리.' : '관리자의 형체가 코드로 흩어진다. 어딘가에서 전화벨이 울린다.', 5);
-  if (S.stage === 2) S.phoneOn = true;
+  subtitle('거인이 무너졌다. 이제 조용하다 — 열쇠 조각을 모아 승강기로.', 5);
   updateObjective();
 }
 function hostHitPlayer(id, d, e) {
@@ -878,7 +1409,7 @@ function hostHitPlayer(id, d, e) {
 }
 let lastSpawnT = 0;
 function hostItemSpawner(dt) {
-  lastSpawnT += dt; if (lastSpawnT < 22) return; lastSpawnT = 0;
+  lastSpawnT += dt; if (lastSpawnT < (S.stage === 1 ? 22 : 40)) return; lastSpawnT = 0;
   const ps = alivePlayers(); if (!ps.length) return; if (worldItems.length > 160) return;
   const p = ps[Math.floor(Math.random() * ps.length)]; const c = randomCellNear(p.x, p.z, 9, 26); if (!c) return;
   const [id, n] = rollItem(Math.random);
@@ -980,6 +1511,19 @@ function sfx(n, pos, v = 1) {
     case 'bounce': tone(400, .05, 'triangle', .12, pos); break;
     case 'focus': tone(200, .8, 'sine', .2, null, 60); nz(.8, 600, .5, .2, null, 'lowpass'); break;
     case 'drink': for (let i = 0; i < 4; i++) nz(.08, 700, 3, .12, null, 'bandpass', i * .13); break;
+    case 'eat': for (let i = 0; i < 5; i++) nz(.06, 1800, 1.5, .14, null, 'bandpass', i * .11); break;
+    case 'ping': tone(2600 + Math.random() * 900, .18, 'triangle', .14, pos, 1800); nz(.05, 4000, 2, .2, pos); break;
+    case 'dart': nz(.12, 2400, 2, .3, pos); tone(600, .12, 'sine', .1, pos, 300); break;
+    case 'inject': tone(300, .5, 'sawtooth', .2, pos, 60); nz(.4, 900, 1, .3, pos, 'lowpass'); break;
+    case 'crash': tone(40, .9, 'sine', 1, pos, 22); nz(.7, 160, .7, .9, pos, 'lowpass', 0, AU.brown); nz(.3, 900, .5, .4, pos); break;
+    case 'pound': tone(55, .4, 'sine', .9, pos, 35); nz(.25, 220, 1, .7, pos, 'lowpass'); nz(.1, 1300, 2, .25, pos); break;
+    case 'doorop': nz(.35, 700, 4, .14, pos); tone(140, .25, 'triangle', .06, pos, 110); break;
+    case 'drawer': nz(.22, 900, 2, .18, pos); nz(.12, 2400, 3, .08, pos, 'bandpass', .18); break;
+    case 'paper': nz(.25, 3200, 1, .1); break;
+    case 'card': tone(1760, .08, 'square', .06); tone(2093, .12, 'square', .05, null, null, .09); break;
+    case 'deny': tone(220, .25, 'square', .07, pos); tone(180, .3, 'square', .06, pos, null, .12); break;
+    case 'beep': tone(1200, .06, 'square', .04); tone(1600, .06, 'square', .035, null, null, .08); break;
+    case 'alarm': for (let i = 0; i < 6; i++) { tone(880, .22, 'square', .07, null, 660, i * .5); } break;
   }
 }
 function updateListener() {
@@ -998,9 +1542,9 @@ const keys = {};
 let SENS = 1;
 function movePlayer(dt) {
   let f = 0, s = 0; if (!uiMode && !S.dead && !S.riding) { if (keys.KeyW) f += 1; if (keys.KeyS) f -= 1; if (keys.KeyD) s += 1; if (keys.KeyA) s -= 1; }
-  const moving = f || s; const running = moving && keys.ShiftLeft && S.stamina > 2 && f > 0;
+  const moving = f || s; const crouch = !!keys.KeyC && !S.dead; PL.crouch = crouch; const running = moving && keys.ShiftLeft && S.stamina > 2 && f > 0 && !crouch;
   if (running) S.stamina = Math.max(0, S.stamina - 18 * dt); else S.stamina = Math.min(100, S.stamina + (moving ? 10 : 18) * dt);
-  let sp = running ? 5.6 : 3.2; if (S.focusT > 0) sp *= 1.35;
+  let sp = crouch ? 1.5 : running ? 5.6 : 3.2; if (S.focusT > 0) sp *= 1.35;
   const len = Math.hypot(f, s) || 1;
   const fx = -Math.sin(PL.yaw), fz = -Math.cos(PL.yaw), rx = Math.cos(PL.yaw), rz = -Math.sin(PL.yaw);
   const tvx = (fx * f + rx * s) / len * sp, tvz = (fz * f + rz * s) / len * sp;
@@ -1009,11 +1553,12 @@ function movePlayer(dt) {
   for (const e of enemies) { if (e.hp <= 0) continue; const dx = PL.x - e.x, dz = PL.z - e.z, d = Math.hypot(dx, dz), m = PL.r + e.r * .9; if (d < m && d > 1e-3) { const px = PL.x + dx / d * (m - d), pz = PL.z + dz / d * (m - d); if (!hitsGrid(px, pz, PL.r, blockedP)) { PL.x = px; PL.z = pz; } } }
   const spd = Math.hypot(PL.vx, PL.vz);
   PL.bob += spd * dt * (running ? 2.3 : 2.6); PL.stepAcc += spd * dt;
-  if (PL.stepAcc > (running ? 1.05 : .8)) { PL.stepAcc = 0; const [cx, cz] = cellAtW(PL.x, PL.z); sfx('step', zone[cz * W + cx] || S.stage === 2 ? 'hard' : 'soft', running ? 1.4 : 1); }
+  if (PL.stepAcc > (running ? 1.05 : .8)) { PL.stepAcc = 0; const [cx, cz] = cellAtW(PL.x, PL.z); if (!crouch) sfx('step', zone[cz * W + cx] || S.stage === 2 ? 'hard' : 'soft', running ? 1.4 : 1); makeNoise(PL.x, PL.z, crouch ? 0 : running ? 13 : 5); }
+  PL.cy = lerp(PL.cy || 0, crouch ? .55 : 0, 1 - Math.exp(-dt * 10));
   PL.kick = lerp(PL.kick, 0, 1 - Math.exp(-dt * 10)); PL.shake = Math.max(0, PL.shake - dt * 2);
   const sh = PL.shake * .03;
   const deadY = S.dead ? -1.2 : 0;
-  camera.position.set(PL.x, EYE + deadY + Math.sin(PL.bob * 2) * .035 * Math.min(1, spd / 3), PL.z);
+  camera.position.set(PL.x, EYE - PL.cy + deadY + Math.sin(PL.bob * 2) * .035 * Math.min(1, spd / 3), PL.z);
   camera.rotation.set(PL.pitch + PL.kick + (Math.random() - .5) * sh, PL.yaw + (Math.random() - .5) * sh, S.dead ? .5 : Math.sin(PL.bob) * .006 * Math.min(1, spd / 3));
 }
 function teleport(x, z, yaw) { PL.x = x; PL.z = z; if (yaw !== undefined) PL.yaw = yaw; PL.vx = PL.vz = 0; }
@@ -1053,7 +1598,8 @@ const VM = {};
   const spk = pip.clone(); { const t = mk(new THREE.BoxGeometry(.06, .06, .2), LM(0x222222)); t.position.set(0, .26, -.45); t.rotation.x = -1.2; spk.add(t); const bl = mk(new THREE.BoxGeometry(.01, .16, .3), LM(0xd8d8d8)); bl.position.set(.03, .3, -.5); bl.rotation.x = -1.2; spk.add(bl); }
   const gren = new THREE.Group(); { const s = mk(new THREE.SphereGeometry(.06, 10, 8), gr); s.scale.y = 1.25; gren.add(s); const h = hand(); h.position.set(0, -.07, .03); gren.add(h); }
   const icon = new THREE.Mesh(new THREE.PlaneGeometry(.18, .18), new THREE.MeshBasicMaterial({ transparent: true, alphaTest: .5, toneMapped: false })); icon.position.set(0, .02, -.05); icon.rotation.y = -.3;
-  Object.assign(VM, { pistol: pist, shotgun: shot, rifle: rif, pipe: pip, spiked: spk, grenade: gren, icon });
+  const drg = new THREE.Group(); { const b = mk(new THREE.CylinderGeometry(.035, .035, .34, 10), LM(0xe8ecef)); b.rotation.x = Math.PI / 2; b.position.set(0, .03, -.12); drg.add(b); const v = mk(new THREE.CylinderGeometry(.028, .028, .12, 10), new THREE.MeshLambertMaterial({ color: 0x45d17a, emissive: 0x0a4a20, transparent: true, opacity: .85 })); v.position.set(0, .085, -.08); drg.add(v); const n_ = mk(new THREE.CylinderGeometry(.004, .004, .1, 5), steel); n_.rotation.x = Math.PI / 2; n_.position.set(0, .03, -.34); drg.add(n_); const gp = mk(new THREE.BoxGeometry(.05, .13, .06), gm2); gp.position.set(0, -.06, .02); gp.rotation.x = -.2; drg.add(gp); const h = hand(); h.position.set(0, -.08, .05); drg.add(h); drg.userData.tip = new THREE.Vector3(0, .03, -.38); }
+  Object.assign(VM, { drug: drg, pistol: pist, shotgun: shot, rifle: rif, pipe: pip, spiked: spk, grenade: gren, icon });
   for (const k in VM) { VM[k].visible = false; vm.add(VM[k]); }
 }
 const flashSpr = new THREE.Sprite(new THREE.SpriteMaterial({ map: (() => { const [c, g] = cvs(64, 64); const gr = g.createRadialGradient(32, 32, 0, 32, 32, 32); gr.addColorStop(0, 'rgba(255,250,220,1)'); gr.addColorStop(.3, 'rgba(255,190,80,.9)'); gr.addColorStop(1, 'rgba(255,120,0,0)'); g.fillStyle = gr; g.fillRect(0, 0, 64, 64); const t = new THREE.CanvasTexture(c); return t; })(), transparent: true, depthWrite: false, toneMapped: false, blending: THREE.AdditiveBlending }));
@@ -1113,15 +1659,19 @@ function shootRay(spread) {
   return { e: best, t: bt, x: _o.x + _dir.x * bt, y: _o.y + _dir.y * bt, z: _o.z + _dir.z * bt };
 }
 function applyHit(e, dmg, px, py, pz) {
-  e.hp -= dmg; S.dealt += dmg; flashEnemy(e);
-  const green = e.k === 'admin' || e.k === 'clone';
-  sparks(px, py, pz, green ? 0x3dff86 : 0x5a0a0a, 5, 2.2);
+  const armored = e.k === 'giant' && e.ph === 1;
+  const eff = armored ? dmg * .04 : dmg;
+  if (armored) { e.hp = Math.max(e.maxhp * .6, e.hp - eff); sparks(px, py, pz, 0xfff0c0, 4, 3); sfx('ping', [px, py, pz]); if (!S.armorHint) { S.armorHint = true; subtitle('총알이 갑피에 튕겨 나간다. 다른 방법이 필요하다 — 약품총을 찾아라.', 5); } }
+  else { e.hp -= eff; flashEnemy(e); sparks(px, py, pz, e.k === 'agent' ? 0x3dff86 : 0x5a0a0a, 5, 2.2); }
+  S.dealt += eff;
   const kill = e.hp <= 0;
   if (kill) S.kills++;
   hitmark(kill); sfx('hitm');
-  if (isHost()) { e.hp += dmg; hostDamage(e, dmg, NET.self); }
+  if (isHost()) { e.hp += eff; if (armored) e.hp = Math.max(e.hp, e.maxhp * .6); hostDamage(e, dmg, NET.self); }
   else netSend('ev', { t: 'hit', id: e.id, d: dmg }, NET.hostId);
 }
+const tracerMat = new THREE.LineBasicMaterial({ color: 0x9dffc8, transparent: true, opacity: .9, toneMapped: false });
+function tracer(x0, y0, z0, x1, y1, z1) { const g = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x0, y0, z0), new THREE.Vector3(x1, y1, z1)]); const l = new THREE.Line(g, tracerMat); scene.add(l); setTimeout(() => { scene.remove(l); g.dispose(); }, 120); }
 function fire() {
   if (S.dead || S.riding) return;
   const h = held(); if (!h) return; const W_ = WEAP[h.id];
@@ -1132,14 +1682,25 @@ function fire() {
     setTimeout(() => {
       camera.getWorldDirection(_dir); let best = null, bd = 1e9;
       for (const e of enemies) { if (e.hp <= 0) continue; const dx = e.x - PL.x, dz = e.z - PL.z, d = Math.hypot(dx, dz) - e.r; if (d > W_.range) continue; const dot = (dx * _dir.x + dz * _dir.z) / (Math.hypot(dx, dz) * Math.hypot(_dir.x, _dir.z) || 1); if (dot < .55) continue; if (!losClear(PL.x, PL.z, e.x, e.z)) continue; if (d < bd) { bd = d; best = e; } }
-      if (best) { applyHit(best, W_.dmg * (S.focusT > 0 ? 1.3 : 1), best.x, 1.1, best.z); sfx('hit', [best.x, 1, best.z]); PL.shake = .25; }
+      if (best) { applyHit(best, W_.dmg * (S.focusT > 0 ? 1.3 : 1), best.x, 1.1, best.z); sfx('hit', [best.x, 1, best.z]); PL.shake = .25; makeNoise(PL.x, PL.z, 12); }
     }, 110);
     return;
   }
   if (W_.thr) { throwGrenade(); WS.fireCd = W_.cd; return; }
   if (W_.gun) {
-    if (h.meta.m <= 0) { sfx('empty'); WS.fireCd = .25; if (countItem(W_.ammo) > 0) startReload(); else msg(`${ITEMS[W_.ammo].name}이 없다.`, '#f88'); return; }
+    if (h.meta.m <= 0) { sfx('empty'); WS.fireCd = .25; if (!W_.ammo) msg('약품이 다 떨어졌다.', '#f88'); else if (countItem(W_.ammo) > 0) startReload(); else msg(`${ITEMS[W_.ammo].name}이 없다.`, '#f88'); return; }
     h.meta.m--; WS.fireCd = W_.cd;
+    if (W_.drug) {
+      const r = shootRay(W_.spread); camera.getWorldDirection(_dir);
+      tracer(camera.position.x + _dir.x * .6 + .1, camera.position.y - .12, camera.position.z + _dir.z * .6, r.x, r.y, r.z);
+      sfx('dart'); WS.recoil = .3; makeNoise(PL.x, PL.z, 8); renderHotbar(true);
+      if (r.e && r.e.k === 'giant') {
+        if (r.e.ph === 1) { sfx('inject', [r.e.x, 2, r.e.z]); hitmark(true); msg('명중 — 약물이 들어갔다!', '#7dffb0'); if (isHost()) hostDrug(r.e); else { netSend('ev', { t: 'drug', id: r.e.id }, NET.hostId); setBossPhase(r.e, 2); } }
+        else msg('이미 약물이 퍼져 있다.', '#aaa');
+      } else if (r.e) applyHit(r.e, W_.dmg, r.x, r.y, r.z);
+      else { sparks(r.x, r.y, r.z, 0x9dffc8, 3, 1); if (boss && boss.ph === 1) msg('빗나갔다… 약품총 남은 탄: ' + h.meta.m, '#f88'); }
+      return;
+    }
     const hits = new Map(); let last = null;
     for (let i = 0; i < W_.pel; i++) {
       const r = shootRay(W_.spread * (Math.hypot(PL.vx, PL.vz) > 3.5 ? 1.8 : 1));
@@ -1150,14 +1711,15 @@ function fire() {
     for (const [e, v] of hits) applyHit(e, Math.round(v.d * (S.focusT > 0 ? 1.25 : 1)), v.p.x, v.p.y, v.p.z);
     sfx(W_.snd); WS.flashT = .05; WS.recoil = h.id === 'shotgun' ? 1 : .45; PL.kick += h.id === 'shotgun' ? .05 : .018;
     flashSpr.position.copy(VM[h.id].userData.tip).add(VM[h.id].position);
-    netEv({ t: 'fx', k: W_.snd, x: +PL.x.toFixed(1), z: +PL.z.toFixed(1) });
+    netEv({ t: 'fx', k: W_.snd, x: +PL.x.toFixed(1), z: +PL.z.toFixed(1) }); makeNoise(PL.x, PL.z, h.id === 'shotgun' ? 45 : 40);
     renderHotbar(true);
-    if (h.meta.m <= 0 && countItem(W_.ammo) > 0) setTimeout(() => { if (held() === h) startReload(); }, 250);
+    if (h.meta.m <= 0 && W_.ammo && countItem(W_.ammo) > 0) setTimeout(() => { if (held() === h) startReload(); }, 250);
   }
 }
 function startReload() {
   const h = held(); if (!h) return; const W_ = WEAP[h.id]; if (!W_ || !W_.gun || WS.reload > 0) return;
-  if (h.meta.m >= W_.mag) return; if (countItem(W_.ammo) <= 0) { msg(`${ITEMS[W_.ammo].name}이 없다.`, '#f88'); return; }
+  if (!W_.ammo) { msg('약품총은 재장전할 수 없다.', '#aaa'); return; }
+  if (h.meta.m >= W_.mag) return; makeNoise(PL.x, PL.z, 7); if (countItem(W_.ammo) <= 0) { msg(`${ITEMS[W_.ammo].name}이 없다.`, '#f88'); return; }
   WS.reload = W_.rt; WS.reloadItem = h; sfx('reload');
 }
 function finishReload() {
@@ -1168,7 +1730,7 @@ function useItem() {
   const h = held(); if (!h || S.dead) return;
   if (HEAL[h.id]) {
     if (S.healCd > 0) return; if (S.hp >= 100 && h.id !== 'almond') { msg('체력이 가득하다.', '#ccc'); return; }
-    S.healCd = .7; S.hp = Math.min(100, S.hp + HEAL[h.id]); if (h.id === 'almond') { S.stamina = 100; sfx('drink'); } sfx('heal');
+    S.healCd = .7; S.hp = Math.min(100, S.hp + HEAL[h.id]); if (h.id === 'almond') { S.stamina = 100; sfx('drink'); } else sfx('eat'); sfx('heal'); makeNoise(PL.x, PL.z, 20); if (S.p3 && S.stage === 1) msg('꿀꺽 — 거인이 들었을지도 모른다.', '#f9c');
     h.n--; if (h.n <= 0) INV.hot[INV.sel] = null; msg(`${ITEMS[h.id].name} 사용 · 체력 ${Math.round(S.hp)}`, '#9f9'); renderHotbar(true); sendState(true);
   }
 }
@@ -1197,7 +1759,7 @@ function explode(g) {
   sfx('boom', [g.x, g.y, g.z]); boomL.position.set(g.x, 1.4, g.z); boomL.intensity = 120; S.boomT = .35;
   sparks(g.x, .5, g.z, 0xffb040, 26, 6); sparks(g.x, .5, g.z, 0x333333, 14, 3);
   const d0 = Math.hypot(PL.x - g.x, PL.z - g.z); if (d0 < 9) PL.shake = Math.min(1.2, PL.shake + (9 - d0) / 9);
-  if (!g.own) return;
+  if (!g.own) return; makeNoise(g.x, g.z, 50);
   for (const e of enemies) { if (e.hp <= 0) continue; const d = Math.hypot(e.x - g.x, e.z - g.z); if (d < 5.2 && losClear(g.x, g.z, e.x, e.z)) applyHit(e, Math.round(170 * (1 - d / 5.8)), e.x, 1, e.z); }
 }
 
@@ -1223,91 +1785,95 @@ function interact() {
 function pickupItem(it, manual) {
   const left = addItem(it.id, it.n, it.meta);
   if (left === it.n) { if (manual || !it.fullT || S.t > it.fullT) { msg('인벤토리가 가득 찼다.', '#f88'); it.fullT = S.t + 4; } return; }
-  sfx(it.id.startsWith('key') ? 'key' : 'pickup'); msg(`${ITEMS[it.id].name}${it.n - left > 1 ? ' ×' + (it.n - left) : ''} 획득`, it.id.startsWith('key') ? '#ffd76a' : '#fff');
+  const spc = ['key1', 'frag', 'drug', 'card'].includes(it.id); sfx(spc ? 'key' : 'pickup'); msg(`${ITEMS[it.id].name}${it.n - left > 1 ? ' ×' + (it.n - left) : ''} 획득${it.id === 'frag' ? ` (가방 속 ${countItem('frag')}/4)` : ''}`, spc ? '#ffd76a' : '#fff');
+  if (it.id === 'drug' && boss && boss.ph === 1) subtitle('약품총 — 거인에게 직접 맞혀라. 단 두 발.', 3.5);
+  if (it.id === 'frag' && countItem('frag') >= 4) subtitle('조각 네 개가 모였다. E를 눌러 조합대에 모두 올려라.', 4);
   if (left > 0) it.n = left; else { removeWorldItem(it); netEv({ t: 'take', iid: it.iid }); }
-  if (it.id === 'key1' || it.id === 'key2') { netEv({ t: 'kpick', by: PNAME }); onKeyPicked(PNAME, true); }
+  if (it.id === 'key1') { netEv({ t: 'kpick', by: PNAME }); onKeyPicked(PNAME, true); }
+  if (it.id === 'frag') updateObjective();
 }
-function onKeyPicked(by, mine) { S.keyPicked = true; if (mine) subtitle(S.stage === 1 ? '열쇠를 얻었다. 비상용 승강기를 찾아라. (나침반)' : '백도어 키를 얻었다. 울리는 전화를 찾아라.', 4); else msg(`${by}님이 열쇠를 주웠다.`, '#ffd76a'); updateObjective(); }
+function onKeyPicked(by, mine) { S.keyPicked = true; revealRed(); if (mine) subtitle('방재 엘리베이터 열쇠가 완성됐다. 그런데 승강기가 보이지 않는다…', 4); else msg(`${by}님이 열쇠를 완성했다.`, '#ffd76a'); updateObjective(); }
 function dropHeld(all) {
   const h = held(); if (!h) return; const n = all ? h.n : 1;
   camera.getWorldDirection(_dir); let x = PL.x + _dir.x * 1.2, z = PL.z + _dir.z * 1.2; if (hitsGrid(x, z, .15, blockedP)) { x = PL.x; z = PL.z; }
   const iid = uid(); const it = spawnItem(h.id, n, x, 0, z, h.meta ? { ...h.meta } : null, iid); it.dropT = S.t + 1.5;
   netEv({ t: 'spawn', iid, id: h.id, n, x, y: 0, z, meta: it.meta });
   h.n -= n; if (h.n <= 0) INV.hot[INV.sel] = null; sfx('throw'); renderHotbar(true);
+  setTimeout(() => { sfx('bounce', [x, .1, z]); makeNoise(x, z, 16); }, 350);
 }
 
 /* ================= 스테이지 구성 ================= */
 const TABLE = {
   1: [['ammo9', 30, 12], ['almond', 16, 1], ['shell', 9, 6], ['bandage', 10, 1], ['cloth', 9, 1], ['grenade', 6, 1], ['tape', 4, 1], ['medkit', 4, 1], ['shotgun', 2, 1], ['pistol', 1, 1]],
-  2: [['ammo556', 26, 30], ['ammo9', 12, 12], ['shell', 9, 6], ['almond', 12, 1], ['medkit', 6, 1], ['bandage', 8, 1], ['grenade', 8, 1], ['cloth', 5, 1], ['tape', 3, 1], ['rifle', 2, 1], ['shotgun', 1, 1]],
+  2: [['ammo556', 20, 30], ['ammo9', 14, 12], ['almond', 12, 1], ['bandage', 10, 1], ['medkit', 4, 1], ['shell', 6, 6], ['grenade', 3, 1], ['cloth', 6, 1]],
 };
 function rollItem(rf) { const tb = TABLE[S.stage]; const tot = tb.reduce((a, b) => a + b[1], 0); let r = rf() * tot; for (const [id, w, n] of tb) { r -= w; if (r <= 0) return [id, n]; } return [tb[0][0], tb[0][2]]; }
 function buildStage(n, wseed) {
   clearWorld(); S.stage = n; const cfg = STAGES[n]; WH = cfg.WH;
+  S.p3 = false; S.introSaid = false; S.startOpen = false; S.redOn = false; S.redCount = 0; S.elevShown = false; S.secOpen = false; S.secAuth = false; S.secTries = 0; S.secLockT = 0; S.line = false; S.readPublic = false; S.noiseLvl = 0; S.stageT = 0; S.agT = 999; S.agSpawned = 0; S.phT = 25;
   reseed((wseed + n * 7919) >>> 0);
   LV = n === 1 ? genLevel0() : genLevel1();
   scene.fog.color.setHex(cfg.fog); scene.fog.near = cfg.fogN; scene.fog.far = cfg.fogF; scene.background.setHex(cfg.fog);
   ambient.color.setHex(cfg.amb[0]); ambient.intensity = cfg.amb[1]; hemi.color.setHex(cfg.hemi[0]); hemi.groundColor.setHex(cfg.hemi[1]); hemi.intensity = cfg.hemi[2];
   for (const l of POOL) { l.color.setHex(cfg.light); }
   buildStructure(cfg);
-  if (n === 1) buildPanels(cfg, (x, z) => x % 2 === 0 && z % 2 === 0);
+  if (n === 1) buildPanels(cfg, (x, z) => x % 2 === 0 && z % 2 === 0 && zone[z * W + x] !== 3);
   else buildPanels(cfg, (x, z) => x % 3 === 1 && z % 3 === 1 && cellT(x, z) !== 4);
   S.gateOpen = n === 2; S.bossDead = false; S.keyPicked = false; S.keyPos = null; S.phoneOn = false; S.riding = false; phone = null; elev = null;
   if (n === 1) {
     buildElevator(LV.el, false, ['비상용 승강기', 'EMERGENCY ELEVATOR']);
+    elevPlug = mk(new THREE.BoxGeometry(CS * 2 + .45, WH, .14), getMat('wall1')); elevPlug.position.set(elev.fx - elev.nx * .07, WH / 2, elev.fz - elev.nz * .07); elevPlug.rotation.y = Math.atan2(-elev.nx, -elev.nz); world.add(elevPlug);
+    LV.reds.forEach((r, i) => buildRed(r, i));
     S.goal = { x: elev.fx, z: elev.fz };
-    inters.push({ x: elev.fx, y: 1.3, z: elev.fz, r: 2.8, lab: () => S.gateOpen ? null : countItem('key1') ? '<b>[F]</b> 열쇠로 비상용 승강기를 연다' : '잠겨 있다 — 방재 엘리베이터 열쇠 필요', act: () => { if (S.gateOpen) return; if (!countItem('key1')) { msg('열쇠 구멍이 있다. 거인이 가진 열쇠가 필요하다.', '#ccc'); return; } removeItem('key1'); netEv({ t: 'gate' }); openGate(PNAME); } });
+    inters.push({ x: elev.fx, y: 1.3, z: elev.fz, r: 2.8, hide: () => !S.elevShown, lab: () => S.gateOpen ? null : countItem('key1') ? '<b>[F]</b> 열쇠로 비상용 승강기를 연다' : '잠겨 있다 — 방재 엘리베이터 열쇠 필요', act: () => { if (S.gateOpen) return; if (!countItem('key1')) { msg('열쇠 구멍이 있다. 조각난 열쇠를 맞춰야 할 것 같다.', '#ccc'); return; } removeItem('key1'); netEv({ t: 'gate' }); openGate(PNAME); } });
     inters.push({ x: elev.panel.x, y: 1.3, z: elev.panel.z, r: 2.2, hide: () => !S.gateOpen, lab: () => '<b>[F]</b> 위층 버튼을 누른다 (팀 전원 이동)', act: () => { if (S.riding) return; netEv({ t: 'ride', by: PNAME }); rideUp(PNAME); } });
+    LV.hides.forEach((h, i) => buildHide(h, i));
+    buildStartDoor(LV.sdoor);
   } else {
     buildElevator(LV.el, true, ['LEVEL 1', 'ARRIVAL'], M.black, '#04160a', '#5dff9a');
-    for (const [bx, bz] of LV.cubes) buildCubicle(bx, bz);
-    buildPhone(LV.phone[0], LV.phone[1]);
-    S.goal = { x: phone.x, z: phone.z };
-    inters.push({ x: phone.x, y: 1.4, z: phone.z, r: 2.4, lab: () => !S.bossDead ? '전화기가 침묵하고 있다' : countItem('key2') ? '<b>[F]</b> 전화를 받는다 (탈출)' : '전화가 울린다 — 백도어 키 필요', act: () => { if (!S.bossDead || !countItem('key2')) { msg(S.bossDead ? '수화기를 들어도 잡음뿐이다. 백도어 키가 필요하다.' : '아무 신호도 없다. 먼저 관리자를 쓰러뜨려라.', '#ccc'); return; } removeItem('key2'); netEv({ t: 'end' }); ending('wake'); } });
+    buildOffice();
+    inters.push({ x: phone.x, y: 1.4, z: phone.z, r: 2.4, lab: () => S.line ? '<b>[F]</b> 수화기를 든다' : '전화기 — 신호가 없다', act: () => { if (!S.line) { msg('수화기를 들어도 아무 소리가 없다. 회선이 끊겨 있다.', '#ccc'); return; } netEv({ t: 'end' }); ending('wake'); } });
   }
   mergeStatics();
-  // 고정 아이템 (시드)
-  const rooms = [];
-  for (let rz = 0; rz < (n === 1 ? LV.R : 5); rz++) for (let rx = 0; rx < LV.R; rx++) rooms.push([rx, rz]);
+  // 바닥 아이템 (시드)
   let k = 0; const isz = LV.STEP - 1;
-  for (const [rx, rz] of rooms) {
+  for (let rz = 0; rz < (n === 1 ? LV.R : LV.RZ); rz++) for (let rx = 0; rx < LV.R; rx++) {
     const bx = LV.X0 + rx * LV.STEP + 1, bz = LV.Z0 + rz * LV.STEP + 1;
-    const cnt = rnd() < (n === 1 ? .5 : .75) ? (rnd() < (n === 1 ? .3 : .45) ? 2 : 1) : 0;
+    const cnt = rnd() < (n === 1 ? .5 : .3) ? (rnd() < .3 ? 2 : 1) : 0;
     for (let i = 0; i < cnt; i++) {
-      const x = bx + ri(0, isz - 1), z = bz + ri(0, isz - 1); if (cellT(x, z) !== 1) continue;
+      const x = bx + ri(0, isz - 1), z = bz + ri(0, isz - 1); if (cellT(x, z) !== 1 || zone[z * W + x]) continue;
       const [id, nn] = rollItem(rnd); spawnItem(id, nn, wc(x) + rr(-.3, .3), 0, wc(z) + rr(-.3, .3), null, 's' + n + '-' + (k++));
     }
   }
-  // 보장 아이템
-  const [sx, sz] = cellAtW(LV.spawn.x, LV.spawn.z);
-  const near = (dmin, dmax) => { for (let i = 0; i < 200; i++) { const x = ri(0, W - 1), z = ri(0, H - 1); const d = LV.D[z * W + x]; if (cellT(x, z) === 1 && d >= dmin && d <= dmax) return [wc(x), wc(z)]; } return [LV.spawn.x, LV.spawn.z]; };
-  const guar = n === 1 ? [['shotgun', 1, 6, 14], ['shotgun', 1, 18, 30], ['grenade', 2, 5, 12], ['ammo9', 24, 3, 8], ['shell', 12, 6, 16], ['almond', 1, 3, 9], ['medkit', 1, 10, 20]] : [['rifle', 1, 4, 10], ['ammo556', 60, 3, 9], ['grenade', 2, 6, 14], ['medkit', 1, 6, 14], ['ammo556', 60, 14, 26], ['rifle', 1, 18, 30]];
-  for (const [id, nn, a, b] of guar) { const [x, z] = near(a, b); spawnItem(id, nn, x, 0, z, null, 's' + n + '-' + (k++)); }
-  // 보스 위치
-  let bp = null; { let bd = 1e9; for (let z = 0; z < H; z++) for (let x = 0; x < W; x++) { const d = LV.D[z * W + x]; if (d < 0 || cellT(x, z) !== 1) continue; const want = n === 1 ? 26 : 20; const s = Math.abs(d - want) + (hitsGrid(wc(x), wc(z), .8, blockedE) ? 100 : 0); if (s < bd) { bd = s; bp = [wc(x), wc(z)]; } } }
+  const near = (dmin, dmax) => { for (let i = 0; i < 400; i++) { const x = ri(0, W - 1), z = ri(0, H - 1); const d = LV.D[z * W + x]; if (cellT(x, z) === 1 && !zone[z * W + x] && d >= dmin && d <= dmax) return [wc(x), wc(z)]; } return [LV.spawn.x, LV.spawn.z]; };
+  if (n === 1) {
+    for (const [id, nn, a, b] of [['shotgun', 1, 6, 14], ['shotgun', 1, 18, 30], ['grenade', 2, 5, 12], ['ammo9', 24, 3, 8], ['shell', 12, 6, 16], ['almond', 1, 3, 9], ['medkit', 1, 10, 20], ['drug', 1, 16, 26], ['drug', 1, 30, 46]]) { const [x, z] = near(a, b); spawnItem(id, nn, x, 0, z, null, 's' + n + '-' + (k++)); }
+    LV.hides.forEach((h, i) => { spawnItem('frag', 1, wc(h.inner[0]), 0, wc(h.inner[1]), null, 'frag-' + i); const c = h.cells[0]; spawnItem('almond', 1, wc(c[0]), 0, wc(c[1]), null, 'hide-a' + i); });
+  } else {
+    const sc = LV.sec; spawnItem('rifle', 1, wc(sc.x0 + 4), 0, wc(sc.z0 + 4), null, 'sec-r'); spawnItem('ammo556', 60, wc(sc.x0 + 7), 0, wc(sc.z0 + 4), null, 'sec-a'); spawnItem('medkit', 1, wc(sc.x0 + 5), 0, wc(sc.z0 + 8), null, 'sec-m'); spawnItem('ammo556', 30, wc(sc.x0 + 6), 0, wc(sc.z0 + 8), null, 'sec-a2');
+    const [x, z] = near(4, 12); spawnItem('ammo556', 30, x, 0, z, null, 's2-g1');
+  }
+  let bp = null; if (n === 1) { let bd = 1e9; for (let z = 0; z < H; z++) for (let x = 0; x < W; x++) { const d = LV.D[z * W + x]; if (d < 0 || cellT(x, z) !== 1 || zone[z * W + x]) continue; const s_ = Math.abs(d - 26) + (hitsGrid(wc(x), wc(z), .8, blockedE) ? 100 : 0); if (s_ < bd) { bd = s_; bp = [wc(x), wc(z)]; } } }
   LV.bossPos = bp;
-  S.invSnap = cloneInv();
+  S.invSnap = cloneInv(); CLUES.length = 0;
   flowT = 0; FLOW = null; lastSpawnT = 0;
   stageAudio(); updateObjective();
-  $('#bossbar').classList.toggle('st2', n === 2);
   $('#scan').style.opacity = n === 2 ? .5 : 0;
   $('#lvl').textContent = cfg.lvl;
 }
 function spawnBoss() {
-  if (!isHost() || boss) return;
-  const k = S.stage === 1 ? 'giant' : 'admin'; const np = alivePlayers().length || 1;
-  const hp = Math.round(KIND[k].hp * (1 + .6 * (np - 1)));
-  const b = makeEnemy(k, LV.bossPos[0], LV.bossPos[1], 'B' + S.stage, hp, hp); b.sumT = 12; b.roar++; b.roarT = 1.6; hostRoar(b);
+  if (!isHost() || boss || S.stage !== 1) return;
+  const np = alivePlayers().length || 1;
+  const hp = Math.round(KIND.giant.hp * (1 + .5 * (np - 1)));
+  const p = bossStartPos(); const b = makeEnemy('giant', p[0], p[1], 'B1', hp, hp); b.sumT = 14; b.roar++; b.roarT = 1.6; hostRoar(b); b.yaw = Math.atan2(PL.x - p[0], PL.z - p[1]);
 }
 function enterStage(n, wseed, first) {
   buildStage(n, wseed);
   teleport(LV.spawn.x + mr(-.4, .4), LV.spawn.z + mr(-.4, .4), n === 2 ? Math.PI : 0);
-  if (n === 1) { const [cx, cz] = cellAtW(LV.spawn.x, LV.spawn.z); }
   if (S.dead) { S.dead = false; $('#dead').classList.add('hidden'); }
-  S.hp = Math.max(S.hp, n === 1 ? 100 : 100); S.stamina = 100;
+  S.hp = 100; S.stamina = 100;
   titleCard(STAGES[n].lvl, STAGES[n].sub);
-  setTimeout(() => { if (S.stage === n && isHost()) spawnBoss(); }, first ? 7000 : 5000);
-  setTimeout(() => { if (S.stage === n) subtitle(n === 1 ? '멀리서 무언가 무거운 것이 걷기 시작했다.' : '형광등이 초록으로 깜빡인다. 누군가 당신을 지켜보고 있다.', 4); }, first ? 6000 : 4000);
+  setTimeout(() => { if (S.stage === n) subtitle(n === 1 ? '닫힌 방. 비상구 너머로 형광등 소리만 들린다. 준비가 되면 문을 열어라.' : '조용하다. 아무도 없는 사무실에 모니터 몇 대만 켜져 있다.', 4.5); }, first ? 6000 : 4000);
 }
 function titleCard(a, b) { $('#tctitle').textContent = a; $('#tcsub').textContent = b; const t = $('#titlecard'); t.style.transition = 'none'; t.style.opacity = 0; requestAnimationFrame(() => { t.style.transition = 'opacity 1.2s'; t.style.opacity = 1; }); clearTimeout(t._t); t._t = setTimeout(() => t.style.opacity = 0, 3500); }
 function openGate(by) {
@@ -1375,12 +1941,20 @@ function renderBars() {
   if (boss && (boss.hp > 0 || boss.dyingT < 3)) {
     bb.classList.remove('hidden'); const pct = Math.max(0, boss.hp / boss.maxhp * 100);
     $('#bbfill').style.width = pct + '%'; $('#bbchip').style.width = pct + '%';
-    const cfg = STAGES[S.stage]; const nm = `${cfg.boss}<small>${cfg.bossEn}${boss.enr ? ' · 분노' : ''}</small>`; if ($('#bossname').innerHTML !== nm) $('#bossname').innerHTML = nm;
+    bb.classList.toggle('ph1', boss.ph === 1); bb.classList.toggle('ph3', boss.ph === 3);
+    const nm = `방랑하는 거인<small>${boss.ph === 1 ? '1페이즈 · 갑피 — 피해 무효' : boss.ph === 2 ? '2페이즈 · 약물 중독' : '3페이즈 · 눈먼 사냥꾼'}</small>`; if ($('#bossname').innerHTML !== nm) $('#bossname').innerHTML = nm;
   } else bb.classList.add('hidden');
+  const nzEl = $('#noise'); S.noiseLvl = Math.max(0, (S.noiseLvl || 0) - 1 / 60 * .7);
+  if (S.stage === 1 && S.p3 && !S.bossDead) { nzEl.classList.remove('hidden'); $('#noisefill').style.width = (S.noiseLvl * 100) + '%'; $('#noisetxt').textContent = PL.crouch ? '소음 · 웅크림' : Math.hypot(PL.vx, PL.vz) > 4 ? '소음 · 달리는 중!' : '소음'; } else nzEl.classList.add('hidden');
   // 나침반
   let tgt = null, lab = '';
-  if (S.bossDead && !S.keyPicked && S.keyPos) { tgt = S.keyPos; lab = S.stage === 1 ? '떨어진 열쇠' : '백도어 키'; }
-  else if (S.keyPicked && S.goal) { tgt = S.goal; lab = S.stage === 1 ? '비상용 승강기' : '울리는 전화'; }
+  const nearest = id => { let b = null, bd = 1e9; for (const it of worldItems) if (it.id === id) { const d = Math.hypot(it.x - PL.x, it.z - PL.z); if (d < bd) { bd = d; b = it; } } return b; };
+  if (S.stage === 1) {
+    if ((S.keyPicked || countItem('key1')) && !S.elevShown && REDS.length) { let b = null, bd = 1e9; for (const r of REDS) { const d = Math.hypot(r.x - PL.x, r.z - PL.z); if (d < bd) { bd = d; b = r; } } tgt = b; lab = `빨간 문 (${Math.min(2, S.redCount || 0)}/2)`; }
+    else if (S.keyPicked || countItem('key1') || S.gateOpen) { tgt = S.goal; lab = '비상용 승강기'; }
+    else if (S.p3) { const f = nearest('frag'); if (f) { tgt = f; lab = '열쇠 조각'; } }
+    else if (boss && boss.ph === 1 && S.stageT > 50) { const f = nearest('drug'); if (f) { tgt = f; lab = '약품총'; } }
+  } else if (S.line && S.goal) { tgt = S.goal; lab = '울리는 전화'; }
   const cp = $('#compass');
   if (tgt) { cp.classList.remove('hidden'); const dx = tgt.x - PL.x, dz = tgt.z - PL.z; const d = Math.hypot(dx, dz); const a = Math.atan2(-dx, -dz) - PL.yaw; $('#cmptxt').textContent = `${lab} ${Math.round(d)}m`; $('#cmpar').style.transform = `rotate(${-a}rad)`; }
   else cp.classList.add('hidden');
@@ -1388,15 +1962,29 @@ function renderBars() {
 }
 function updateObjective() {
   const L_ = []; const st = S.stage;
-  const bn = STAGES[st].boss;
-  if (!S.bossDead) { L_.push(`· ${bn}을(를) 쓰러뜨려라`); L_.push('· 무기 · 탄약 · 회복 아이템을 주워라'); }
-  else if (!S.keyPicked) L_.push(st === 1 ? '· 거인이 떨어뜨린 열쇠를 주워라' : '· 관리자가 남긴 백도어 키를 주워라');
-  else if (st === 1 && !S.gateOpen) L_.push('· 비상용 승강기(방재 엘리베이터)를 찾아 열어라');
-  else if (st === 1) L_.push('· 승강기에 타서 위층 버튼을 눌러라');
-  else L_.push('· 울리는 전화를 받아 시뮬레이션을 빠져나가라');
+  if (st === 1) {
+    const ph = boss ? boss.ph : S.p3 ? 3 : 1;
+    const fragsLeft = worldItems.filter(i => i.id === 'frag').length;
+    if (S.gateOpen) L_.push('· 승강기에 타서 위층 버튼을 눌러라');
+    else if ((S.keyPicked || countItem('key1')) && !S.elevShown) { L_.push(`· 맵 끝의 빨간 문을 통과하라 (${Math.min(2, S.redCount || 0)}/2)`); L_.push('· 빨간 문 옆 벽의 낙서를 확인하라'); }
+    else if (S.keyPicked || countItem('key1')) L_.push('· 나타난 비상용 승강기를 열쇠로 열어라');
+    else if (S.p3) { L_.push(`· 벽에 생긴 문 4곳에서 열쇠 조각을 모아라 (남은 조각 ${fragsLeft})`); L_.push('· 조각 4개를 한 사람이 모아 조합(E)'); if (!S.bossDead) L_.push('· 거인은 눈이 멀었다 — 소리를 내지 마라 (C 웅크리기)'); }
+    else if (ph === 2) { L_.push('· 약물이 퍼졌다 — 거인의 체력을 30%까지 깎아라'); L_.push('· 얼굴 없는 것들을 조심하라'); }
+    else if (!S.startOpen) { L_.push('· 장비를 확인하고 비상구 문을 열어라 (F)'); L_.push('· 문을 열면 거인이 깨어난다'); }
+    else { L_.push('· 거인에게 총알은 통하지 않는다'); L_.push('· 약품총(2정)을 찾아 거인에게 맞혀라'); L_.push('· 무기 · 탄약 · 회복 아이템을 챙겨라'); }
+  } else {
+    if (S.line) { L_.push('· 회의실의 전화를 받아라'); L_.push('· 요원들이 몰려온다'); }
+    else {
+      L_.push('· 비상 회선(B-7)으로 외부와 연결하라');
+      if (!S.readPublic) L_.push('· 켜져 있는 단말을 찾아라');
+      else if (!S.secOpen && !countItem('card')) L_.push('· 보안실 출입카드를 찾아라 (서랍)');
+      else if (!S.secOpen) L_.push('· 보안실을 찾아 카드로 문을 열어라');
+      else if (!S.secAuth) L_.push('· 보안실 단말의 암호를 알아내라 (Tab 단서 수첩)');
+      else L_.push('· 보안실 단말에서 B-7을 활성화하라');
+    }
+  }
   $('#objective').innerHTML = L_.join('<br>');
 }
-/* 인벤토리 UI */
 function buildInvDOM() {
   const mkS = (parent, key, n) => { for (let i = 0; i < n; i++) { const d = document.createElement('div'); d.className = 'slot'; d.dataset.k = key + ':' + i; parent.appendChild(d); } };
   mkS($('#mainGrid'), 'main', 27); mkS($('#hotGrid'), 'hot', 9); mkS($('#craftGrid'), 'craft', 4);
@@ -1416,7 +2004,7 @@ function clickSlot(key, btn, shift) {
     if (shift) { if (moveInto(res, ['main', 'hot']) === 0) consumeCraft(); }
     else if (!INV.cursor) { INV.cursor = res; consumeCraft(); }
     else if (INV.cursor.id === res.id && INV.cursor.n < ITEMS[res.id].max) { INV.cursor.n++; consumeCraft(); }
-    sfx('craft'); msg(`조합: ${ITEMS[r.out].name}`, '#ffd76a'); renderInv(); return;
+    sfx('craft'); msg(`조합: ${ITEMS[r.out].name}`, '#ffd76a'); if (r.out === 'key1') { netEv({ t: 'kpick', by: PNAME }); onKeyPicked(PNAME, true); } renderInv(); return;
   }
   const A = INV[k]; const s = A[i]; const c = INV.cursor;
   if (shift && s) { const dest = k === 'hot' ? ['main'] : k === 'main' ? ['hot'] : ['main', 'hot']; const left = moveInto(s, dest); A[i] = left > 0 ? { ...s, n: left } : null; sfx('click'); renderInv(); return; }
@@ -1462,7 +2050,7 @@ function ending(code) {
   setTimeout(() => {
     $('#hud').classList.add('hidden'); $('#ecode').textContent = 'ENDING · 각성';
     $('#etitle').textContent = '깨어남';
-    $('#etext').textContent = `수화기 너머에서 기계음이 들린다. 사무실의 초록빛이 한 줄씩 지워진다.\n노란 방도, 거인도, 관리자도 — 전부 누군가 짜 놓은 코드였다.\n\n눈을 뜨자 차가운 형광등 아래, 낯선 의자에 앉아 있다.\n모니터 한 구석에 깜빡이는 한 줄.\n\n> LEVEL 2 LOADING…`;
+    $('#etext').textContent = `수화기 너머에서 기계음이 들린다. 사무실의 초록빛이 한 줄씩 지워진다.\n노란 방도, 눈먼 거인도, 검은 정장의 요원들도 — 전부 누군가 짜 놓은 코드였다.\n\n눈을 뜨자 차가운 형광등 아래, 낯선 의자에 앉아 있다.\n모니터 한 구석에 깜빡이는 한 줄.\n\n> LEVEL 2 LOADING…`;
     $('#estats').innerHTML = statLine();
     $('#ebtns').innerHTML = '<button class="btn" id="again">다시 들어가기</button>'; $('#again').onclick = () => location.reload();
     uiMode = 'ending'; $('#ending').classList.remove('hidden'); $('#fade').style.opacity = 0; $('#fade').style.background = '#000';
@@ -1491,7 +2079,7 @@ function doRetry() {
 const MAXP = 4;
 const NET = { on: false, host: false, hostId: null, room: null, code: '', self: 'solo', peers: new Map(), log: [], tx: {}, seed: 0, sendT: 0, enT: 0, teamT: 0, joined: false };
 const isHost = () => !NET.on || NET.host;
-const LOGGED = new Set(['take', 'spawn', 'gate', 'bdead', 'kpick']);
+const LOGGED = new Set(['take', 'spawn', 'gate', 'bdead', 'kpick', 'door', 'dbreak', 'dfix', 'drawer', 'sdoor', 'line', 'sopen', 'rpass']);
 const COATS = [0x6a3a2a, 0x2c4a63, 0x4a5a2a, 0x5a2c5a];
 function netSend(kind, data, target) { if (!NET.on || !NET.tx[kind]) return; try { const r = NET.tx[kind](data, target ? target : undefined); if (r && r.catch) r.catch(() => {}); } catch (e) {} }
 function netEv(e) { if (!NET.on) return; if (LOGGED.has(e.t)) NET.log.push(e); netSend('ev', e); }
@@ -1499,7 +2087,7 @@ function uid() { return (NET.self || 's').slice(0, 5) + '-' + (ITEM_SEQ++); }
 function applyEv(e, from) {
   const p = from ? NET.peers.get(from) : null; const who = p ? p.name : '누군가';
   switch (e.t) {
-    case 'take': { const it = worldItems.find(i => i.iid === e.iid); if (it) removeWorldItem(it); break; }
+    case 'take': { const it = worldItems.find(i => i.iid === e.iid); if (it) { removeWorldItem(it); if (it.id === 'frag') updateObjective(); } break; }
     case 'spawn': spawnItem(e.id, e.n, e.x, e.y || 0, e.z, e.meta, e.iid); break;
     case 'hit': if (NET.host) { const en = enemies.find(x => x.id === e.id); if (en) { hostDamage(en, e.d, from); flashEnemy(en); } } break;
     case 'pdmg': if (e.to === NET.self) damageLocal(e.d, e.x, e.z, e.k); break;
@@ -1512,6 +2100,19 @@ function applyEv(e, from) {
     case 'end': ending('wake'); break;
     case 'retry': doRetry(); break;
     case 'wipe': gameOver(); break;
+    case 'noise': if (isHost()) hostNoise(e.x, e.z, e.r); break;
+    case 'drug': if (isHost()) hostDrug(enemies.find(x => x.id === e.id)); break;
+    case 'crash': crashFx(e.x, e.z, e.s); break;
+    case 'echo': echoFx(e.x, e.z); break;
+    case 'pound': poundFx(DOORL[e.i]); break;
+    case 'dbreak': breakDoor(DOORL[e.i]); break;
+    case 'dfix': fixDoor(DOORL[e.i]); break;
+    case 'door': setDoor(e.i, e.o); break;
+    case 'drawer': { const d = LV && LV.desks && LV.desks[e.i]; if (d) d.searched = true; break; }
+    case 'sdoor': openSec(who); break;
+    case 'line': activateLine(e.by || who); break;
+    case 'sopen': openStart(e.by || who); break;
+    case 'rpass': onRedPass(e.by || who); break;
   }
 }
 function peerOf(id) {
@@ -1539,7 +2140,7 @@ function nameTex(n) { const [c, g] = cvs(256, 64); g.fillStyle = 'rgba(0,0,0,.45
 function dropPeer(id) { const p = NET.peers.get(id); if (!p) return; scene.remove(p.av); NET.peers.delete(id); msg(`${p.name}님과 연결이 끊어졌다.`, '#aaa'); renderTeam(); }
 function sendState(now) {
   if (!NET.on) return; if (!now && NET.sendT > 0) return; NET.sendT = .1;
-  const h = held(); netSend('p', { x: +PL.x.toFixed(2), z: +PL.z.toFixed(2), y: +PL.yaw.toFixed(2), p: +PL.pitch.toFixed(2), n: PNAME, hp: Math.round(S.hp), a: S.dead ? 0 : 1, s: S.stage, h: h ? h.id : null });
+  const h = held(); netSend('p', { x: +PL.x.toFixed(2), z: +PL.z.toFixed(2), y: +PL.yaw.toFixed(2), p: +PL.pitch.toFixed(2), n: PNAME, hp: Math.round(S.hp), a: S.dead ? 0 : 1, s: S.stage, h: h ? h.id : null, v: +Math.hypot(PL.vx, PL.vz).toFixed(1), c: PL.crouch ? 1 : 0 });
 }
 function updatePeers(dt) {
   for (const p of NET.peers.values()) {
@@ -1559,18 +2160,18 @@ function updatePeers(dt) {
 }
 function sendEn() {
   const r2 = v => Math.round(v * 100) / 100;
-  netSend('en', { s: S.stage, e: enemies.map(e => [e.id, e.k, r2(e.x), r2(e.z), r2(e.yaw), Math.round(e.hp), e.maxhp, e.st, e.tp, e.roar, e.enr ? 1 : 0, e.aimT > 0 ? 1 : 0]), p: projs.map(p => [p.id, r2(p.x), r2(p.y), r2(p.z), r2(p.vx), r2(p.vz)]) });
+  netSend('en', { s: S.stage, e: enemies.map(e => [e.id, e.k, r2(e.x), r2(e.z), r2(e.yaw), Math.round(e.hp), e.maxhp, e.st, e.tp, e.roar, e.ph || 1, e.aimT > 0 ? 1 : 0, e.anim || 0]), p: projs.map(p => [p.id, r2(p.x), r2(p.y), r2(p.z), r2(p.vx), r2(p.vz)]) });
 }
 function onEn(d, from) {
   if (from !== NET.hostId || d.s !== S.stage) return;
   const seen = new Set();
-  for (const [id, k, x, z, yaw, hp, maxhp, st, tp, roar, enr, aim] of d.e) {
-    seen.add(id); let e = enemies.find(q => q.id === id);
-    if (!e) { if (hp <= 0) continue; e = makeEnemy(k, x, z, id, hp, maxhp); e.tp = tp; e.roar = roar; e.yaw = yaw; }
-    e.tx = x; e.tz = z; e.tyaw = yaw; e.maxhp = maxhp; e.st = st; e.enr = !!enr; e.aimT = aim ? .3 : 0;
-    if (hp < e.hp || e.hp <= 0 || hp <= 0) e.hp = hp; else e.hp = hp;
-    if (tp !== e.tp) { e.tp = tp; e.x = x; e.z = z; glitchFx(e); }
-    if (roar !== e.roar) { e.roar = roar; e.roarT = 1.4; sfx('roar', [e.x, 2, e.z], e.k === 'admin' ? .6 : 1); if (enr && !e._enrSaid) { e._enrSaid = 1; subtitle(e.k === 'giant' ? '거인이 분노했다. 발걸음이 빨라진다.' : '관리자가 코드를 다시 쓴다. 공격이 거세진다.', 3); } }
+  for (const [id, k, x, z, yaw, hp, maxhp, st, tp, roar, ph, aim, anim] of d.e) {
+    seen.add(id); let e = enemies.find(q => q.id === id); let fresh = false;
+    if (!e) { if (hp <= 0) continue; e = makeEnemy(k, x, z, id, hp, maxhp); e.tp = tp; e.roar = roar; e.yaw = yaw; fresh = true; }
+    e.tx = x; e.tz = z; e.tyaw = yaw; e.maxhp = maxhp; e.st = st; e.aimT = aim ? .3 : 0; e.anim = anim;
+    e.hp = hp;
+    if (k === 'giant' && ph > e.ph) setBossPhase(e, ph, fresh);
+    if (roar !== e.roar) { e.roar = roar; e.roarT = 1.4; sfx('roar', [e.x, 2, e.z]); }
     e.seen = performance.now();
   }
   for (const e of [...enemies]) if (!seen.has(e.id)) { if (e.hp > 0) e.hp = 0; if (e.dyingT > 2) removeEnemy(e); }
@@ -1596,13 +2197,17 @@ async function netConnect(code) {
   const room = m.joinRoom({ appId: 'lost-sector.bossrush.v1' }, 'LSB-' + code);
   NET.room = room; NET.code = code; NET.on = true;
   let oldApi = false;
-  for (const k of ['p', 'ev', 'en', 'hi', 'hello', 'chat']) {
+  for (const k of ['p', 'ev', 'en', 'hi', 'hello', 'chat', 'lobby', 'rdy', 'go']) {
     const a = room.makeAction(k);
     if (Array.isArray(a)) { oldApi = true; NET.tx[k] = (d, t) => a[0](d, t); a[1]((d, peer) => onNet(k, d, peer)); }
     else { NET.tx[k] = (d, t) => a.send(d, t ? { target: t } : undefined); a.onMessage = (d, ctx) => onNet(k, d, ctx && ctx.peerId); }
   }
   const onJoin = id => { if (NET.joined) netSend('hi', { n: PNAME }, id); else netSend('hi', { n: PNAME, want: 1 }, id); };
-  const onLeave = id => { const wasHost = id === NET.hostId; dropPeer(id); if (wasHost && NET.joined) pickNewHost(); };
+  const onLeave = id => {
+    const wasHost = id === NET.hostId; dropPeer(id);
+    if (NET.inLobby) { if (wasHost) { setNetMsg('방장이 대기실을 나갔습니다.'); setTimeout(() => location.reload(), 1600); $('#lbhint').textContent = '방장이 나갔습니다. 처음 화면으로 돌아갑니다…'; return; } if (NET.host) { LOBBY.delete(id); lobbyBroadcast(); } return; }
+    if (wasHost && NET.joined) pickNewHost();
+  };
   if (oldApi) { room.onPeerJoin(onJoin); room.onPeerLeave(onLeave); } else { room.onPeerJoin = onJoin; room.onPeerLeave = onLeave; }
 }
 function onNet(k, d, from) {
@@ -1610,7 +2215,8 @@ function onNet(k, d, from) {
   if (k === 'hi') {
     const p = NET.joined ? peerOf(from) : null; if (p) { p.name = d.n || p.name; p.tagMat.map = nameTex(p.name); if (!d.ack && !d.want) netSend('hi', { n: PNAME, ack: 1 }, from); }
     if (NET.host && d.want) {
-      if (NET.peers.size >= MAXP) { netSend('hello', { full: 1 }, from); dropPeer(from); return; }
+      if (NET.peers.size > MAXP - 1) { netSend('hello', { full: 1 }, from); dropPeer(from); return; }
+      if (!NET.started) { netSend('hello', { lobby: 1, seed: NET.seed, hostName: PNAME }, from); LOBBY.set(from, { name: d.n || '생존자', ready: false }); lobbyBroadcast(); sfx('pickup'); return; }
       netSend('hello', { seed: NET.seed, stage: S.stage, log: NET.log, hostName: PNAME, gate: S.gateOpen }, from);
       msg(`${d.n || '생존자'}님이 들어왔다.`, '#9f9');
     }
@@ -1620,6 +2226,7 @@ function onNet(k, d, from) {
     if (NET.joined) return;
     if (d.full) { setNetMsg('방이 가득 찼습니다. (최대 4명)'); try { NET.room.leave(); } catch (e) {} NET.on = false; joinBusy(false); return; }
     NET.hostId = from; NET.joined = true; clearTimeout(NET.joinTimer); NET.seed = d.seed;
+    if (d.lobby) { peerOf(from).name = d.hostName || '방장'; LOBBY.set(from, { name: d.hostName || '방장', ready: true }); LOBBY.set(NET.self, { name: PNAME, ready: false }); showLobby(); return; }
     startGame(d.stage || 1);
     for (const e of d.log || []) { applyEv(e, null); NET.log.push(e); }
     if (d.gate) S.gateOpen = true;
@@ -1629,7 +2236,10 @@ function onNet(k, d, from) {
     return;
   }
   if (!NET.joined) return;
-  if (k === 'p') { const p = peerOf(from); p.tx = d.x; p.tz = d.z; p.ty = d.y; p.pitch = d.p; p.h = d.h; p.hp = d.hp; const was = p.alive; p.alive = !!d.a; p.stage = d.s; if (d.n && d.n !== p.name) { p.name = d.n; p.tagMat.map = nameTex(p.name); } if (was && !p.alive) msg(`${p.name}님이 쓰러졌다!`, '#f66'); return; }
+  if (k === 'lobby') { if (from !== NET.hostId) return; LOBBY.clear(); for (const [id, n, r] of d.l) LOBBY.set(id, { name: n, ready: !!r }); renderLobby(); return; }
+  if (k === 'rdy') { if (!NET.host || NET.started) return; const e = LOBBY.get(from); if (e) { e.ready = !!d.r; lobbyBroadcast(); } return; }
+  if (k === 'go') { if (from !== NET.hostId || S.running) return; NET.seed = d.seed; hideLobby(); startGame(1); return; }
+  if (k === 'p') { const p = peerOf(from); p.v = d.v || 0; p.crouch = !!d.c; p.tx = d.x; p.tz = d.z; p.ty = d.y; p.pitch = d.p; p.h = d.h; p.hp = d.hp; const was = p.alive; p.alive = !!d.a; p.stage = d.s; if (d.n && d.n !== p.name) { p.name = d.n; p.tagMat.map = nameTex(p.name); } if (was && !p.alive) msg(`${p.name}님이 쓰러졌다!`, '#f66'); return; }
   if (k === 'ev') { if (LOGGED.has(d.t)) NET.log.push(d); applyEv(d, from); return; }
   if (k === 'en') { onEn(d, from); return; }
   if (k === 'chat') { const p = NET.peers.get(from); msg(`<${p ? p.name : '?'}> ${d.m}`, '#cfe8ff'); sfx('click'); return; }
@@ -1640,9 +2250,34 @@ async function netHost() {
   joinBusy(true); setNetMsg('방을 여는 중…');
   try { await netConnect(genCode()); } catch (e) { console.warn(e); setNetMsg('실시간 연결을 불러오지 못했습니다. 인터넷 연결을 확인해 주세요.'); joinBusy(false); NET.on = false; return; }
   NET.host = true; NET.hostId = NET.self; NET.joined = true; NET.seed = (Math.random() * 4294967295) >>> 0;
-  startGame(1);
-  msg(`방을 열었다. 방 코드: ${NET.code} — 친구에게 알려 주세요. (최대 4명)`, '#ffd76a');
+  LOBBY.set(NET.self, { name: PNAME, ready: true }); showLobby();
 }
+/* --- 대기실 --- */
+const LOBBY = new Map();
+function showLobby() { readName(); NET.inLobby = true; $('#start').classList.add('hidden'); $('#lobby').classList.remove('hidden'); auInit(); renderLobby(); }
+function hideLobby() { NET.inLobby = false; $('#lobby').classList.add('hidden'); }
+function lobbyBroadcast() { netSend('lobby', { l: [...LOBBY].map(([id, v]) => [id, v.name, v.ready ? 1 : 0]) }); renderLobby(); }
+function renderLobby() {
+  $('#lbcode').textContent = NET.code;
+  const rows = [...LOBBY].sort((a, b) => (b[0] === NET.hostId) - (a[0] === NET.hostId));
+  let h = '';
+  rows.forEach(([id, v], i) => { const isH = id === NET.hostId; h += `<div class="lbrow"><span class="dot" style="background:#${COATS[i % 4].toString(16).padStart(6, '0')}"></span>${v.name}${id === NET.self ? ' (나)' : ''}${isH ? ' ★ 방장' : ''}<span class="st ${isH || v.ready ? 'on' : 'off'}">${isH ? 'HOST' : v.ready ? 'READY' : 'WAITING'}</span></div>`; });
+  for (let i = rows.length; i < MAXP; i++) h += '<div class="lbrow empty">빈 자리 — 방 코드로 참가</div>';
+  $('#lblist').innerHTML = h;
+  const others = rows.filter(([id]) => id !== NET.hostId); const all = others.every(([, v]) => v.ready);
+  if (NET.host) {
+    $('#lbready').classList.add('hidden'); $('#lbstart').classList.remove('hidden'); $('#lbstart').disabled = !all;
+    $('#lbhint').textContent = !others.length ? '친구에게 방 코드를 알려 주세요. 혼자서도 시작할 수 있습니다.' : all ? '모두 준비됐습니다. 게임을 시작하세요.' : `준비 ${others.filter(([, v]) => v.ready).length}/${others.length} — 모두 준비하면 시작할 수 있습니다.`;
+  } else {
+    const me = LOBBY.get(NET.self); $('#lbstart').classList.add('hidden'); $('#lbready').classList.remove('hidden');
+    $('#lbready').textContent = me && me.ready ? '준비 취소' : '준비';
+    $('#lbhint').textContent = me && me.ready ? '방장이 시작하기를 기다리는 중…' : '준비를 누르면 방장이 시작할 수 있습니다.';
+  }
+}
+$('#lbready').onclick = () => { const me = LOBBY.get(NET.self); if (!me) return; me.ready = !me.ready; sfx('click'); netSend('rdy', { r: me.ready ? 1 : 0 }, NET.hostId); renderLobby(); };
+$('#lbstart').onclick = () => { if (!NET.host || $('#lbstart').disabled) return; NET.started = true; netSend('go', { seed: NET.seed }); hideLobby(); startGame(1); msg(`방 코드 ${NET.code} · 게임 시작`, '#ffd76a'); };
+$('#lbleave').onclick = () => { try { NET.room.leave(); } catch (e) {} location.reload(); };
+$('#lbcopy').onclick = () => { try { navigator.clipboard.writeText(NET.code); $('#lbcopy').textContent = '복사됨'; } catch (e) {} };
 async function netJoin(code) {
   code = (code || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
   if (code.length !== 5) { setNetMsg('방 코드 5자리를 입력해 주세요.'); return; }
@@ -1674,7 +2309,9 @@ addEventListener('keydown', e => {
   keys[e.code] = true;
   if (e.repeat) return;
   if (uiMode === 'ending') return;
-  if (e.code === 'Escape') { if (uiMode && uiMode !== 'pause') { closeUI(false); showPause(); } return; }
+  if (e.code === 'Escape') { if (['term', 'note', 'clues', 'inv'].includes(uiMode)) { closeUI(); return; } if (uiMode && uiMode !== 'pause') { closeUI(false); showPause(); } return; }
+  if (uiMode === 'note' && e.code === 'KeyF') { closeUI(); return; }
+  if (e.code === 'Tab') { if (uiMode === 'clues') closeUI(); else if (!uiMode) { renderClues(); openUI('clues'); } return; }
   if (uiMode === 'pause') return;
   if (e.code === 'KeyE') { if (uiMode === 'inv') closeUI(); else if (!uiMode) { openUI('inv'); renderInv(); } return; }
   if (uiMode) return;
@@ -1737,6 +2374,7 @@ function updateLights(dt) {
   let dirty = false;
   for (const p of near) { const lv = Math.random() < .3 ? (Math.random() < .5 ? .08 : 1) : (flick.get(p) ?? 1); flick.set(p, lv); p.lv = lv; panelMesh.setColorAt(p.i, _col.copy(p.base).multiplyScalar(lv)); dirty = true; }
   for (const [p] of flick) if (!near.has(p)) { flick.delete(p); p.lv = 1; panelMesh.setColorAt(p.i, p.base); dirty = true; }
+  if (S.echoL) { let any = false; for (const p of S.echoL) { const lv = S.t < p.dark ? .04 : 1; if (p.lv !== lv) { p.lv = lv; panelMesh.setColorAt(p.i, _col.copy(p.base).multiplyScalar(lv)); dirty = true; } if (S.t < p.dark) any = true; } if (!any) S.echoL = null; }
   if (dirty) panelMesh.instanceColor.needsUpdate = true;
   poolT -= dt; if (poolT <= 0) {
     poolT = .2; const [cx, cz] = cellAtW(PL.x, PL.z); const cand = [];
@@ -1744,6 +2382,20 @@ function updateLights(dt) {
     cand.sort((a, b) => a[0] - b[0]); POOL.forEach((l, i) => { const c = cand[i]; l.userData.p = c ? c[1] : null; if (c) l.position.set(c[1].x, WH - .35, c[1].z); });
   }
   const li = STAGES[S.stage].li; POOL.forEach(l => { const p = l.userData.p; l.intensity = p ? li * p.lv : 0; });
+}
+
+/* ================= 환영 (LEVEL 1) ================= */
+const phantoms = [];
+function updatePhantoms(dt) {
+  for (const p of [...phantoms]) { p.t -= dt; if (p.t <= 0) { sparks(p.x, 1.2, p.z, 0x3dff86, 14, 2); sfx('glitch', [p.x, 1.4, p.z]); scene.remove(p.m); phantoms.splice(phantoms.indexOf(p), 1); } }
+  if (S.stage !== 2 || S.line || S.dead) return;
+  S.phT -= dt; if (S.phT > 0) return; S.phT = mr(30, 60);
+  const fwd = Math.atan2(-Math.sin(PL.yaw), -Math.cos(PL.yaw));
+  for (let i = 0; i < 40; i++) {
+    const a = fwd + mr(-.7, .7), d = mr(10, 17); const x = PL.x + Math.sin(a) * d, z = PL.z + Math.cos(a) * d; const [cx, cz] = cellAtW(x, z);
+    if (cellT(cx, cz) !== 1 || !losClear(PL.x, PL.z, x, z)) continue;
+    const m = suitModel(false, 1.05); m.position.set(x, 0, z); m.rotation.y = Math.atan2(PL.x - x, PL.z - z); scene.add(m); phantoms.push({ m, t: 2.4, x, z }); sfx('shoe', [x, .2, z]); break;
+  }
 }
 
 /* ================= 루프 ================= */
@@ -1761,12 +2413,14 @@ function tick(dt) {
     const moved = Math.hypot(e.x - ox, e.z - oz);
     animEnemy(e, dt, moved);
     if (e.flashT > 0) { e.flashT -= dt; if (e.flashT <= 0) e.mesh.userData.mats.forEach(m => m.emissive.setHex(m.userData.base)); }
-    if (e.hp > 0) { e.stepAcc += moved; const st = e.k === 'giant' ? 1.9 : e.k === 'crawler' ? .9 : 1.1; if (e.stepAcc > st) { e.stepAcc = 0; sfx(e.k === 'giant' ? 'bstep' : e.k === 'crawler' ? 'skitter' : 'shoe', [e.x, .2, e.z]); if (e.k === 'giant') { const d = Math.hypot(e.x - PL.x, e.z - PL.z); if (d < 12) PL.shake = Math.max(PL.shake, (12 - d) / 12 * .35); } } }
+    if (e.hp > 0) { e.stepAcc += moved; const st = e.k === 'giant' ? 1.9 : e.k === 'faceless' ? .95 : 1.1; if (e.stepAcc > st) { e.stepAcc = 0; sfx(e.k === 'giant' ? 'bstep' : 'shoe', [e.x, .2, e.z]); if (e.k === 'giant') { const d = Math.hypot(e.x - PL.x, e.z - PL.z); if (d < 12) PL.shake = Math.max(PL.shake, (12 - d) / 12 * .35); } } }
     if (!isHost() && e.hp <= 0) { e.dyingT += 0; }
     if (e.hp <= 0 && !isHost()) { if (e.dyingT > (e.K.boss ? 8 : 2)) removeEnemy(e); }
   }
   updateProjs(dt); updateGrenades(dt); updateParts(dt); updateLights(dt);
   if (S.stage === 2) updateCode(dt);
+  S.stageT = (S.stageT || 0) + dt; updateDoors(dt); updateReds(dt); updatePhantoms(dt);
+  if (S.stage === 2) T.static.offset.set(Math.random(), Math.random());
   if (elev) { const tgt = S.gateOpen && !elev.closing ? 1 : 0; elev.open = lerp(elev.open, tgt, 1 - Math.exp(-dt * 2.2)); placeDoors(); }
   if (phone && S.phoneOn) { phone.ringT -= dt; if (phone.ringT <= 0) { phone.ringT = 2.6; sfx('ring', [phone.x, 1.4, phone.z]); } phone.glow.intensity = 3 + Math.sin(S.t * 10) * 2; }
   if (NET.joined) updatePeers(dt);
@@ -1803,7 +2457,7 @@ $('#pname').value = PNAME;
 function readName() { const nm = $('#pname').value.trim().slice(0, 8); if (nm) PNAME = nm; try { localStorage.setItem('ls_name', PNAME); } catch (e) {} }
 function startGame(stage = 1) {
   if (S.running || S.over) return; readName(); renderTeam();
-  auInit(); $('#start').classList.add('hidden'); $('#hud').classList.remove('hidden');
+  auInit(); $('#start').classList.add('hidden'); hideLobby(); $('#hud').classList.remove('hidden'); NET.started = true;
   if (!NET.seed) NET.seed = (Math.random() * 4294967295) >>> 0;
   S.startT = performance.now();
   enterStage(stage, NET.seed, true);
@@ -1816,7 +2470,7 @@ $('#hostbtn').onclick = () => { readName(); netHost(); };
 $('#joinbtn').onclick = () => { readName(); netJoin($('#rcode').value); };
 $('#rcode').addEventListener('keydown', e => { e.stopPropagation(); if (e.key === 'Enter') $('#joinbtn').click(); });
 $('#pname').addEventListener('keydown', e => { if (e.key === 'Enter') sb.click(); e.stopPropagation(); });
-window.__ls = { S, PL, INV, enemies, get boss() { return boss; }, teleport, addItem, enterStage, NET, worldItems, hostDamage, get LV() { return LV; }, elev: () => elev, renderer, scene, camera, fire, selectSlot, interact, spawnBoss, tick: n => { for (let i = 0; i < n; i++) if (S.running) tick(.05); } };
+window.__ls = { REDS, revealRed, spawnF: (x, z) => makeEnemy('faceless', x, z), DOORL, toggleDoor, clickSlot, openTerm, searchDrawer, CLUES, TERM, tryPw, closeUI, makeNoise, keys, get uiMode() { return uiMode; }, S, PL, INV, enemies, get boss() { return boss; }, teleport, addItem, enterStage, NET, worldItems, hostDamage, get LV() { return LV; }, elev: () => elev, renderer, scene, camera, fire, selectSlot, interact, spawnBoss, tick: n => { for (let i = 0; i < n; i++) if (S.running) tick(.05); } };
 </script>
 </body>
 </html>
